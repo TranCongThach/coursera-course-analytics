@@ -1,0 +1,50 @@
+Column,Data_Type,Row_Count,Null_Count,Placeholder_Count,Effective_Missing_Count,Effective_Missing_Percentage,Coverage_Percentage,Unique_Count,Invalid_Count,Notes
+course_id,str,6645,0,0,0,0.0,100.0,6645,0,
+title,str,6645,0,0,0,0.0,100.0,6599,0,
+enrolled,str,6645,1758,0,1758,26.455981941309254,73.54401805869074,4615,0,
+rating,float64,6645,1436,0,1436,21.610233258088787,78.38976674191122,21,0,
+num_reviews,float64,6645,1392,0,1392,20.94808126410835,79.05191873589165,1860,0,
+Instructor,str,6645,11,0,11,0.16553799849510908,99.83446200150489,2535,0,
+Organization,str,6645,10,0,10,0.15048908954100826,99.84951091045899,297,0,
+Skills,str,6645,1954,0,1954,29.40556809631302,70.59443190368698,4477,0,
+Description,str,6645,10,0,10,0.15048908954100826,99.84951091045899,6630,0,
+Modules/Courses,str,6645,10,0,10,0.15048908954100826,99.84951091045899,43,0,
+Level,str,6645,778,0,778,11.708051166290444,88.29194883370955,3,0,
+Schedule,str,6645,1888,0,1888,28.412340105342366,71.58765989465763,130,0,
+URL,str,6645,0,0,0,0.0,100.0,6645,0,
+Satisfaction Rate,str,6645,4447,0,4447,66.92249811888638,33.07750188111362,29,0,High missingness; do not generalize without caveat.
+enrolled_num,float64,6645,1758,0,1758,26.455981941309254,73.54401805869074,4615,0,
+rating_num,float64,6645,1436,0,1436,21.610233258088787,78.38976674191122,21,0,
+satisfaction_rate_num,float64,6645,4447,0,4447,66.92249811888638,33.07750188111362,29,0,High missingness; do not generalize without caveat.
+duration_sup1,str,6645,4991,0,4991,75.10910458991724,24.890895410082763,3,0,High missingness; do not generalize without caveat.
+gained_skills_sup1,str,6645,4991,0,4991,75.10910458991724,24.890895410082763,1652,0,High missingness; do not generalize without caveat.
+Difficulty,str,6645,6408,0,6408,96.4334085778781,3.5665914221219026,4,0,Supplemental matched subset only. High missingness; do not generalize without caveat.
+Type,str,6645,6408,0,6408,96.4334085778781,3.5665914221219026,2,0,Supplemental matched subset only. High missingness; do not generalize without caveat.
+course_url,str,6645,6504,0,6504,97.87810383747178,2.1218961625282162,141,0,Supplemental matched subset only; URL is the canonical URL. High missingness; do not generalize without caveat.
+duration_sup2,str,6645,6408,0,6408,96.4334085778781,3.5665914221219026,3,0,High missingness; do not generalize without caveat.
+subjects_combined,str,6645,4991,0,4991,75.10910458991724,24.890895410082763,4,0,Use bridge_course_subject.csv for analysis. High missingness; do not generalize without caveat.
+subject_count,int64,6645,0,0,0,0.0,100.0,3,0,
+organization_hq_country,str,6645,10,0,10,0.15048908954100826,99.84951091045899,34,0,Headquarters only; not learner location.
+organization_hq_country_status,str,6645,0,0,0,0.0,100.0,2,0,Manual mapping verification status; citations are still required.
+hours_to_complete_reported,float64,6645,2875,0,2875,43.26561324303988,56.73438675696012,77,0,
+hours_to_complete_estimated,float64,6645,5658,0,5658,85.14672686230249,14.853273137697514,33,0,High missingness; do not generalize without caveat.
+hours_to_complete,float64,6645,1888,0,1888,28.412340105342366,71.58765989465763,110,0,Mix of reported and explicitly flagged estimated values.
+hours_per_week,float64,6645,2197,0,2197,33.06245297215952,66.93754702784048,30,0,
+duration_weeks,float64,6645,2197,0,2197,33.06245297215952,66.93754702784048,13,0,Month schedules converted with 1 month = 4.345 weeks.
+duration_weeks_is_estimated,object,6645,2197,0,2197,33.06245297215952,66.93754702784048,2,0,
+hours_to_complete_is_estimated,object,6645,1888,0,1888,28.412340105342366,71.58765989465763,2,0,
+schedule_parse_status,str,6645,0,0,0,0.0,100.0,4,0,
+level_clean,str,6645,0,0,0,0.0,100.0,4,0,
+review_to_enrollment_ratio,float64,6645,1866,0,1866,28.081264108352144,71.91873589164786,4756,0,
+enrolled_percentile,float64,6645,1758,0,1758,26.455981941309254,73.54401805869074,4615,0,
+rating_normalized,float64,6645,1436,0,1436,21.610233258088787,78.38976674191122,21,0,
+popularity_score,float64,6645,1867,0,1867,28.096313017306247,71.90368698269376,4739,0,Derived from rating and enrollment; not independent.
+popularity_score_status,str,6645,0,0,0,0.0,100.0,4,0,
+skills_combined,str,6645,1652,0,1652,24.860797592174567,75.13920240782544,4806,0,Use bridge_course_skill.csv for analysis.
+skill_count,int64,6645,0,0,0,0.0,100.0,28,0,
+courses_per_organization,float64,6645,10,0,10,0.15048908954100826,99.84951091045899,67,0,
+courses_per_hq_country,float64,6645,10,0,10,0.15048908954100826,99.84951091045899,28,0,
+internet_usage_pct,float64,6645,22,0,22,0.33107599699021817,99.66892400300978,32,0,Context for HQ country; observations use mixed years.
+internet_usage_year,float64,6645,22,0,22,0.33107599699021817,99.66892400300978,3,0,Always interpret together with internet_usage_pct.
+internet_usage_source,str,6645,22,0,22,0.33107599699021817,99.66892400300978,1,0,
+internet_observation_rule,str,6645,22,0,22,0.33107599699021817,99.66892400300978,1,0,
