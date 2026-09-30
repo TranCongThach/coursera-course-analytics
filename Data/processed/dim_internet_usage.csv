@@ -1,0 +1,218 @@
+Country Name,Country Code,internet_usage_pct,internet_usage_year,internet_usage_source,internet_observation_rule
+Afghanistan,AFG,18.4,2020,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Albania,ALB,83.1356,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Algeria,DZA,71.2432,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+American Samoa,ASM,,,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Andorra,AND,94.4855,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Angola,AGO,39.2935,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Antigua and Barbuda,ATG,91.4123,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Argentina,ARG,89.229,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Armenia,ARM,77.0277,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Aruba,ABW,97.17,2017,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Australia,AUS,94.8762,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Austria,AUT,95.3347,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Azerbaijan,AZE,88.0,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+"Bahamas, The",BHS,94.4117,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Bahrain,BHR,100.0,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Bangladesh,BGD,44.5027,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Barbados,BRB,76.2053,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Belarus,BLR,91.5125,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Belgium,BEL,94.6263,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Belize,BLZ,70.354,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Benin,BEN,33.7602,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Bermuda,BMU,98.37,2017,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Bhutan,BTN,86.8403,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Bolivia,BOL,73.2831,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Bosnia and Herzegovina,BIH,83.3772,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Botswana,BWA,77.3272,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Brazil,BRA,84.1506,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+British Virgin Islands,VGB,77.7043,2017,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Brunei Darussalam,BRN,98.9704,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Bulgaria,BGR,80.3896,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Burkina Faso,BFA,19.9237,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Burundi,BDI,11.275,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Cabo Verde,CPV,72.1021,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Cambodia,KHM,56.7328,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Cameroon,CMR,43.8629,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Canada,CAN,94.0,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Cayman Islands,CYM,81.0677,2017,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Central African Republic,CAF,10.5826396,2021,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Chad,TCD,12.1839,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Channel Islands,CHI,,,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Chile,CHL,94.1192,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+China,CHN,77.4827,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Colombia,COL,72.7964,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Comoros,COM,27.3369432,2021,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+"Congo, Dem. Rep.",COD,27.24,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+"Congo, Rep.",COG,36.2469,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Costa Rica,CRI,85.127,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Cote d'Ivoire,CIV,38.4133,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Croatia,HRV,83.2412,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Cuba,CUB,73.2178,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Curacao,CUW,68.1272,2017,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Cyprus,CYP,91.2212,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Czechia,CZE,85.9941,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Denmark,DNK,98.7756,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Djibouti,DJI,65.0322,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Dominica,DMA,83.3767,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Dominican Republic,DOM,84.3832,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Ecuador,ECU,72.6943,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+"Egypt, Arab Rep.",EGY,72.1981,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+El Salvador,SLV,62.8885,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Equatorial Guinea,GNQ,66.8193,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Eritrea,ERI,26.5942,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Estonia,EST,93.1834,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Eswatini,SWZ,58.2502,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Ethiopia,ETH,19.3781,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Faroe Islands,FRO,97.582,2017,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Fiji,FJI,85.2199,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Finland,FIN,93.5139,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+France,FRA,86.8364,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+French Polynesia,PYF,72.7039,2017,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Gabon,GAB,73.6951,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+"Gambia, The",GMB,54.1899,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Georgia,GEO,81.8842,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Germany,DEU,92.4764,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Ghana,GHA,69.8405,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Gibraltar,GIB,94.4445,2016,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Greece,GRC,85.0102,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Greenland,GRL,69.4825,2017,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Grenada,GRD,79.8955,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Guam,GUM,80.5055,2017,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Guatemala,GTM,54.4043,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Guinea,GIN,33.923,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Guinea-Bissau,GNB,31.567,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Guyana,GUY,85.3163,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Haiti,HTI,38.9450183,2021,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Honduras,HND,59.7135,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+"Hong Kong SAR, China",HKG,95.6136,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Hungary,HUN,91.4501,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Iceland,ISL,99.8565,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+India,IND,43.4054,2020,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Indonesia,IDN,69.2084,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+"Iran, Islamic Rep.",IRN,81.717,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Iraq,IRQ,78.7156,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Ireland,IRL,95.5905,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Isle of Man,IMN,,,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Israel,ISR,91.8508,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Italy,ITA,87.0278,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Jamaica,JAM,85.1185,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Japan,JPN,84.9234,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Jordan,JOR,90.5,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Kazakhstan,KAZ,92.8785,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Kenya,KEN,40.8137,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Kiribati,KIR,54.4214,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+"Korea, Dem. People's Rep.",PRK,0.0,2013,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+"Korea, Rep.",KOR,97.416,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Kosovo,XKX,89.443,2018,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Kuwait,KWT,99.7473,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Kyrgyz Republic,KGZ,79.7703,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Lao PDR,LAO,66.1548,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Latvia,LVA,92.1879,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Lebanon,LBN,90.0522,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Lesotho,LSO,47.0368,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Liberia,LBR,30.1275,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Libya,LBY,88.4281,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Liechtenstein,LIE,96.8046,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Lithuania,LTU,88.5029,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Luxembourg,LUX,99.3479,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+"Macao SAR, China",MAC,89.7864,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Madagascar,MDG,20.5777,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Malawi,MWI,18.0,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Malaysia,MYS,97.6927,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Maldives,MDV,83.9119,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Mali,MLI,33.0528,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Malta,MLT,91.9155,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Marshall Islands,MHL,73.2238,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Mauritania,MRT,44.3616,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Mauritius,MUS,75.5,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Mexico,MEX,81.1832,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+"Micronesia, Fed. Sts.",FSM,40.5434,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Moldova,MDA,63.5349,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Monaco,MCO,98.3776,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Mongolia,MNG,83.9145,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Montenegro,MNE,88.2219,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Morocco,MAR,89.9,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Mozambique,MOZ,21.207,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Myanmar,MMR,44.0216732,2021,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Namibia,NAM,62.215,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Nauru,NRU,82.6668,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Nepal,NPL,49.5609,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Netherlands,NLD,97.0068,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+New Caledonia,NCL,82.0058,2017,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+New Zealand,NZL,95.7299,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Nicaragua,NIC,61.0524,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Niger,NER,16.937,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Nigeria,NGA,35.4563,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+North Macedonia,MKD,84.2304,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Northern Mariana Islands,MNP,,,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Norway,NOR,99.0,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Oman,OMN,95.2517,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Pakistan,PAK,32.9486,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Palau,PLW,26.9703,2004,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Panama,PAN,73.6085,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Papua New Guinea,PNG,26.991,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Paraguay,PRY,78.0948,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Peru,PER,74.675,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Philippines,PHL,75.2111,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Poland,POL,86.4147,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Portugal,PRT,85.7901,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Puerto Rico,PRI,87.2918,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Qatar,QAT,100.0,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Romania,ROU,89.2034,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Russian Federation,RUS,92.245,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Rwanda,RWA,34.4405,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Samoa,WSM,75.2869,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+San Marino,SMR,85.0607,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Sao Tome and Principe,STP,56.9899,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Saudi Arabia,SAU,100.0,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Senegal,SEN,59.9832,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Serbia,SRB,85.3575,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Seychelles,SYC,86.6654,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Sierra Leone,SLE,30.3518,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Singapore,SGP,94.2863,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Sint Maarten (Dutch part),SXM,,,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Slovak Republic,SVK,87.2131,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Slovenia,SVN,90.3779,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Solomon Islands,SLB,44.9575,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Somalia,SOM,27.6,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+South Africa,ZAF,74.703,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+South Sudan,SSD,12.1407,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Spain,ESP,95.4456,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Sri Lanka,LKA,50.1067,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+St. Kitts and Nevis,KNA,76.4575,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+St. Lucia,LCA,74.1859,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+St. Martin (French part),MAF,,,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+St. Vincent and the Grenadines,VCT,77.7418,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Sudan,SDN,28.7045,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Suriname,SUR,75.7614,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Sweden,SWE,95.7033,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Switzerland,CHE,97.3444,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Syrian Arab Republic,SYR,35.78,2020,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Tajikistan,TJK,36.0872,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Tanzania,TZA,31.8913,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Thailand,THA,89.5352,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Timor-Leste,TLS,40.7521,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Togo,TGO,37.6212,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Tonga,TON,57.5486,2021,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Trinidad and Tobago,TTO,79.9843,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Tunisia,TUN,73.8379,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Turkiye,TUR,85.9607,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Turkmenistan,TKM,21.251,2017,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Turks and Caicos Islands,TCA,,,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Tuvalu,TUV,81.1913,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Uganda,UGA,10.0,2021,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Ukraine,UKR,79.2183,2021,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+United Arab Emirates,ARE,100.0,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+United Kingdom,GBR,95.3412,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+United States,USA,97.1299,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Uruguay,URY,89.873,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Uzbekistan,UZB,89.0136,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Vanuatu,VUT,69.8888,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+"Venezuela, RB",VEN,61.6,2017,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Viet Nam,VNM,78.08,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Virgin Islands (U.S.),VIR,64.3775,2017,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+West Bank and Gaza,PSE,86.6377,2023,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+"Yemen, Rep.",YEM,17.6948,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Zambia,ZMB,31.2342,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file
+Zimbabwe,ZWE,32.5615,2022,World Bank IT.NET.USER.ZS (source: ITU),latest_available_in_local_2000_2023_file

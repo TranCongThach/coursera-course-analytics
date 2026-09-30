@@ -1,0 +1,24 @@
+Check,Status,Expected,Actual,Details
+raw_url_complete,PASS,0 missing,0,URL is the canonical course identity.
+raw_url_unique,PASS,0 duplicates,0,Distinct source URLs must never be collapsed by equal titles.
+fact_row_count_matches_raw_urls,PASS,6645,6645,Confirms no source URL was lost or synthesized.
+fact_url_set_matches_raw,PASS,same URL set,missing=0; extra=0,Set-level source lineage check.
+course_id_primary_key,PASS,complete and unique,missing=0; duplicates=0,Fact grain is one row per course URL.
+course_id_is_deterministic_url_hash,PASS,SHA-256 URL prefix,0,IDs remain stable when row order changes.
+subject_bridge_foreign_keys,PASS,0,0,Every bridge row must resolve to the fact.
+skill_bridge_foreign_keys,PASS,0,0,Every bridge row must resolve to the fact.
+subject_bridge_unique_relations,PASS,0,0,A subject counts at most once per course.
+skill_bridge_unique_relations,PASS,0,0,A case-normalized skill counts at most once per course.
+subject_count_matches_bridge,PASS,0,0,Fact summary and many-to-many bridge agree.
+skill_count_matches_bridge,PASS,0,0,Fact summary and many-to-many bridge agree.
+numeric_domains,PASS,0,0,Checks documented ranges and non-negative quantities.
+popularity_missingness_logic,PASS,0,0,"Missing rating/enrollment is retained, never replaced by zero."
+popularity_status_logic,PASS,0,0,Status explains every unavailable proxy score.
+schedule_parse_coverage,PASS,0 mismatches; 0 unparsed,mismatches=0; unparsed=0,Every present schedule follows a documented parse rule.
+internet_value_year_pair,PASS,0,0,Never interpret Internet percentage without its observation year.
+internet_source_is_documented_local_series,PASS,World Bank IT.NET.USER.ZS (source: ITU),World Bank IT.NET.USER.ZS (source: ITU),No undocumented manual Internet value is injected.
+canonical_placeholders_removed,PASS,0,0,Exact placeholder tokens become NA; valid sentences are preserved.
+eda_quality_has_no_invalid_values,PASS,0,0,Independent check of EDA quality table.
+eda_quality_has_no_placeholders,PASS,0,0,Independent check of EDA quality table.
+compatibility_file_matches_canonical,PASS,identical,identical,Legacy filename cannot silently diverge from EDA-ready data.
+all_eda_outputs_exist,PASS,0,0,All expected files are non-empty.
