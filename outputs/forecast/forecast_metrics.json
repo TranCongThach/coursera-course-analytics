@@ -1,0 +1,21 @@
+{
+  "n_train": 3909,
+  "n_test": 978,
+  "r2_log10": 0.9117399526616058,
+  "mae_log10": 0.14903176582316802,
+  "rmse_log10": 0.18965148675951696,
+  "features": [
+    "num_reviews",
+    "rating_num",
+    "hours_to_complete",
+    "hours_per_week",
+    "duration_weeks",
+    "skill_count",
+    "subject_count",
+    "courses_per_organization",
+    "level_Advanced",
+    "level_Beginner",
+    "level_Intermediate",
+    "level_Not specified"
+  ]
+}

@@ -1,0 +1,979 @@
+course_id,title,Organization,level_clean,actual_log10,predicted_log10,actual_enrolled,predicted_enrolled
+course_14018f2e49969714,International Women's Health and Human Rights,Stanford University,Beginner,5.079803289113909,4.870283587828097,120172.00000000012,74179.44639249393
+course_01de79f44f731340,Basic System Programming on IBM Z,IBM,Intermediate,3.997954004069403,4.262337480249021,9953.000000000002,18295.213428480914
+course_1b70b4016ebaa060,Data and Business Process Modeling with Microsoft Visio,Microsoft,Beginner,3.6265456590271294,3.598736066600612,4232.000000000001,3969.5023793564374
+course_e15218f9fc637959,Jazz Improvisation,Berklee,Intermediate,4.857235975821491,4.649178235025509,71983.99999999996,44583.918384280325
+course_10c7b13fe5f3be9d,Homeland Security & Cybersecurity Connection - It's Not About the Terrorists,University of Colorado System,Beginner,4.044735697450507,4.376640660640309,11085.00000000001,23803.491309605102
+course_544944435a7fb600,"Brand Management: Aligning Business, Brand and Behaviour",University of London,Beginner,5.660885390613125,5.378742909848189,458021.00000000035,239189.9399870463
+course_f4ccb7433b71ed9f,Customer Service Fundamentals,Knowledge Accelerators,Beginner,4.58198377286074,4.8884963751439585,38193.00000000001,77356.4222163669
+course_167954fc967a7ee0,AWS Cloud Practitioner Essentials,Amazon Web Services,Beginner,5.168939213835978,4.9309147440597405,147549.99999999997,85293.26591755573
+course_8cc08d127c46283e,Finance of Mergers and Acquisitions: Valuation and Pricing,University of Illinois Urbana-Champaign,Intermediate,4.414321417177539,4.28004445731059,25960.999999999975,19056.557837503133
+course_ccbd0ab51990f8f1,Jewish Diaspora in Modern China,Nanjing University,Not specified,4.007875743767586,4.050173691148718,10183.000000000007,11224.67282593561
+course_de669e7ba3abb402,"Custom Models, Layers, and Loss Functions with TensorFlow",DeepLearning.AI,Intermediate,4.58773340859825,4.679297982853247,38702.0,47785.70336667441
+course_cb7585dcb6c413ce,Windows Server Management and Security,University of Colorado System,Beginner,4.42802134408605,4.497426188676039,26793.0,31435.920998300513
+course_049cefb5f615afcc,Renewable Energy: Fundamentals and Job Opportunities,University at Buffalo,Beginner,4.145351816558461,4.154038152903895,13974.99999999999,14257.32839169385
+course_db99bfc2e434a2e2,IBM Product Manager Professional Certificate,IBM,Beginner,4.297585445297346,4.382996323488967,19841.999999999993,24154.40386497315
+course_7bea215d976208db,Algebra: Elementary to Advanced - Polynomials and Roots,Johns Hopkins University,Beginner,3.8444771757456815,3.877592964708896,6990.000000000001,7543.848615497559
+course_fcc96b4589d81750,Animal Behaviour and Welfare,The University of Edinburgh,Not specified,5.1937533132600215,5.303229221553343,156225.99999999997,201015.34959688922
+course_02b567290687e356,Data Visualization with R,IBM,Beginner,4.379232978167667,4.428646798769064,23946.0,26831.614075931448
+course_c4cb322ddeff05b5,Mastering Excel Essentials to Enhance Business Value,Illinois Tech,Beginner,3.449478399187365,3.49814222637695,2814.9999999999995,3148.7793337711896
+course_ff0a6dc3fa49a730,Linux Tools for Developers,The Linux Foundation,Beginner,4.356905034810079,4.678391446885959,22746.000000000022,47686.06065863822
+course_80d825f19d764568,Introduction to Religions & Ecology,Yale University,Beginner,3.749890841271422,3.6683118609939056,5622.000000000002,4659.205446680205
+course_8b1188a499256dd0,Machine Learning Foundations for Product Managers,Duke University,Beginner,4.657600770446638,4.555141405017259,45456.999999999956,35903.8817607945
+course_500a06b2e5986b1e,Symmetric Cryptography,University of Colorado System,Intermediate,4.188900373175912,4.350887450091501,15448.999999999998,22433.0048424386
+course_7f8798c2730b2034,Oracle Database Foundations,LearnQuest,Beginner,4.363028769038011,4.447051272649898,23068.999999999996,27993.1178586644
+course_434a8b56f32316b2,Solar Energy Systems Overview,University at Buffalo,Beginner,4.320789977698806,4.552604394225114,20930.999999999985,35694.7540803365
+course_6969cc26cec307ba,Simple Past Tense,"University of California, Irvine",Beginner,4.495946532723614,4.596548363721208,31329.00000000003,39495.56797899759
+course_cd276267fcd4ca1d,IBM Applied DevOps Engineering Professional Certificate,IBM,Intermediate,3.887842265107357,4.146244881853813,7723.999999999998,14003.76718242296
+course_446e5d731dcb4c87,Data Management for Clinical Research,Vanderbilt University,Beginner,5.088646306471225,4.907656671750883,122643.99999999999,80845.65272353408
+course_825dffb626c53cb8,"Global Health Security, Solidarity and Sustainability through the International Health Regulations",University of Geneva,Intermediate,3.8945375849957466,3.9696997978321624,7844.000000000004,9326.094200364463
+course_c1ecc848f37a0e1f,Search Engine Optimization (SEO) Specialization,"University of California, Davis",Beginner,5.3547114206568125,5.334955655738937,226313.99999999983,216249.77075233398
+course_c0b6de1d6fe8b42a,Google Calendar,Google Cloud,Beginner,4.174408732073123,4.3008830427373095,14942.000000000015,19993.23371245787
+course_cfd9459f8d8a8311,Combining and Analyzing Complex Data,"University of Maryland, College Park",Not specified,3.937568038600383,3.9909186734885287,8661.000000000004,9793.065820986296
+course_2e47c25aa92f124e,Children's Human Rights - An Interdisciplinary Introduction,University of Geneva,Beginner,4.909101172520155,4.9251666467670665,81115.00000000007,84171.80623617835
+course_f4a0cf60e6c6166c,Consulting Approach to Problem Solving,Emory University,Beginner,4.111766433052562,4.079280902173836,12934.999999999995,12002.753916481663
+course_1a9d5b448177c3f6,Human-Centered Design: an Introduction,University of California San Diego,Not specified,5.146357530686048,5.058330915198503,140074.00000000003,114374.9494678986
+course_c2796d6af834f779,Photovoltaic solar energy,École Polytechnique,Beginner,4.354626976852949,4.6505830214488775,22627.000000000015,44728.36481257888
+course_43214b0f9dbe1de1,CUDA at Scale for the Enterprise,Johns Hopkins University,Intermediate,3.3289908554494287,3.313823428673648,2133.0,2059.7922922153384
+course_dd12ddc32826fb77,Generative AI Automation Specialization,Vanderbilt University,Beginner,3.7554937284151193,3.8288067604687903,5695.000000000002,6742.279629009928
+course_a8401bce4d23ccc5,Introduction to Early Childhood,The State University of New York,Beginner,4.037784941753637,3.8080899214158794,10908.99999999999,6428.208006861018
+course_dc72b526eb04d935,eHealth: More than just an electronic record,The University of Sydney,Not specified,4.357725268400632,4.330957922134134,22789.000000000004,21426.8299107878
+course_59a301d5fff2cdb1,Online teaching: Using Zoom to connect with learners,Macquarie University,Beginner,3.5939502952639875,3.726787141693752,3926.0000000000005,5330.735591106592
+course_633087d769ce9f68,National Academy of Sports Medicine Nutrition Essentials,National Academy of Sports Medicine,Beginner,4.176698846118572,3.762919721777334,15021.000000000004,5793.216004148944
+course_03c00c2e45497791,Leading Through Effective Communication,Arizona State University,Beginner,3.338854746252323,3.2909049873100384,2182.0,1953.911942311178
+course_c57f21d30a3ac21b,Modern American Poetry,University of Illinois Urbana-Champaign,Beginner,4.383582004606485,4.150311826100795,24187.000000000015,14135.52119432361
+course_4c9eea4a5b8efc88,Introduction to Deep Learning & Neural Networks with Keras,IBM,Intermediate,4.783217309208569,4.845523452864059,60704.00000000001,70068.60204409888
+course_6f3448a9f49edb32,Data Analysis and Interpretation Specialization,Wesleyan University,Beginner,4.527410765292662,4.489719816058368,33683.00000000002,30883.023795266996
+course_95c02b572b93ee64,Kinetics: Studying Spacecraft Motion,University of Colorado Boulder,Advanced,4.025551622782544,4.017057535495792,10606.0,10400.579439687725
+course_ce79d6bf8395fc43,Prepare for the EMT Certification Test,University of Colorado System,Beginner,4.065355601289965,3.8205579887448486,11623.99999999999,6615.428634492762
+course_be14f8df816db54b,Business Implications of AI: Full course,EIT Digital,Beginner,3.7914801160200007,3.6319609225790876,6186.999999999997,4285.099617276596
+course_135fb3910b5bfa65,Battery Pack Balancing and Power Estimation,University of Colorado Boulder,Intermediate,4.058350092210653,3.898162008246562,11437.999999999993,7909.736360158943
+course_7686b4789de2b8a3,Memoir and Personal Essay: Write About Yourself Specialization,Wesleyan University,Beginner,4.224973090428833,4.230972976274963,16787.000000000007,17020.525958532835
+course_35cb1c57eed1da98,Outsmarting intermittency,École Polytechnique,Beginner,3.1950689964685903,3.423892140641981,1567.0000000000007,2653.9463583440734
+course_2f6f534fb4520c1c,Introduction to Data Science in Python,University of Michigan,Intermediate,5.904395791184367,5.66952044827614,802409.0000000003,467218.9491423264
+course_04774cf5c11f7536,Blockchain Specialization,University at Buffalo,Intermediate,5.073736674621221,5.016840119145347,118505.0000000001,103953.74008354069
+course_d092780111cca685,Solving Complex Problems Specialization,Macquarie University,Beginner,4.010681493131443,3.6794587480934062,10248.99999999999,4780.339574470376
+course_0f1ac20c47a8006e,Futures Thinking,Arizona State University,Not specified,3.4138025167693513,3.3976181533113965,2592.999999999999,2498.1479379769717
+course_053b2899eae51afd,Business English: Finance and Economics,Arizona State University,Intermediate,4.580651318148037,4.511821817236811,38076.000000000015,32495.39476096236
+course_0df300a175cafb18,Introduction to Blockchain for Financial Services,INSEAD,Beginner,4.368602958559182,4.572468983837925,23366.999999999996,37365.343908984636
+course_5a88ebf4175279ba,IBM Program Manager Professional Certificate,IBM,Beginner,3.219060332448861,3.273632777262585,1655.9999999999993,1877.7284103093116
+course_fdc98228fd7ae983,Averaged-Switch Modeling and Simulation,University of Colorado Boulder,Intermediate,3.9422065422770953,3.9778830197804225,8754.000000000002,9503.48776168233
+course_94bf420cd0350135,Introduction to Machine Learning,Duke University,Intermediate,5.330985691205163,5.203050880190568,214282.00000000006,159606.61249561288
+course_74ff35eddd39a466,Health Informatics for Healthcare Professionals,Northeastern University,Beginner,3.446226401778163,3.3186079078616992,2793.999999999999,2082.6098008192803
+course_40b2a30a29961efd,Conversational English Skills,Tsinghua University,Beginner,5.021772103293179,4.707335392112031,105141.00000000001,50972.436335862054
+course_ed4a0dbf4be6e06e,"Introduction to Self-Determination Theory: An approach to motivation, development and wellness",University of Rochester,Beginner,4.838439779925449,4.443676100142535,68935.00000000001,27776.409110773857
+course_1ca4a30f244a4792,Essentials of Management and Strategic Planning,"University of California, Irvine",Beginner,4.1953183601130135,4.149118137054444,15679.0,14096.722061803188
+course_41301686172d4f76,Writing and Editing: Word Choice and Word Order,University of Michigan,Beginner,5.134817554285929,4.978213517510167,136401.00000000012,95107.22660277563
+course_27e349dbd4c1745c,Principles of Public Relations,University of Colorado Boulder,Beginner,4.24878221406855,4.478763506184775,17733.0,30113.657470370064
+course_356f99dd6c4c9aeb,The Age of Sustainable Development,Columbia University,Not specified,5.144692493939179,5.33417793812582,139537.9999999999,215862.86563108375
+course_c3fb82b7023d5ace,"Health, Housing, and Educational Services",Columbia University,Beginner,3.5538830266438746,3.7313255610692906,3580.000000000002,5386.734380825623
+course_699880fbc1e8aeac,Guided Imagery,University of Minnesota,Beginner,4.006765452451993,4.197704840389097,10157.000000000004,15765.394418271298
+course_ca1149f550039564,Operational Analytics with Microsoft Azure Synapse Analytics,Microsoft,Intermediate,3.7649229846498886,3.5153999239023124,5820.000000000002,3276.4226827543603
+course_10d721d5d20585a5,The Science of Success: What Researchers Know that You Should Know,University of Michigan,Beginner,5.272393993523537,5.154095640029196,187237.99999999985,142592.15744874522
+course_f75653b69c2370a5,Developing AI Applications on Azure,LearnQuest,Advanced,4.679664059513583,4.726257344277171,47825.999999999956,53242.3657228287
+course_3a1d3aa14064724a,Construction Management Specialization,Columbia University,Beginner,5.057540589120016,5.091256587641489,114166.99999999988,123383.35851684779
+course_04f6c042175d1a1e,Business Strategy Specialization,University of Virginia,Beginner,4.854882693421925,4.832565156020933,71594.99999999999,68008.80691148136
+course_d7e5be71961abab1,Fundamentals of Equities,Interactive Brokers,Beginner,4.673656669141918,4.617577811612179,47168.999999999985,41455.085157278125
+course_7eec1faa47275994,Applied Data Science Capstone,IBM,Intermediate,5.235634482614413,5.288958846139015,172041.99999999997,194517.5747516173
+course_e17474a4fd1b507c,Game Design and Development 4: 3D Platformer,Michigan State University,Intermediate,3.719497016610582,3.6191034478693096,5242.000000000003,4160.096911706387
+course_420581b93173f1d3,Mandarin Chinese for Intermediate Learners: Capstone Project,Shanghai Jiao Tong University,Intermediate,3.5308397786165204,3.3165809243529627,3394.9999999999995,2072.9122801407407
+course_37ab1fcb09b642f7,"Solar Energy for Engineers, Architects and Code Inspectors Specialization",University at Buffalo,Beginner,4.20194306340165,4.376816519575436,15919.999999999996,23813.132012983075
+course_cd390608886b788e,Strategies for Teaching Perfect Tenses and Modals,"University of California, Irvine",Intermediate,4.288517501797074,4.2989928667319806,19431.999999999985,19906.40642532497
+course_117d0e614576c330,Machine Learning and Reinforcement Learning in Finance Specialization,New York University,Intermediate,4.332317244540979,4.54483548244002,21493.999999999996,35061.90288060247
+course_8ef5837e97acec7d,Information​ ​Systems Specialization,University of Minnesota,Beginner,4.651151972757688,4.459692008547001,44787.00000000003,28819.869407408085
+course_138351f1d4212237,Climate Change Mitigation in Developing Countries,University of Cape Town,Intermediate,4.680371778662958,4.532339446084441,47903.999999999985,34067.43579368876
+course_172e75b4363e26c5,Computational Thinking & Block Programming in K-12 Education Specialization,University of California San Diego,Beginner,3.224014811372864,3.440301055377385,1674.9999999999995,2756.138612068724
+course_596ef6d7f0ccaeaf,Narrative Economics,Yale University,Beginner,4.526959255342246,4.581209446810256,33647.99999999999,38124.96439885657
+course_6697dad7a339028e,Developing Websites and Front-Ends with Bootstrap,IBM,Intermediate,3.7516639462609866,3.723370374520487,5645.0,5288.961120706814
+course_307da532d900bad7,Introduction to Machine Learning on AWS,Amazon Web Services,Beginner,4.435414316217528,3.9545113996186396,27253.000000000025,9005.574008041513
+course_a4b4e4f22a30a196,What future for education?,University of London,Not specified,4.7884158626098525,4.655549184587386,61434.99999999995,45242.76976360551
+course_62b510d540110acf,Blockchain and Business,INSEAD,Not specified,4.312473557686056,4.507947701092928,20534.000000000015,32206.809248892983
+course_a9a44841177e7349,Foundations of Career Navigating and Coaching,Goodwill Industries International,Beginner,4.192065410979292,4.270558860986376,15561.999999999995,18644.848592921575
+course_9c23481e2a96a7a8,Structuring Machine Learning Projects,DeepLearning.AI,Beginner,5.67832258372945,6.076729582077091,476785.00000000006,1193244.8869090541
+course_f0fec4701f47e3c3,"Federal Taxation I: Individuals, Employees, and Sole Proprietors",University of Illinois Urbana-Champaign,Intermediate,4.5738922712528876,4.50196683856305,37488.0,31766.31503240812
+course_fbcfd4c63a6c4043,Generative Pre-trained Transformers (GPT),University of Glasgow,Intermediate,3.7001843296221977,3.6113384925135046,5014.0,4086.3775770814805
+course_2c00b8ee79d9fbde,Data Analysis and Visualization with Power BI,Microsoft,Beginner,4.760927358774605,4.50472981282472,57666.999999999985,31969.056033258137
+course_aa83749de0736ab6,THINK GLOBAL:  TEACHERS TRAINING COURSE (IDP-ICE),Universitat de Barcelona,Beginner,3.391816923613249,4.007158112970676,2465.0000000000005,10166.187444363339
+course_b2df4e9ab43d6a33,"Transportation, Sustainable Buildings, Green Construction",Johns Hopkins University,Intermediate,4.260023660694307,3.9770899377904128,18197.99999999998,9486.14891064466
+course_9e275375f8c99847,Chemicals and Health,Johns Hopkins University,Beginner,4.868949923799016,4.704948782580737,73952.00000000007,50693.09211356811
+course_fdf416a4892e3eb0,Data Processing with Azure,LearnQuest,Intermediate,3.876275588677879,3.869790131699279,7521.000000000001,7409.520973627065
+course_fe8907f1e6b83784,Classical Sociological Theory,University of Amsterdam,Not specified,5.0949844316866795,5.08792018414136,124446.9999999999,122439.11565434469
+course_b4c841147e5f52de,Mechanics of Materials III: Beam Bending,Georgia Institute of Technology,Intermediate,4.5868909795908674,4.647000953740469,38626.99999999999,44360.96181275099
+course_3625e1fbb494bd4d,Encoder-Decoder Architecture,Google Cloud,Advanced,3.521399628115376,3.6172245294103695,3322.0000000000014,4142.137671918439
+course_fc89d8928a8dd56a,"Python for Command-and-control, Exfiltration and Impact",Infosec,Intermediate,3.617943434828973,3.4237293506325956,4149.000000000002,2652.951745220985
+course_44d5741fd7a926f7,Intelligent Machining,University at Buffalo,Beginner,4.471467740710164,4.749771440866313,29611.999999999978,56204.54558282278
+course_abda8ea6762e56fb,Raspberry Pi Projects Specialization,Johns Hopkins University,Beginner,3.5208763816883417,3.343434051064069,3317.9999999999986,2205.129255393136
+course_13b86f891362f778,"C++ Basic Structures: Vectors, Pointers, Strings, and Files",Codio,Beginner,4.321950362519417,4.19711180008988,20987.000000000015,15743.881058061119
+course_15a017c829411006,Applied Data Science with R Specialization,IBM,Beginner,3.639486489268586,3.862784494139463,4359.999999999998,7290.9562821842355
+course_7f285f919b0babe4,Learn to Teach Java:  Writing Classes and Arrays,University of California San Diego,Beginner,3.3975924340381165,3.3746736925554957,2497.9999999999986,2369.5926416544444
+course_974e1c249b9ef70f,Financial Accounting Fundamentals,University of Virginia,Beginner,5.201102031610662,5.168787769278143,158891.9999999999,147498.5562221649
+course_9b12c156fcd498c8,Accounting Analytics,University of Pennsylvania,Not specified,5.052801636679876,5.11296598821275,112928.0000000001,129707.76863226999
+course_288565c424661eca,Grow with AI: Your AI-driven Growth Marketing strategy,Starweaver,Beginner,3.295347148333618,3.431775567848468,1973.9999999999998,2702.5613893784084
+course_880f8e0e0e97262f,Economics and Policies of Climate Change,EDHEC Business School,Beginner,3.7707783961691477,3.76872055611204,5899.0,5871.114580138988
+course_b01f01b950a11835,Lead Management in Salesforce,Salesforce,Beginner,4.3273998072377,4.395045777549208,21252.0,24833.94857962819
+course_f2c22b23a3af27c3,"Photography Techniques: Light, Content, and Sharing",Michigan State University,Not specified,4.878061981290013,4.819991797122312,75520.0,66068.09690639592
+course_cb92cecc206ff1c1,Creative Writing: The Craft of Setting and Description,Wesleyan University,Not specified,4.8063360205253876,4.781648845967795,64023.00000000002,60485.16169256969
+course_2268c61ab2f12954,Auditing I: Conceptual Foundations of Auditing,University of Illinois Urbana-Champaign,Intermediate,4.75048525243288,4.568370645561597,56297.00000000002,37014.39417543801
+course_8642dc81c823f114,"Internal Displacement, Conflict and Protection",University of London,Beginner,3.886547123391106,3.6703679523422257,7701.000000000003,4681.315938682946
+course_e16db45bc477742f,Introduction to Chemistry:  Reactions and Ratios,Duke University,Beginner,5.090236884528415,4.781343810330669,123093.99999999997,60442.6936145598
+course_c1f3b84f2c7a8f9d,Strategies for Senior Housing Communities during COVID-19,Johns Hopkins University,Beginner,3.7402837196818792,3.939346302056073,5499.000000000002,8696.53605930606
+course_2b4bb015612025e7,Project Planning: Putting It All Together,Google,Beginner,5.700834331897704,5.638073162650338,502151.00000000006,434583.4293325642
+course_4b11129c36a9d61a,GPU Programming Specialization,Johns Hopkins University,Intermediate,3.8972421028053654,3.26725698667194,7893.000000000001,1850.3632173265376
+course_6d7e3b89d770ea52,Procurement & Sourcing Introduction,Rutgers the State University of New Jersey,Beginner,4.580628505568549,4.739967383547428,38073.99999999997,54949.960370213295
+course_f32f3b603f320396,Climate Change and Water in Mountains: A Global Concern,University of Geneva,Intermediate,4.171580201932064,4.3051794847392575,14845.000000000005,20192.00684273601
+course_beabd3c560246277,Understanding Patient Perspectives on Medications,University of Copenhagen,Intermediate,3.901076715726255,3.9639435947676955,7963.000000000001,9203.300335073074
+course_806f2bba7832658b,The GRC Approach to Managing Cybersecurity,Kennesaw State University,Beginner,4.150510832907967,4.323546917883713,14141.999999999993,21064.294493698166
+course_4b4f7b77a790037f,Strategic Organization Design,Ludwig-Maximilians-Universität München (LMU),Not specified,4.130301597341845,4.368803298691572,13498.999999999996,23377.781688435065
+course_0d4c7d8cda2886f4,Introduction to UI Design,University of Minnesota,Beginner,4.915758520888274,4.9085719719494865,82368.00000000006,81016.21918804375
+course_11015fa0f32b02de,How to Network: Leading Yourself to Lead Others,University of Michigan,Beginner,3.669688708056208,3.636801499223609,4674.000000000001,4333.127810439455
+course_e571cee7ff1a2ef4,The Fall and Rise of Jerusalem,Tel Aviv University,Not specified,4.321287665169863,4.388038065830151,20954.999999999996,24436.44728311225
+course_c40572c905432c42,European Business Law  Specialization,Lund University,Beginner,3.9500726297501574,3.96165811696248,8913.999999999996,9154.995116248763
+course_a930cb8e2691f54a,Network Function Virtualization,Georgia Institute of Technology,Not specified,3.4625477288026643,3.5583514089470776,2901.000000000001,3617.024154131042
+course_5d79deb98f3d1a57,DevOps on AWS Specialization,Amazon Web Services,Intermediate,4.602494068807281,4.480815166932286,40039.999999999985,30256.254664058924
+course_330c3801fe61b089,Managing Employee Compensation,University of Minnesota,Not specified,4.842652916456926,5.004792189280436,69606.99999999996,101109.5527393594
+course_2881956d36f4e705,Command Line Tools for Genomic Data Science,Johns Hopkins University,Not specified,4.467326869904469,4.526545386142728,29331.000000000015,33615.94977129405
+course_6acceec08b8d046b,Environmental Health: the Foundation of Global Public Health,University of Michigan,Beginner,3.8955882756662628,3.9708789944421867,7862.999999999997,9351.45082491783
+course_606672711d225846,Introduction to Key Constitutional Concepts and Supreme Court Cases,University of Pennsylvania,Beginner,4.599282501319745,4.782607079654596,39744.99999999999,60618.76437383526
+course_d6c56e1d6442d8b8,The Arduino Platform and C Programming,"University of California, Irvine",Not specified,5.300678074586354,5.327219745972676,199838.00000000017,212431.90611453578
+course_64d87a3088ae7590,"Psychology of Anxiety, Mood, Substance Use, and Addictive Behaviors Specialization",American Psychological Association,Beginner,3.3807537708039,3.4636158590038133,2403.0000000000005,2908.143676623354
+course_f8a5b49bb88c63e2,Business Strategies for A Better World Specialization,University of Pennsylvania,Beginner,4.214923284894898,4.5140573785157185,16403.00000000001,32663.098345284623
+course_cea74fc7c8e1f665,Futures Thinking Specialization,Institute for the Future,Beginner,4.435223046211029,4.564240039483773,27241.000000000022,36664.01648314566
+course_54ea95676f456659,Architecting and Installing the Apigee Hybrid API Platform,Google Cloud,Beginner,3.381656482585787,3.5630998892004775,2407.9999999999995,3656.7888932336614
+course_7b5dea793b075237,Regression Analysis: Simplify Complex Data Relationships,Google,Advanced,4.625600512882817,4.488696568321512,42228.00000000001,30810.345492950888
+course_9e7fed2ff088287c,Creative Problem Solving,University of Minnesota,Not specified,5.4053344053852435,5.0856654780660575,254292.99999999983,121805.10151608729
+course_64d5b709c318cd07,Indigenous Canada,University of Alberta,Not specified,5.78499437318715,5.944102800373922,609528.9999999998,879230.6118974466
+course_68a545946b94f470,Software Architecture for Big Data Specialization,University of Colorado Boulder,Advanced,3.6860102913152857,3.723665505133445,4853.000000000002,5292.556526357989
+course_829c7b23af704d52,Leading Change in Health Informatics,Johns Hopkins University,Beginner,4.135387108382386,4.297081345761504,13658.000000000002,19818.982115518553
+course_7f05f32652b9ab63,Cybersecurity Attack and Defense Fundamentals Specialization,EC-Council,Beginner,4.353646996410273,4.336226381824184,22576.000000000015,21688.343442118734
+course_39be6463ed68b30d,SAP Technology Consultant Hands-on Project,SAP,Beginner,3.957128197676813,3.6805186449824734,9060.000000000002,4792.02025404419
+course_4600b44e82404287,A Comprehensive Excel Masterclass,Illinois Tech,Intermediate,3.875928984922927,3.7347796878403283,7514.999999999997,5429.748172811597
+course_8ec462ce6dc2e58c,Data Processing Using Python,Nanjing University,Beginner,5.03271141119991,4.60087134879266,107823.00000000001,39890.67165807444
+course_04a18b0933cdf72a,Trustworthy AI for Healthcare Management,Politecnico di Milano,Beginner,3.456214155357989,3.42098271328678,2859.0,2636.226451041439
+course_4ba4cb9a149b3b5b,Neuroscience and Neuroimaging Specialization,Johns Hopkins University,Intermediate,4.339650157613684,4.2925086380561694,21859.999999999985,19611.401818905495
+course_8a4a82e3538186c2,Terrorism and Counterterrorism: Comparing Theory and Practice,Universiteit Leiden,Beginner,5.087802706232963,5.108889957183006,122405.99999999994,128496.10314742153
+course_af03d25588f89aab,"Cybersecurity Compliance Framework, Standards & Regulations",IBM,Intermediate,5.0166071876214335,5.143885810381939,103897.99999999996,139279.05465510828
+course_2e4c292900e9fba2,Strategic Sales Management Specialization,Fundação Instituto de Administração,Intermediate,4.1702617153949575,4.172912203657246,14800.000000000004,14890.600210665645
+course_cffcc6ec44b9f93e,Corporate Finance Essentials,IESE Business School,Not specified,4.939948343165613,5.012867339774079,87086.00000000006,103007.14252603763
+course_00892f441728f336,"Organizational Leadership in Diversity, Equity & Inclusion Specialization",Rice University,Intermediate,3.82529626443096,3.946336011892854,6688.000000000001,8837.634001600134
+course_4c45462d0e4b9d32,Introduction to Big Data with Spark and Hadoop,IBM,Intermediate,4.733012590485638,4.504666285146867,54077.00000000005,31964.380009395394
+course_4f186ce4682f5754,"Cannabis, Chronic Pain, and Related Disorders",University of Colorado Boulder,Beginner,3.8207923810882036,3.99608402882607,6618.999999999998,9910.236730949897
+course_c4546eb1b2fd178a,Visual Analytics with Tableau,"University of California, Davis",Beginner,4.857483266952451,4.999278010419812,72025.0,99833.89386473683
+course_b1d70e55e65714e5,"Tropical Parasitology: Protozoans, Worms, Vectors and Human Diseases",Duke University,Intermediate,4.471130287843276,4.602276320452911,29589.000000000015,40019.92961195089
+course_da3866e4727068c4,"Introduction to Financial Analysis - The ""Why?""",University of Illinois Urbana-Champaign,Beginner,4.271051261492347,4.302019094175622,18665.99999999999,20045.60157847811
+course_1cfabd791867f832,Business Intelligence (BI) Essentials,IBM,Beginner,4.345158000269437,4.1339449144109865,22138.99999999998,13612.720087863352
+course_65fd5cf01815110f,The Economics of Health Care Delivery,University of Pennsylvania,Not specified,4.289834121485031,4.353165669837971,19490.99999999999,22550.99298341016
+course_7a89ef74c94c48d0,"Transmedia Storytelling: Narrative worlds, emerging technologies, and global audiences",UNSW Sydney (The University of New South Wales),Not specified,5.051738906501513,4.8248849810310395,112652.00000000004,66816.69361586413
+course_763c064f5e3c81f0,History of Medical Cannabis,University of Colorado Boulder,Beginner,4.193792230279798,4.287676517504442,15624.000000000004,19394.40754828264
+course_658fcd5bd1165f14,Fundamentals of Data Analytics in the Public Sector with R,University of Michigan,Intermediate,3.8483123036272846,3.615752894161412,7052.000000000003,4128.125521528582
+course_c56ec16e597989d7,Concurrent Programming in Java,Rice University,Intermediate,4.401831174908948,4.686922975128449,25225.000000000007,48632.094594852264
+course_d88d5cb63655320d,IBM Mainframe Developer Professional Certificate,IBM,Intermediate,3.791901080009571,4.1853829664078575,6192.999999999998,15324.381895716337
+course_bba8006649a08888,Fundamentals of GIS,"University of California, Davis",Beginner,5.238648175057805,5.367972829645511,173240.00000000017,233331.20809200255
+course_402f9d97899aa124,Principles of fMRI 1,Johns Hopkins University,Beginner,4.618393302080016,4.673635846036284,41533.00000000004,47166.73844346613
+course_d8f5c7a4d13da7f1,"Agriculture, Economics and Nature",University of Western Australia,Beginner,4.695875515031685,4.492097091690404,49644.99999999999,31052.53726891868
+course_9fe4b084bc312891,IELTS Listening and Speaking Sections Skills Mastery,"University of California, Irvine",Beginner,4.753981171127868,4.680869213406437,56752.000000000044,47958.89999740163
+course_f0f937e174799ff3,De-Mystifying Mindfulness,Universiteit Leiden,Beginner,5.347484186888427,4.784924002867016,222578.99999999994,60943.024379240065
+course_6a372628b9e82b1d,Data Manipulation in RPA,UiPath,Beginner,3.740678425227455,3.715866835690007,5504.000000000001,5198.365786821826
+course_91f1f659bac73f5d,SIEM Splunk Hands-On Guide Specialization,EDUCBA,Beginner,3.3064250275506875,3.351663139883063,2025.0000000000005,2247.310805067773
+course_f9381ad657fa5ec5,Urbanisation and Health - Promoting  Sustainable Solutions,University of Copenhagen,Not specified,3.7561033715851058,4.125893111721782,5703.000000000003,13362.665949972623
+course_87aeecaa6e084bed,Financial Technology (Fintech) Innovations Specialization,University of Michigan,Beginner,4.556881174379756,4.6207749259772735,36048.00000000001,41761.38812878697
+course_7664cd96f37ece81,HRCI Human Resource Associate Professional Certificate,HRCI,Beginner,4.837481113838893,4.652890899734718,68782.99999999996,44966.6878697625
+course_c41bbd808fa5d37e,"Financial Analysis: Portfolios, Risks, Strategic Decisions",Coursera Instructor Network,Beginner,3.1956229435869368,3.3157551206077445,1569.0000000000002,2068.974416941147
+course_18bbfe45038c67f4,Create the User Interface in Android Studio,Meta,Intermediate,4.100818395731537,4.180577403206404,12613.000000000007,15155.748967072368
+course_b2cf7ba3be39c355,Using Data Analytics in Supply Chain,Unilever,Beginner,3.5779511277297553,3.6362075560936438,3784.0000000000014,4327.205855295433
+course_8b42fc8145b33573,Prompt Engineering for Educators Specialization,Vanderbilt University,Beginner,3.274388795550379,3.6360764417040428,1881.0000000000005,4325.899660206068
+course_623f7f0cb4fa4ace,What is Palliative Care?,University of Colorado System,Beginner,3.969974730121715,4.2583546297526,9332.000000000004,18128.19773917655
+course_fac70cb0af2ef5ff,Epigenetic Control of Gene Expression,The University of Melbourne,Not specified,4.705786763531621,4.663482504541031,50790.999999999956,46076.82063691702
+course_e7ba9b0eddb52b4b,FinTech Law and Policy,Duke University,Beginner,4.57422810328016,4.680300180627223,37517.000000000015,47896.1031702215
+course_6d54e646ef430f75,Teaching in University Science Laboratories (Developing Best Practice),University of Amsterdam,Intermediate,4.063145637106638,4.134729475766934,11564.999999999998,13637.333955211707
+course_8f71bd1d0e30c9e4,Data Analysis with R Specialization,Duke University,Beginner,5.178470454519378,5.043718175956672,150824.0,110590.5902371645
+course_e574290b1feef5b7,Clinical Trials Operations Specialization,Johns Hopkins University,Beginner,4.190919698912573,4.061792226936165,15521.000000000013,11529.015602775178
+course_e062acffdb094e47,Financing and Investing in Infrastructure,Università Bocconi,Not specified,4.7802164692102265,4.90777659837108,60286.000000000015,80867.98062565149
+course_0bc4d6578eb50b8a,"Excel/VBA for Creative Problem Solving, Part 3 (Projects)",University of Colorado Boulder,Advanced,4.393838332318475,4.43229606801674,24764.999999999985,27058.023399448215
+course_4c461bf0cc111d50,Java Enterprise Edition Specialization,LearnQuest,Intermediate,3.6193020758756083,3.6447391266497635,4162.000000000001,4413.052831014993
+course_dbcbf175ecc0cad1,Digital Transformation Using AI/ML with Google Cloud Specialization,Google Cloud,Beginner,3.9787281771384917,4.096415419027615,9521.999999999996,12485.772543888774
+course_fa12d8397bddc4ce,Manage Resources in Azure,Microsoft,Intermediate,3.553761698390004,3.3944154944092175,3578.999999999999,2479.7933692938045
+course_215874ba08c8e5d3,3D Data Visualization for Science Communication,University of Illinois Urbana-Champaign,Beginner,3.6555225962534177,3.396229937712634,4524.0,2490.175395548291
+course_6f8a70d68727c368,Gen AI Foundational Models for NLP & Language Understanding,IBM,Intermediate,3.2805783703680764,3.434058120787462,1908.0000000000005,2716.8028289600184
+course_643644b7f0ba471f,Hadoop Platform and Application Framework,University of California San Diego,Not specified,5.175189887084362,5.331774712769692,149689.00000000015,214671.65910024388
+course_9f35adb8dfe5895f,Introduction to Creative Thinking: Tools for Success,Imperial College London,Beginner,3.8923729073984363,4.4779986454158625,7805.0,30060.669265548633
+course_26968cb9302abce0,Coaching Skills for Managers Specialization,"University of California, Davis",Intermediate,4.576018677434666,4.5584286485614145,37672.0,36176.67501922889
+course_2c7539a57d3cf349,Wearable Technologies and Sports Analytics,University of Michigan,Intermediate,3.591064607026499,3.8175040506532496,3899.999999999999,6569.072434043347
+course_02403489efe26187,FPGA Capstone:  Building FPGA Projects,University of Colorado Boulder,Intermediate,3.8737854608182007,3.5448084600177143,7477.999999999999,3505.9721346849456
+course_30c4dab4fb2b5971,Generative AI: Elevate Your Data Science Career,IBM,Intermediate,4.069223957297052,3.9160375635973734,11727.999999999989,8242.094005864426
+course_6567e668323deac4,Intermediate Object-Oriented Programming for Unity Games,University of Colorado System,Intermediate,4.26119147205037,4.424098149708167,18246.999999999993,26552.05565466346
+course_0698f3bc7f1ef381,Storytelling in Branding and Content Marketing,IE Business School,Beginner,4.555251685522227,4.508809443273168,35913.00000000001,32270.778561400195
+course_70adaaf4ccb6653f,English for Effective Business Speaking,The Hong Kong University of Science and Technology,Not specified,5.100615197687914,4.734280024915809,126070.99999999991,54235.047507510906
+course_535255ce053dd858,Writing in the Sciences,Stanford University,Beginner,5.724452009940039,5.49612546545745,530215.0,313419.1045321556
+course_106b88ae2afbdaa8,AI Materials,Korea Advanced Institute of Science and Technology(KAIST),Beginner,3.243286146083446,3.5371716427382665,1751.0,3444.860523326224
+course_c5d5aa8041e4672a,Quantum Mechanics,University of Colorado Boulder,Advanced,4.342915917084086,4.4326061711066505,22025.000000000007,27077.350776137973
+course_5058045225d43b2d,Operations Systems Excellence,University of London,Not specified,3.659821158055705,3.6766426703895903,4568.999999999999,4749.442896034507
+course_0860ba4adfea7e33,Physics 102 - Electric Charges and Fields,Rice University,Intermediate,4.124830149413859,3.9499511619845658,13330.000000000002,8911.507193154182
+course_7e5fd953edea365c,Reputation Crisis? Facebook meets Cambridge Analytica,Erasmus University Rotterdam,Intermediate,3.208441356438567,3.42805657656349,1615.9999999999995,2679.5173691122363
+course_dc82cb87e34a8a91,Basic Information Literacy,The State University of New York,Beginner,3.8147801457458046,3.9997045518780547,6527.999999999998,9993.199369064547
+course_535c108b83414b34,Machine Learning for Computer Vision,MathWorks,Beginner,3.7481880270062002,3.4143831756591574,5599.999999999998,2596.4692024679835
+course_48ebc48f73b9842d,Epidemics,The University of Hong Kong,Beginner,4.082030981267012,4.208977195861355,12079.000000000004,16179.950769670288
+course_bcd0f73a5e571dad,Threat Response,Cisco Learning and Certifications,Not specified,3.3197304943302246,3.5480014840385636,2088.0000000000005,3531.843766650842
+course_7b31cf666c424792,Calculus through Data & Modeling: Limits & Derivatives,Johns Hopkins University,Beginner,3.8656960599160706,4.07056243889042,7340.000000000001,11764.201074555436
+course_7dc5ec055d1778c4,Cybercrime,"Royal Holloway, University of London",Beginner,3.28668096935493,3.4973499931677843,1934.9999999999998,3143.0406155334617
+course_bf9fb126c5eff7c5,Prompt Engineering Specialization,Vanderbilt University,Beginner,4.7539122931976445,4.638633543957577,56742.99999999998,43514.454540946106
+course_ed25d5e09c37b9e2,Networking in Google Cloud Specialization,Google Cloud,Intermediate,4.602700103721848,4.8399874763490685,40059.000000000015,69181.10210346502
+course_6553a90f88acab06,Intro to Operating Systems 4: Persistence,Codio,Intermediate,3.9150831016512004,3.6650096878209464,8223.999999999998,4623.913358625868
+course_8769e641c64a3c64,Israel State and Society,Hebrew University of Jerusalem,Beginner,4.1508178199016665,4.430693037594364,14151.999999999995,26958.333248743395
+course_08104cea9ad8c4c5,Computer Communications Specialization,University of Colorado System,Intermediate,4.762798559440545,4.656512533033203,57916.00000000006,45343.238291214
+course_56e0f11925f9737e,Web Design: Strategy and Information Architecture,California Institute of the Arts,Intermediate,4.873913209861144,4.680873229298122,74802.00000000007,47959.34347215487
+course_7d226635ac319382,Learning to Teach Online,UNSW Sydney (The University of New South Wales),Beginner,5.274160159334567,5.163813755608029,188000.99999999983,145818.87912974655
+course_5ffb9ae29efcaef2,Functional Programming in Scala Specialization,École Polytechnique Fédérale de Lausanne,Intermediate,4.865483002195347,5.037612042107924,73363.99999999993,109046.57815358766
+course_347bd76b57ac3ca5,"Mindfulness, Dignity, and the Art of Human Connection",University of Michigan,Beginner,3.3380578754197563,3.3791065396873465,2178.000000000001,2393.9029487400826
+course_e0b40caf7cd56697,Low Intermediate English: Technology,Voxy,Not specified,3.262213705476417,3.4520285820916197,1829.0,2831.578343477928
+course_3683a079a64c2142,The Science of Gastronomy,The Hong Kong University of Science and Technology,Beginner,4.996629861222035,4.741024666972636,99226.99999999991,55083.89819611663
+course_e02d9658829ea57e,Careers in Sustainability,Arizona State University,Beginner,3.675044735955893,3.6641643654661142,4732.000000000001,4614.922003768497
+course_9124569386ada589,Population Health: Health & Health Behaviour,Universiteit Leiden,Intermediate,3.735838334317074,3.7284662695385293,5443.0,5351.385894104504
+course_b94cd375d281f187,Climate Change and Human Rights,New York University,Beginner,3.9311526385232933,4.389834199365093,8534.000000000002,24537.7196015178
+course_d456e406a900c886,Getting Started with Tableau,SkillUp EdTech,Beginner,3.501196242027089,3.422174047599017,3171.0000000000005,2643.4679397129767
+course_3703772eef9668f0,Introduction to Cybersecurity Foundations,Infosec,Beginner,4.497109414310947,4.473035910922477,31412.999999999978,29719.117628838187
+course_7b8366311bc16895,Introduction to Programming with Python and Java Specialization,University of Pennsylvania,Beginner,4.748296587057236,4.638539649357644,56014.000000000044,43505.04771946923
+course_507e2ad6666f358a,Introduction to DevSecOps,Johns Hopkins University,Intermediate,3.7974752875373343,3.595425259298808,6273.0,3939.356267403707
+course_a5758d80eff2b915,The Nurse's Toolkit,University of Michigan,Not specified,3.325720858019412,3.3667787613278937,2117.0,2326.905581424598
+course_6c9154f1edc8df33,Introduction to C++ Programming and Unreal,University of Colorado System,Intermediate,4.289834121485031,4.138958904253342,19490.99999999999,13770.791546116723
+course_cdde155d9ea470fe,IoT Communications and Networks,Institut Mines-Télécom,Intermediate,3.4156409798961542,3.2994518708091922,2603.9999999999995,1992.7456547506492
+course_2de39193c475a2f5,"Modern Robotics, Course 2:  Robot Kinematics",Northwestern University,Intermediate,4.294576439201622,4.240473349686714,19705.000000000004,17396.959389927666
+course_6be04e8e2a481d58,Business Analytics Specialization,University of Pennsylvania,Beginner,5.282239076160264,5.506793558835321,191530.99999999997,321213.3293426556
+course_b725b0a9a33e2326,Social Computing,University of California San Diego,Not specified,4.432135157757712,4.727762573862186,27047.99999999999,53427.21961994132
+course_a1b191661e8344b7,Preparing for Graduate Study in the U.S.: A course for international students,University of Michigan,Beginner,4.500057998579122,3.870762498103778,31626.999999999985,7426.129153499691
+course_e713019365d1955f,Infrastructure Automation with Terraform,Whizlabs,Not specified,3.2390490931401916,3.397859696781129,1734.0000000000005,2499.537730336928
+course_5348b0514e4ddde8,Anti-Racism Specialization,University of Colorado Boulder,Beginner,3.2764618041732443,3.519298840678565,1890.0000000000007,3305.9694856177452
+course_dbf09f10a9287f90,Preparing for the AP Physics 1 Exam,University of Houston,Not specified,3.8312296938670634,3.7155291425899275,6780.0,5194.325279707598
+course_f118040c34eba697,Value-Based Care: Introduction to Value-Based Care and the U.S. Healthcare System,University of Houston,Beginner,3.9970804354717306,3.9874191458631363,9932.999999999996,9714.47077008823
+course_6f2058d26410664a,Data Science Capstone,Johns Hopkins University,Not specified,4.567108744832694,4.582074917329491,36907.00000000003,38201.01632567112
+course_c03c4514888304dc,Dog Emotion and Cognition,Duke University,Not specified,5.33018641954126,5.454102759594359,213888.00000000006,284513.4222730091
+course_7dd344418c311fb5,Teach English Now! Capstone Project 1,Arizona State University,Not specified,4.592065670432247,5.0272547242824785,39090.00000000002,106476.73470752602
+course_5ba862125b8c5b2b,EMT Foundations,University of Colorado System,Beginner,4.694210206198834,4.650709395627086,49454.99999999997,44741.382092478794
+course_faef8fbe7b991c5a,Blockchain: Foundations and Use Cases,ConsenSys Academy,Beginner,4.942573508416298,4.628491476688328,87613.99999999993,42510.03638516229
+course_df82e9dbc47429ac,The Finite Element Method for Problems in Physics,University of Michigan,Intermediate,4.8409086716903,4.585580198055082,69328.0,38510.59228686666
+course_cc1a3a4d91f8493e,HPE Aruba Networking Security Basics,HPE Aruba Networking,Beginner,3.3554515201265174,3.3478693350646385,2267.0,2227.7647872273456
+course_5f7157e1361dd99e,Generative AI Primer,Vanderbilt University,Beginner,4.278227557594742,4.064648483306335,18976.99999999999,11605.089210455415
+course_deb4c6afa20a8f80,Valuing nature and people to inform business decision-making,Capitals Coalition,Beginner,3.495405563146193,3.7213381367863625,3128.9999999999986,5264.269769800995
+course_a3c1a5339cf54381,FPGA Softcore Processors and IP Acquisition,University of Colorado Boulder,Intermediate,3.906388921152831,4.117131248002307,8061.000000000004,13095.776302574935
+course_6f31f95ffbabd9b1,Sustainable Consumption and Health,University of Michigan,Intermediate,3.36285930295868,3.371380581834459,2306.0,2351.6927583715583
+course_965526afc4c0e86c,Corporate Strategy,University of Illinois Urbana-Champaign,Intermediate,4.693507108634517,4.751338671256053,49375.00000000002,56407.736282016536
+course_4800683201432e38,Cloud Computing Law: Transactions,Queen Mary University of London,Beginner,3.5425764762605296,3.8491303572995497,3488.0,7065.29593495729
+course_3c4f1b9badb6fcdf,Mastering Software Development in R Specialization,Johns Hopkins University,Beginner,4.360347230975766,4.595367120813314,22927.000000000015,39388.28945764667
+course_7612f0211cb3202c,ADP Entry-Level Payroll Specialist Professional Certificate,"Automatic Data Processing, Inc. (ADP)",Beginner,3.7707047682157793,3.838344976279792,5898.0,6891.995358257568
+course_99dbf6f00e7ac0b7,Piano Scales for Modern Music,Berklee,Intermediate,3.5461723683169426,3.3162629746687635,3517.0,2071.395243585539
+course_ba11f25546ee7dff,User Interface Design Specialization,University of Minnesota,Intermediate,4.559511632301378,4.589267497426094,36267.0,38838.951525638986
+course_9019d65b0e581365,Instructional Methods in Health Professions Education,University of Michigan,Intermediate,4.3761022583701,4.440539588002744,23774.000000000004,27576.528140287846
+course_7298c201ca51fe47,Everyday Chinese Medicine 2,The Chinese University of Hong Kong,Beginner,4.093841766912128,3.9047967850124072,12411.999999999993,8031.502243542201
+course_d76a75845977cb47,Harnessing the Power of Data with Power BI,Microsoft,Beginner,4.903665046287759,4.812695880028169,80106.00000000001,64967.458851588526
+course_319d07a97580c4da,Introduction to Computers and Operating Systems and Security,Microsoft,Beginner,4.985300703593186,4.7744653306958185,96671.99999999991,59492.92622415304
+course_29cdf974ac4671cf,Data for Business Analysts Using Microsoft Excel,Microsoft,Beginner,3.909983694939844,4.009497919694826,8127.999999999997,10221.106645968177
+course_c2dc16fa7799e89c,Health Systems Development: Introduction to Health Systems,Imperial College London,Beginner,3.9731278535996988,4.059817496546502,9400.000000000002,11476.712345726279
+course_a9c4139d23fa1381,Rust Programming Specialization,Duke University,Beginner,3.760723972141952,3.932205341589074,5764.000000000003,8554.71098112189
+course_2310f5a000c2af53,"Advanced Data Structures, RSA and Quantum Algorithms",University of Colorado Boulder,Advanced,3.3005954838899636,3.525900785449832,1998.0000000000005,3356.6092376400793
+course_562333c64bc4582e,Concept Art for Video Games,Michigan State University,Not specified,3.99140330258004,3.9380964109778267,9803.999999999996,8671.543578734974
+course_d895ceff411fdd9c,IBM AI Developer Professional Certificate,IBM,Beginner,5.12029418179988,5.331427863676007,131914.99999999994,214500.2801207213
+course_22ed4caf50f01e3f,Decision Making and Reinforcement Learning,Columbia University,Intermediate,3.4667193716815987,3.539867929827807,2929.0000000000005,3466.3142283330526
+course_0ffcd96bbb68de44,Cybersecurity Policy for Water and Electricity Infrastructures,University of Colorado System,Beginner,3.72607487021537,3.988716966663068,5322.000000000001,9743.544358423565
+course_7faeb55456172d48,IBM Full Stack Software Developer Professional Certificate,IBM,Beginner,5.259553266391977,5.20263667172739,181782.99999999985,159454.46022097132
+course_220f4f26a649c168,Fundamentals of Good Clinical Practice: Prep and Personnel,Novartis,Beginner,3.5901728315963144,3.6568650917972474,3892.000000000001,4538.006272077861
+course_5d30697b892c9bd2,US Social Services Compared,Columbia University,Beginner,3.765594055319445,4.038147720715578,5829.000000000003,10918.116415824985
+course_979fbfac97c8b96c,Qualitative Research,"University of California, Davis",Intermediate,4.512991068415215,4.55456515281486,32583.000000000007,35856.27357877162
+course_87b29c6a0a0c010e,Introduction to Risk Management,New York Institute of Finance,Beginner,4.549493713215013,4.646464836021704,35440.000000000015,44306.23391423213
+course_3c55f8ead4918d1c,Object-Oriented Programming in C++: Functions,University of London,Intermediate,3.406199423663313,3.591583324973469,2548.0,3904.660912552161
+course_7f08b4d4f1c87b14,Municipal Solid Waste Management in Developing Countries,École Polytechnique Fédérale de Lausanne,Intermediate,4.978317496746751,5.072616820629943,95129.99999999996,118199.82148258285
+course_ec982c25b1a980f1,Robotics Specialization,University of Pennsylvania,Beginner,4.7650498219029505,4.932546741043467,58217.00000000006,85614.38494404728
+course_3e9666beeb5c3dc4,Mathematics for Machine Learning: Linear Algebra,Imperial College London,Beginner,5.596293533161889,5.537316386971363,394724.0,344600.8838160313
+course_921fd9269559b43c,Planning for Climate Change in African Cities,United Cities and Local Governments of Africa,Intermediate,4.041471640613747,4.052744078869977,11002.000000000007,11291.30344456924
+course_f40a04bcaaf08bb0,Leading Oneself with Purpose and Meaning,University of Colorado Boulder,Beginner,3.354876422516234,3.5195720644788104,2264.000000000001,3308.049994987638
+course_f21c5afc5ab7cbbe,Emotional Intelligence,Arizona State University,Beginner,3.47158505418519,3.44591839766936,2962.000000000001,2792.019181846143
+course_9cf3b0870be840f7,Implementation of PhET Activities for STEM Education,University of Colorado Boulder,Intermediate,3.5240064455573727,3.3985972249246448,3342.000000000002,2503.7861048921304
+course_13b4d82a76dbc79b,Google Cloud Digital Leader Training Professional Certificate,Google Cloud,Beginner,4.710396646013606,4.556392557954357,51333.00000000004,36007.46589016564
+course_c250964c79aa601c,Introduction to Cybersecurity Essentials,IBM,Beginner,4.586902222733238,4.4788201815697475,38628.0,30117.587555987833
+course_e4020438101f790b,Launch Your Online Business,The State University of New York,Beginner,5.090885579993219,4.64453092508585,123278.00000000007,44109.377125038394
+course_0932c4752f7d40c1,Working with Data in iOS,Meta,Intermediate,3.6766936096248664,3.832726202221245,4749.999999999997,6803.403078923399
+course_8358cac63bca9128,Product Management: Developing and Delivering a New Product,SkillUp EdTech,Beginner,3.684755622108624,3.711103832945425,4839.000000000003,5141.6656598653035
+course_039c43faeafa0635,Expressway to Data Science: Essential Math Specialization,University of Colorado Boulder,Intermediate,4.019822224167774,4.118636750240453,10467.00000000001,13141.252203407601
+course_3be2c7a4562d701c,Design and Conduct of Clinical Trials,Johns Hopkins University,Beginner,4.217878578027433,4.011221761203785,16514.999999999993,10261.757825191366
+course_a6f1a9781a587edc,Combining Scrum with Other Agile Methodologies,LearnQuest,Beginner,4.32376758329678,4.452184063448905,21075.0,28325.92255650356
+course_ca28a3f0444dbcd0,Introduction to Deep Learning,University of Colorado Boulder,Intermediate,4.0305997219659515,3.5682126321096432,10730.000000000011,3700.092932943743
+course_a3f62181e40e6929,Strategic Leadership and Management Specialization,University of Illinois Urbana-Champaign,Beginner,5.121316860189715,5.036211188594084,132226.00000000012,108695.40588259241
+course_7aa6ca32a4995580,Customer-Centric IT Strategy,University of Virginia,Beginner,4.370513089598592,4.702025739433587,23469.999999999993,50353.04507616691
+course_a64e02ad0f8732cf,"Animals, Self, and Society",University of Colorado Boulder,Beginner,3.7589118923979736,3.8714349844849543,5740.000000000002,7437.637103519911
+course_a0dc96d2ed50f80f,Game Design and Development with Unity 2020 Specialization,Michigan State University,Beginner,4.335197045077562,4.193740804910694,21637.00000000002,15622.150051561131
+course_972e8f576402c2a7,ChatGPT Advanced Data Analysis,Vanderbilt University,Beginner,4.859246406944984,4.531802396522664,72318.0,34025.33396069242
+course_21e42ec290605eec,Data Warehousing Capstone Project,IBM,Intermediate,3.3326404103874627,3.4437802828497084,2151.000000000001,2778.307318030233
+course_9bf447bcbdb940f3,Leadership in Interprofessional Informatics,University of Minnesota,Intermediate,3.5024271199844326,3.537797385877956,3179.999999999999,3449.827548230388
+course_9db408e7415cd569,Data Visualization and Communication with Tableau,Duke University,Not specified,5.3469082033117274,5.283441425649859,222283.99999999988,192061.99056175753
+course_00d0d6e7e845d953,Sustainable Tourism – promoting environmental public health,University of Copenhagen,Beginner,4.592731766393962,4.6823492837191925,39150.0,48122.62216847487
+course_ec510a2ec264edd2,"Cameras, Exposure, and Photography",Michigan State University,Not specified,5.444786212617859,5.4354864708852055,278475.00000000006,272575.2825122784
+course_e247c84f143be02f,Introduction to HTML5,University of Michigan,Beginner,5.757700383812586,5.693848294521757,572401.0,494138.047116138
+course_a08b910600e5f232,Intellectual Humility: Practice,The University of Edinburgh,Beginner,4.151584339359896,4.181782642742896,14176.999999999987,15197.867110656684
+course_807eeff5493a1269,Managing Google Cloud's Apigee API Platform for Hybrid Cloud Specialization,Google Cloud,Beginner,3.2390490931401916,3.362599249819137,1734.0000000000005,2304.6195932545747
+course_9e342bdb684973cb,"Medical Terminology, Anatomy, and Physiology Fundamentals",MedCerts,Beginner,3.9869507878585164,3.8525021929062233,9703.999999999996,7120.363953133626
+course_e1c27e7c570a121b,MATLAB Programming for Engineers and Scientists Specialization,Vanderbilt University,Beginner,4.947605249035348,5.072112301609663,88635.00000000009,118062.58871624114
+course_df0009c2da7576e3,Medical Neuroscience,Duke University,Advanced,5.561182508007922,5.155438508647782,364067.99999999994,143033.74463318757
+course_3bbfbe3065651e7c,Diversity and Inclusion for HR Professionals,"University of California, Irvine",Beginner,4.257078305966568,4.304619597271566,18075.0,20165.99231139897
+course_f3c55464206489f8,Learning Technologies Foundations and Applications,University of Illinois Urbana-Champaign,Not specified,4.068779363009561,4.046133599229482,11716.000000000005,11120.737747996158
+course_506450bcbdee1a5e,Value-Based Care: Organizational Competencies,University of Houston,Beginner,3.182984967003582,3.347390698842593,1524.0000000000007,2225.3109187055866
+course_94722743fadf11ac,Project Management Fundamentals,LearnKartS,Beginner,3.7023443583557687,3.664950652582571,5039.0,4623.284855878531
+course_ec2e1238d6714aed,Palliative Care Capstone Projects,University of Colorado System,Beginner,3.325515663363148,3.5826656116978253,2116.0,3825.300979736729
+course_1f7f6ceaa252b6b3,Parallel Programming in Java,Rice University,Intermediate,4.678609416558926,4.858389392519846,47709.99999999997,72175.43208742933
+course_cbcfe28122555714,"Philosophy, Science and Religion: Science and Philosophy",The University of Edinburgh,Beginner,4.749372963600887,4.793392299379173,56152.999999999985,62143.01202836887
+course_04cf7ae1065e91ee,BIM Fundamentals for Engineers,National Taiwan University,Beginner,4.9686090157494895,4.927163048370263,93026.99999999994,84559.6250097319
+course_9042690d86c11adf,Becoming a changemaker: Introduction to Social Innovation,University of Cape Town,Beginner,5.0617502004883965,4.861280716524244,115278.99999999994,72657.54449337319
+course_71c1de9a8cd520b8,Digital Content Planning and Management,University of Illinois Urbana-Champaign,Beginner,3.65571454961871,3.5366445618879285,4526.0,3440.682209504135
+course_fcfc8696f076bbba,Music Production Capstone,Berklee,Intermediate,3.6909930320998696,3.8897899781469727,4909.000000000002,7758.718195637642
+course_8fe6c778e2097890,C++ Programming: Classes and Data,University of London,Intermediate,3.57611089412084,3.7248150735053045,3768.0000000000014,5306.584369833651
+course_840bdedfd7970f8e,Real Estate Financial Modeling,Coursera Instructor Network,Beginner,3.185258765296585,3.207543964634401,1531.9999999999993,1612.6642728072227
+course_d11cc778fc40b31e,Internet of Things: Setting Up Your DragonBoard™ Development Platform,University of California San Diego,Not specified,4.1759175065100935,4.347753046118984,14993.999999999995,22271.683492159395
+course_ce4d7d2338b0b86b,GenAI and LLMs on AWS,Duke University,Beginner,3.366236123718293,3.399764987735908,2324.0000000000005,2510.52752770566
+course_0254aae09326c41d,Personality Types at Work,University of Florida,Beginner,4.920905604164024,4.701992797906832,83349.99999999997,50349.22590888456
+course_d765aca51f6fa825,Networking and Security Architecture with VMware NSX,VMware,Intermediate,4.726409316259979,4.428711635113471,53261.00000000004,26835.620098822437
+course_3c56d14268889801,The Future of Payment Technologies,University of Michigan,Beginner,4.72493909600082,4.923916442982714,53081.000000000044,83929.8492352823
+course_810c524ee4953759,Introduction to Clinical Data,Stanford University,Beginner,4.37390459247497,4.439772163996529,23654.0,27527.841814408843
+course_100e063d21a64eaa,Cyber-Physical Systems: Modeling and Simulation,"University of California, Santa Cruz",Intermediate,4.02938377768521,3.663160842632999,10700.000000000002,4604.270629436846
+course_4559e8ed7aeab9d1,Introduction to Academic Writing,O.P. Jindal Global University,Beginner,4.202161247019353,4.052089976955529,15927.999999999987,11274.310126829096
+course_c9af637a56a536e6,Thought Experiments: An introduction to philosophy,Erasmus University Rotterdam,Intermediate,3.702775077901044,3.3294328684992296,5044.000000000003,2135.172014203302
+course_3ecd3cf6dc86b3bd,Sustainable Business Enterprises,University of Illinois Urbana-Champaign,Beginner,3.9507541815935037,4.328031110039615,8928.000000000004,21282.914975199612
+course_d6dc194f0ca33efd,Biochemical Principles of Energy Metabolism,Korea Advanced Institute of Science and Technology(KAIST),Beginner,4.5916099165733,4.629028277603288,39049.0,42562.61254243716
+course_2f149c337c5ce577,"Extinctions: Past, Present, & Future",Emory University,Beginner,4.002252479920538,4.0155690565024225,10052.0,10364.994035159421
+course_5082d38882f4e3de,MLOps Platforms: Amazon SageMaker and Azure ML,Duke University,Advanced,3.8152455919165633,3.904707214077018,6535.000000000004,8029.845959572438
+course_13bee5c8e884921a,Econometrics for Economists and Finance Practitioners Specialization,Queen Mary University of London,Intermediate,3.575880315680646,3.5235287205161097,3765.999999999998,3338.3258126275236
+course_9b186836650351ae,C++ Class Development,University of Colorado System,Intermediate,3.4991369945373827,3.405762788431331,3156.0,2545.439554188845
+course_c858f2aa0e2150c4,World Design for Video Games,California Institute of the Arts,Beginner,4.56075524189913,4.742288799629091,36370.99999999998,55244.46849877015
+course_da2080a107c02283,Applied Digital Literacy Specialization,The State University of New York,Beginner,3.3378584290410944,3.4552584353869498,2177.0000000000005,2852.7153263157315
+course_896c73e7d963f5a4,Introduction to Electronics,Georgia Institute of Technology,Not specified,5.37902435935049,5.150134269598731,239345.00000000017,141297.43223822932
+course_1f4327e7d6311699,Healthy Aging and the Future of Cannabis Research,University of Colorado Boulder,Beginner,3.661812685537261,3.790768430056885,4589.999999999997,6176.869557625639
+course_3d3270be66d299f1,When Disaster Meets Conflict,Erasmus University Rotterdam,Intermediate,3.8590181438888944,3.7946483730059466,7228.000000000003,6232.300322872808
+course_3870cc2b9fd337a4,Introduction to Generative AI Learning Path Specialization,Google Cloud,Intermediate,4.415607622664147,4.39874601066038,26038.00000000001,25046.4402847398
+course_35b8817f8230518a,The Importance and Power of Music in our Society,Universiteit Leiden,Beginner,4.1126720171171325,3.846957520412859,12962.00000000001,7030.0355372971335
+course_05f3b30dda8a4b1a,Unordered Data Structures,University of Illinois Urbana-Champaign,Not specified,4.272375437300545,4.606462745569684,18723.000000000004,40407.57108078318
+course_0e1a94e788a5ea00,Mindfulness and Well-being: Living with Balance and Ease,Rice University,Beginner,4.538510897304987,4.367013029839685,34554.99999999997,23281.611068392063
+course_3a3f8faf1ea69edf,Cyber Security Fundamentals,University of London,Beginner,4.319792888480451,4.197931051176179,20882.99999999999,15773.608271725912
+course_cc40db3fdd574c93,Teaching Character and Creating Positive Classrooms,Relay Graduate School of Education,Not specified,4.932143859716962,4.629796079986056,85534.99999999993,42637.926831279496
+course_7aeaf893f7996e83,Career Success Specialization,"University of California, Irvine",Beginner,5.322504594519504,5.377641846647724,210138.00000000012,238584.29178648518
+course_29eea409a048b00c,Advanced Semiconductor Packaging,Arizona State University,Beginner,3.2617385473525378,3.6820993092219982,1826.9999999999998,4809.493135624746
+course_1bce3bbbb6d5e2e4,Professionalism in Allied Health,MedCerts,Beginner,4.534990134158752,4.531994438854985,34276.00000000002,34040.38307987681
+course_2d92121b5abe85f2,"Cloud Virtualization, Containers and APIs",Duke University,Beginner,4.139280732718524,4.117236844555182,13781.000000000002,13098.960862878801
+course_baf9b9498f58b768,The Fundamentals of Revenue Management: The Cornerstone of Revenue Strategy,ESSEC Business School,Not specified,4.462637542572378,4.788922625883101,29016.000000000015,61506.72822605586
+course_9ec6eb83bafd4a5e,Attention Mechanism,Google Cloud,Advanced,3.5286596452349897,3.6930535654606085,3377.999999999998,4932.346352854393
+course_b282ba423d058c2e,Tropical Forest Landscapes 101: Conservation & Restoration,Yale University,Beginner,3.998302940098541,4.0380631640547255,9960.999999999996,10915.990877421304
+course_2577de6f578cb2af,Meta Social Media Marketing Professional Certificate,Meta,Beginner,5.6291383352199995,5.808132686267144,425733.99999999994,642884.1021798899
+course_65c6120b3bad006a,Silicon Thin Film Solar Cells,École Polytechnique,Advanced,3.8385972528166565,4.085660195742013,6896.000000000003,12180.362000957402
+course_c2450a6ac77921a1,Advanced Data Visualization with Tableau,SkillUp EdTech,Intermediate,3.2773799746672547,3.5514203829039306,1894.0000000000005,3559.7572475469306
+course_16b5e4c481c4dc77,.NET FullStack Developer Specialization,Board Infinity,Intermediate,3.9947569445876283,4.126833568222999,9880.000000000004,13391.63390426341
+course_25186406115c19a4,Electronic Music Production Specialization,Berklee,Intermediate,4.398217868234877,4.207266627692008,25015.999999999993,16116.347672021679
+course_df8947014331f2ea,Aruba CX Switching for Cisco Professionals,HPE Aruba Networking,Intermediate,3.3895204658463776,3.4051990502666962,2452.000000000001,2542.1375769462784
+course_3b209142b7a28252,Applying to U.S. Universities,University of Pennsylvania,Beginner,5.074677502679902,4.484076700588744,118761.99999999993,30484.333247774754
+course_4c20f87f9c96694c,Flight Mechanics - Anemobarometry,ISAE-SUPAERO,Intermediate,3.540579716504454,3.6686372348917704,3471.9999999999986,4662.697436402731
+course_548741f8e170f75a,Introduction to Customer Service,CVS Health,Beginner,4.08192310435106,4.1961993255930095,12075.999999999996,15710.837099684051
+course_f20f0aef9dd4d20d,Oil & Gas Industry Operations and Markets,Duke University,Not specified,5.166059902856835,5.291454135752144,146575.00000000012,195638.41504681893
+course_c9cdd1eb9fe15b8c,Principles of Economics: Macroeconomics - The Big Picture,Rice University,Beginner,3.5101426994025733,3.606742918123635,3237.0000000000014,4043.3647269599774
+course_35da869b5391812b,Linear Regression and Modeling,Duke University,Beginner,4.990290005012757,4.917025656057735,97788.99999999993,82608.67494220039
+course_13ee29d5d93584ff,Circular Economy - Sustainable Materials Management,Lund University,Beginner,4.870152152234078,4.970771146887132,74157.00000000003,93491.28884536996
+course_f463454478d2566c,Clinical Data Models and Data Quality Assessments,University of Colorado System,Intermediate,3.8903092168999485,3.8850077236358764,7768.0,7673.751364922316
+course_27fb3af710138ccc,Doing Economics: Measuring Climate Change,University of London,Beginner,3.7132384615456617,3.7249872218055176,5167.0,5308.688243114151
+course_a8bf9e1201cf4fde,Text Mining and Analytics,University of Illinois Urbana-Champaign,Not specified,4.854579288014934,4.698984680972144,71544.99999999994,50001.689738729365
+course_7a6408e6ea05b11f,Evolution Today,Universiteit Leiden,Beginner,3.9990870226258886,4.25277587689029,9979.000000000004,17896.82027842041
+course_2f787a832c1a467a,Creating Advanced Reports with SAS Visual Analytics,SAS,Intermediate,4.007192823557041,4.1266255406059615,10167.00000000001,13385.22083040706
+course_68d7e0bc65167844,Designing Autonomous AI,University of Washington,Beginner,3.4379090355394983,3.476159531153315,2740.9999999999995,2993.363999216559
+course_e2093fa0cf5d56d9,Environmental Hazards and Global Public Health,University of Michigan,Beginner,3.6799726942774185,3.823649590372013,4785.999999999999,6662.6897450339975
+course_c10d7e97714c0d44,Artificial Intelligence: an Overview Specialization,Politecnico di Milano,Beginner,3.7368743616484226,3.8135378155754727,5456.000000000001,6509.352876389293
+course_d5439e80dd9c5a6c,Creative Thinking Tools for Success and Leadership Specialization,Imperial College London,Beginner,3.472317546316842,3.562380211364504,2967.0,3650.7341752900124
+course_ad82de5790c1b200,Water: an essential resource,Politecnico di Milano,Beginner,3.4473131088235682,3.350471006481119,2801.0,2241.1504214863467
+course_300b792ff4cec39c,"Health Systems Development: Health systems, Policy and Research",Imperial College London,Beginner,3.6482624057480444,3.7259277727221027,4448.999999999999,5320.197719913884
+course_3101435f6531c95c,Esports Specialization,"University of California, Irvine",Beginner,3.739572344450092,4.022045210225714,5490.0,10520.713891666206
+course_2dfe1fb0d7dd1db1,Teaching the Violin and Viola: Creating a Healthy Foundation,Northwestern University,Not specified,4.3688630818982945,4.18842268381858,23380.999999999978,15432.016671711095
+course_e134ff1d80e39af6,Business Statistics and Analysis Capstone,Rice University,Not specified,4.314856957779571,4.363101721821251,20646.99999999998,23072.875455906968
+course_1c6474f7c75f7650,The Fundamentals of Personal Finance Specialization,SoFi,Beginner,4.140225125266448,4.026718796866592,13810.999999999996,10634.542148747398
+course_2ad150666c9215b8,Portfolio and Risk Management,University of Geneva,Not specified,4.863679667875898,4.8935407819590315,73060.00000000003,78260.16909913851
+course_865cd2c032daf16c,"Dynamic Programming, Greedy Algorithms",University of Colorado Boulder,Advanced,4.424097239400547,4.259295954038646,26551.999999999975,18167.532845569764
+course_91efc93d0775f0dd,Fibonacci Numbers and the Golden Ratio,The Hong Kong University of Science and Technology,Beginner,4.587609954556331,4.714857522043911,38690.99999999996,51862.98653518362
+course_81f49acd37692ebe,Light Emitting Diodes and Semiconductor Lasers,University of Colorado Boulder,Advanced,4.053539396452824,3.835143477259921,11311.999999999998,6841.376275411172
+course_6a1f71f9da15b05b,Fitting Statistical Models to Data with Python,University of Michigan,Intermediate,4.5386616896384036,4.6413357256408,34566.99999999998,43786.04566330152
+course_bab165f32461a8d7,Business Analysis Process,Tableau Learning Partner,Beginner,4.027471927021278,4.076017593883908,10652.999999999996,11912.902679040366
+course_1b4d163da68e1a38,IoT Enabled Farming,EDUCBA,Beginner,3.386855529184724,3.514793593005277,2436.9999999999995,3271.851567392952
+course_c1d2cfd1dcb3563a,Intermediate Object-Oriented Programming for Unreal Games,University of Colorado System,Intermediate,3.4658288153574364,3.3608156785200958,2922.9999999999995,2295.174332907886
+course_abc4b678ecb524f5,Everyday Chinese Medicine,The Chinese University of Hong Kong,Intermediate,4.829110710155295,4.685241300731995,67470.0,48444.14559888286
+course_4c9b193c1b48b4e9,Caring for Others Specialization,University of Colorado Boulder,Beginner,3.1953460583484197,3.372500755032342,1568.0000000000002,2357.766294996205
+course_e0f10614a9630dd5,Introduction to Cloud Identity,Google Cloud,Beginner,4.8747368690562505,4.863566454540795,74944.00000000003,73040.95695755475
+course_c6137f89cf9894dc,Tidyverse Skills for Data Science in R Specialization,Johns Hopkins University,Beginner,3.499549625905149,3.684874779325769,3159.000000000001,4840.327856802326
+course_b4f36bf96397b4de,Writing and Disseminating Grey Literature,Indian Institute for Human Settlements,Not specified,3.433449793761596,3.377871157668118,2712.999999999999,2387.102994975818
+course_c5a6f05f21b2d01e,What is Data Science?,IBM,Beginner,6.024134149224014,6.002975705262069,1057144.0000000002,1006875.341963487
+course_ab4b14335c10f2c2,Managing Human Capital in Retail,University of Pennsylvania,Beginner,3.475380593143361,3.7931372937597176,2987.999999999999,6210.653409359671
+course_4fd5839d3a4765a6,Practical Data Science with MATLAB Specialization,MathWorks,Beginner,4.428183406361945,4.313864477586546,26803.00000000002,20599.86990130971
+course_e883d739b28e7f2a,"Healthy Practices: Nutrition, Physical Activity, and Community and Family Participation",University of Colorado System,Beginner,4.407288905531389,4.591067408233444,25544.000000000022,39000.25155148806
+course_25552bbd2e10547e,Healthier Materials and Sustainable Building Specialization,"Parsons School of Design, The New School",Intermediate,3.2329961103921536,3.4853953106387183,1709.999999999999,3057.7030794938296
+course_4e45ca9c3477f03f,Ubiquitous Learning and Instructional Technologies,University of Illinois Urbana-Champaign,Not specified,3.978408792623039,3.8172891776286044,9514.999999999998,6565.823101168903
+course_a6673c1e856b7cab,Mastering Final Cut Pro,LearnQuest,Beginner,4.7083784034878855,4.329943260257255,51094.999999999985,21376.82787093232
+course_84eb9aab1d4f3a60,Mindfulness: An Approach to Stress Reduction,Korea Advanced Institute of Science and Technology(KAIST),Beginner,3.881783955593385,3.4346127010777074,7617.000000000004,2720.2743160927066
+course_8e160b44c50217f6,Evaluations of AI Applications in Healthcare,Stanford University,Beginner,4.198079476171031,4.442553024282005,15778.999999999998,27704.672729580907
+course_274886d79cf48773,English Upper Intermediate B2.1,Università di Napoli Federico II,Intermediate,3.6450290647211423,3.4252976568164133,4415.999999999998,2662.5492930100877
+course_2064709d31f4acb7,Data Storage in Microsoft Azure,Microsoft,Intermediate,4.301659266551521,4.490084059404287,20029.000000000004,30908.936292330352
+course_7da24b8c84bfa7b1,Genomics: Decoding the Universal Language of Life,University of Illinois Urbana-Champaign,Beginner,4.632092696264134,4.4652058919323405,42863.99999999999,29188.104464829303
+course_a8d1e95e57b613dd,"Capstone MOOC for ""Android App Development""",Vanderbilt University,Not specified,4.081599312732936,3.738477182380458,12067.0,5476.173286596071
+course_bbd8b53319f2eb6f,Anatomy: Musculoskeletal and Integumentary Systems,University of Michigan,Beginner,5.064210820320425,5.022928651307983,115933.99999999994,105421.36891555056
+course_fbc6fa605cc7c00b,Constitutional Struggles in the Muslim World,University of Copenhagen,Not specified,4.570215928477933,4.616569772526048,37172.0,41358.97551734372
+course_62bab0ba24697030,"English for Science, Technology, Engineering, and Mathematics",University of Pennsylvania,Beginner,5.313173059668179,5.156374958590811,205671.0000000002,143342.49470979034
+course_37b0543d1e3c164e,Corporate Finance Essentials II,IESE Business School,Intermediate,3.9248992640142837,3.9684701002792213,8412.000000000004,9299.72487058358
+course_f3ad753b67bc8c16,Introduction to AI and Machine Learning on Google Cloud,Google Cloud,Beginner,4.139217700137586,3.9885261345864813,13778.99999999999,9739.263916401012
+course_1a0fae7238aaf631,Introduction to Integrative Therapies and Healing Practices,University of Minnesota,Beginner,4.425974160919376,4.476751843924662,26666.99999999998,29974.492856030778
+course_546b1a83b4ff265c,Cultural impact of housing displacement gentrification,University of Glasgow,Intermediate,3.2380461031287955,3.536577594469157,1730.0000000000002,3440.1517034714357
+course_c94ef66201334bbf,Science & Religion 101,University of Alberta,Not specified,4.099991233544684,4.239025321428122,12588.999999999993,17339.050896975546
+course_3fce2ab684280995,Google Cloud Big Data and Machine Learning Fundamentals,Google Cloud,Beginner,5.508716862932259,5.566915854874451,322639.0000000003,368906.1156016088
+course_fabaa2b8455b5ee7,Operating Systems and You: Becoming a Power User,Google,Beginner,5.729351107427528,5.791258596317063,536229.9999999995,618384.5014192666
+course_cc6d4f7d9d3b4356,Design of High-Performance Optical Systems,University of Colorado Boulder,Advanced,3.824060717418653,3.723624767261956,6669.000000000002,5292.06009505465
+course_4c6a1ff906fd31d9,Conduct UX Research and Test Early Concepts,Google,Beginner,5.413634997198556,5.393224739844722,259200.00000000003,247300.35502998112
+course_8bbc399953634c45,Akamai Customer Consulting and Support Professional Certificate,"Akamai Technologies, Inc.",Beginner,3.379668034033654,3.467843269940344,2397.0,2936.589691599241
+course_769a21b153123059,The 360º Corporation: Tools for Achieving Corporate Purpose,University of Toronto,Beginner,3.669409867287783,3.753326739361367,4671.000000000001,5666.6545673216515
+course_75157d502c5e1ac1,Wind Energy,Technical University of Denmark (DTU),Not specified,5.2178838373898575,5.517937273742316,165151.99999999988,329562.1092453693
+course_2632bc0e9a8d677a,"Applied Public History: Places, People, Stories",University of London,Beginner,3.788945727023748,3.8942056054988665,6151.000000000002,7838.006250932624
+course_f3c3436d811ea0e2,Microsoft UX Design Professional Certificate,Microsoft,Beginner,3.9007493580610797,3.884629097237129,7957.000000000003,7667.064154276064
+course_26c6bff05098fade,Detecting and Mitigating Cyber Threats and Attacks,University of Colorado System,Beginner,4.366385596953946,4.421813808741053,23247.999999999985,26412.761434280626
+course_64e6be0c3f380b23,Brand Management: Strategies for a Strong Brand,Coursera Instructor Network,Beginner,3.9634100156802288,3.9262689692697808,9192.0,8438.572175213953
+course_7f8bb1aedc90721b,Computational Methods in Pricing and Model Calibration,Columbia University,Intermediate,3.8640955734242475,3.7378042033725203,7313.0,5467.694026784241
+course_b377cac981e30427,Patient Safety Specialization,Johns Hopkins University,Beginner,4.334574371754929,4.413118748337985,21606.0,25889.207021897382
+course_5fefcf76b250ab3c,Writing in English at University,Lund University,Beginner,5.406955541953784,4.551480997271412,255243.99999999974,35602.541166099516
+course_0655c70d97e44461,Data Analysis and Visualization Foundations Specialization,IBM,Beginner,4.545566873074014,5.020898492728328,35120.99999999999,104929.71486786187
+course_d3e597633cb2523e,Lesson | Express Yourself: Pronunciation,Georgia Institute of Technology,Not specified,5.046857900380879,4.4561068712940735,111392.99999999994,28582.938264947585
+course_8fbd50bfbdaccb2a,Analyzing and Visualizing Data in Looker,Google Cloud,Beginner,4.34411706783031,4.304529000259746,22085.999999999985,20161.785976359934
+course_dde639a2b2fe7b75,Intellectual Property Law Specialization,University of Pennsylvania,Intermediate,4.408409578468429,4.4542790397747,25609.99999999998,28462.8929744617
+course_95926e00b2f339ee,Data Science Fundamentals with Python and SQL Specialization,IBM,Beginner,4.739216219393725,5.057137698506283,54854.999999999956,114061.13753611862
+course_036445790520ed45,AI Engineering Specialization,Scrimba,Intermediate,3.6481647785740012,3.4751230207206576,4448.000000000002,2986.2283951321815
+course_b89049dd4ce79447,Fundamentals of Reinforcement Learning,University of Alberta,Intermediate,4.966798546383361,5.0945927890243405,92639.99999999991,124334.82545724073
+course_18e05ee9cb5ca878,Linux Fundamentals,LearnQuest,Beginner,4.647940152753331,4.672941332019664,44456.99999999998,47091.370730108334
+course_7ffca242cbdace55,Oracle SQL Databases Specialization,LearnQuest,Beginner,4.247482260677054,4.194426496446675,17679.999999999985,15646.834769730613
+course_353e06c511d8a11a,"Foundations of Sports Analytics: Data, Representation, and Models in Sports",University of Michigan,Intermediate,4.330210784571528,4.2110264452018065,21389.999999999993,16256.4774221135
+course_cf2285a638da5085,Data Visualization with Tableau,Tableau Learning Partner,Beginner,4.057932227380609,4.069468334844045,11427.0,11734.601203809703
+course_c85e47495c63be50,Project Execution: Running the Project,Google,Beginner,5.6076908722146115,5.539748485860817,405220.00000000006,346536.1019371445
+course_af8ce639c229addd,Introduction to Computers and Office Productivity Software,The Hong Kong University of Science and Technology,Not specified,4.948862677593486,4.94112690853363,88892.00000000003,87322.65033472089
+course_8289ba794824e1ce,Branding and Customer Experience,IE Business School,Intermediate,4.5364826869272,4.481278005891934,34394.0,30288.516732218373
+course_502744d242338c62,Physics 102 - AC Circuits and Maxwell's Equations,Rice University,Intermediate,3.4871383754771865,3.37226253289016,3070.0000000000005,2356.473351744514
+course_9308ae4ee532e345,Introduction to Logic and Critical Thinking Specialization,Duke University,Beginner,4.609722437865238,4.380137951772344,40711.99999999997,23995.95019000646
+course_0b2ca348c8dc5c74,Immunology: The Immune System and its Failures Specialization,Imperial College London,Intermediate,3.7873187566245474,3.8617664023391893,6127.999999999998,7273.884526926909
+course_718606e8e964f9c8,Agile Planning for Software Products,University of Alberta,Not specified,4.822213861011698,4.890899399896731,66407.0,77785.63472931871
+course_d0ca9b8574fcd307,Python for Cybersecurity Specialization,Infosec,Intermediate,4.270469206453198,4.191541928540782,18640.999999999996,15543.2534436538
+course_b02630e62cc9ee72,Christianity & Ecology,Yale University,Beginner,3.3847117429382823,3.466808600327542,2424.9999999999986,2929.601844059284
+course_c2b1143997928c12,Particle Dynamics,Korea Advanced Institute of Science and Technology(KAIST),Intermediate,3.526339277389844,3.584554927345241,3360.0000000000005,3841.978474851904
+course_2241f6506ff79ede,AI in Healthcare Capstone,Stanford University,Not specified,4.091350352313579,4.1494282257179576,12340.999999999993,14106.790793505492
+course_369a43d30399132a,Astronomy: Exploring Time and Space,University of Arizona,Beginner,5.389890485769405,5.181375618643069,245408.99999999977,151836.30226221035
+course_61145fd14278bafd,"Campaign Performance Reporting, Visualization, & Improvement",Unilever,Beginner,3.2762319579218335,3.4321395941097004,1888.9999999999998,2704.8276298839714
+course_bf3e2258d3493d82,ICT in Primary Education: Transforming children's learning across the curriculum,University of London,Beginner,4.277677962606253,4.3105744317103865,18952.99999999998,20444.402930870936
+course_0f77f43dc1fcca0a,Large Language Model Operations (LLMOps) Specialization,Duke University,Beginner,3.8291107101552946,3.7857699872005113,6746.999999999999,6106.185409901104
+course_1e7e6c37afbdee9e,Preparing for Google Cloud Certification: Cloud Security Engineer Professional Certificate,Google Cloud,Intermediate,4.425827563624514,4.706723230432483,26657.999999999975,50900.63852943868
+course_b7c0aee905a265ee,Strategic Thinking for Everyone Specialization,Arizona State University,Beginner,3.3205616801952367,3.1063506255906703,2092.0,1277.4697517385914
+course_0c04c71b67bd25bf,Music Education for Teachers Specialization,Berklee,Intermediate,3.756636108245848,3.7591506438154783,5710.000000000001,5743.156406441551
+course_8b8e93b84649653b,Dynamic Public Speaking Specialization,University of Washington,Beginner,4.917274384493223,4.5543090194080555,82655.99999999996,35835.132896110554
+course_3dd0bf83185c3498,Global Health Innovations Specialization,Imperial College London,Beginner,3.8243211248507714,3.8885588138428786,6673.000000000002,7736.7544580988715
+course_c9dc98cdfc6a1cfb,Advanced Python - Reconnaissance,Infosec,Not specified,3.759592308645975,3.6125568928411904,5749.000000000003,4097.857884849462
+course_892befc1b9b22e0c,Sales and CRM Overview,Salesforce,Beginner,4.872604909064832,4.819631104915863,74577.00000000001,66013.24851301675
+course_07708e5595009c1a,How To Create a Website in a Weekend! (Project-Centered Course),The State University of New York,Not specified,5.291315559515642,4.686355827325778,195575.9999999999,48568.62709734952
+course_a417cf61c5bedfd1,Software Design and Architecture Specialization,University of Alberta,Beginner,4.898977350110362,4.790354263522196,79245.99999999994,61709.81771087718
+course_a284ffd164a3fbce,Meta Database Engineer Professional Certificate,Meta,Beginner,4.766933093837284,4.77922588484682,58469.99999999996,60148.65007451713
+course_0dde1a2d52046289,Nursing Informatics Training and Education,University of Minnesota,Intermediate,3.7508168426497543,3.9600656031995483,5633.999999999997,9121.486153368087
+course_146d514e91bb2eec,Use Generative AI as Your Thought Partner,Coursera,Beginner,3.844725627973226,4.0116777843145455,6993.999999999998,10272.538658577025
+course_1f50ab401fd7bb2c,Speaking Skills for University Success,"University of California, Irvine",Beginner,4.110219223689404,4.06327133860352,12889.000000000005,11568.347839487
+course_71846847b02a61c1,Black Lives Matter,Johns Hopkins University,Beginner,3.6898414091375047,3.838872705072394,4895.999999999999,6900.375190911119
+course_b4cddcae48ccd5df,Poverty & Population: How Demographics Shape Policy,Columbia University,Beginner,3.9083777724323947,3.972482096018803,8098.000000000002,9386.033415385917
+course_fa2d880238f2d112,Play It Safe: Manage Security Risks,Google,Beginner,5.594822211948109,5.4239898055487545,393388.99999999977,265454.32495804166
+course_7c28bb272f3af36c,Software Engineering Specialization,The Hong Kong University of Science and Technology,Intermediate,4.14050804303818,4.106018500611863,13820.000000000005,12764.931852838708
+course_4db8bc04a7d9520b,Principles of UX/UI Design,Meta,Beginner,5.046096976123962,4.683825727336482,111197.99999999996,48286.500023186054
+course_6f368ee1e3511d89,Econometrics: Methods and Applications,Erasmus University Rotterdam,Not specified,5.273367083440266,4.931429947233749,187658.0000000001,85394.50928686046
+course_8582796d7d272619,"Our Earth: Its Climate, History, and Processes",University of Manchester,Beginner,4.466660058040165,4.445634283881753,29285.999999999993,27901.932509087022
+course_18fa16e65fc03e72,Getting Started with CyberGIS,University of Illinois Urbana-Champaign,Beginner,3.4771212547196626,3.5276420802711694,3000.0000000000014,3370.0945099573555
+course_0be55aa4d865418d,Algorithms on Graphs,University of California San Diego,Intermediate,5.074988223507281,5.041618046260565,118846.99999999988,110057.09525508387
+course_11f7be02b5f0e052,"DevOps, Cloud, and Agile Foundations Specialization",IBM,Beginner,4.195041280556656,4.328354939422688,15668.999999999995,21298.79038613973
+course_bf9f4310c94e67e2,Designing User Interfaces and Experiences (UI/UX),IBM,Beginner,4.22125770712091,4.385656720040983,16644.000000000007,24302.822784553642
+course_97258a17f20750c5,Capstone Project: Advanced AI for Drug Discovery,LearnQuest,Intermediate,3.3422252293607904,3.363485686090386,2199.0,2309.3283445238226
+course_3e05a6ba47bc84f4,How to Make a Comic Book (Project-Centered Course),High Tech High Graduate School of Education,Not specified,4.809896246602439,4.406677885194525,64549.99999999999,25508.086743679694
+course_c083a14fcad38169,The Horse Course: Introduction to Basic Care and Management,University of Florida,Not specified,4.695674264399299,4.720427824663506,49622.000000000015,52532.470421934835
+course_abfc1be13a79c607,Data Mining Project,University of Illinois Urbana-Champaign,Not specified,3.8708134239155974,3.6495761599256333,7426.999999999997,4462.478738484225
+course_6262723b9c42ff12,Moneyball and Beyond,University of Michigan,Intermediate,3.5759956202032677,3.817308271593042,3767.0000000000005,6566.111777065063
+course_f77382001780a0c4,Blood Film Morphology - A Practical Guide,University of Western Australia,Intermediate,3.999695887410839,3.989043199300373,9992.999999999995,9750.866248236674
+course_02cf0c7f54553a3d,Bioconductor for Genomic Data Science,Johns Hopkins University,Not specified,4.374400037802237,4.351601398907103,23681.0,22469.913414182476
+course_492fdd3105682615,Strategic Business Analytics Specialization,ESSEC Business School,Advanced,4.558408539791075,4.537943319285588,36174.99999999999,34509.86968175033
+course_fe9b34b80a9ab8b0,"Speak English Professionally: In Person, Online & On the Phone",Georgia Institute of Technology,Not specified,5.9681746301505285,5.562936198917498,929339.9999999994,365541.08696988237
+course_3d413bf763ba9d0a,Internet of Things: Multimedia Technologies,University of California San Diego,Not specified,4.389254706848648,4.269405231701917,24504.99999999999,18595.38745147317
+course_bca6d2abd33e5eb3,"One Health: Pandemic preparedness, prevention, and response",Politecnico di Milano,Intermediate,3.2005769267548483,3.4525862173184345,1587.0000000000002,2835.2164324794358
+course_168f8161f9c29553,Business English: Management and Leadership,Arizona State University,Intermediate,4.8916155010160765,4.788034043421787,77913.99999999996,61381.011855018274
+course_53cbf0ced97ff650,UX Design: From Concept to Prototype,University of Michigan,Beginner,4.534990134158752,4.352679368033351,34276.00000000002,22525.755612442368
+course_89b178510b28ab02,First Order Optical System Design,University of Colorado Boulder,Advanced,4.32132911339302,4.515697470445883,20957.000000000015,32786.68215042258
+course_e0b4080c5316ac85,Ethical Hacking Fundamentals,LearnKartS,Intermediate,3.697316541732383,3.7200559848754176,4980.999999999998,5248.751175085119
+course_3348412cad98c575,Making Architecture,IE Business School,Beginner,5.14055517808682,4.7730577290134155,138215.00000000003,59300.41449898952
+course_925c55995f9ab3e1,Business Strategy in Practice (Project-centered Course),University of Virginia,Not specified,4.138239523465188,4.1072967325040395,13748.000000000013,12802.557424849541
+course_bc72104f1c2d8c1c,Environmental Science,Dartmouth College,Beginner,3.998302940098541,4.169262143956386,9960.999999999996,14765.975515618797
+course_e14a5829369b12ea,Foundations of Teaching for Learning: Curriculum,Commonwealth Education Trust,Not specified,4.587924132208408,4.473894831249268,38718.99999999997,29777.952392227708
+course_54e3717f1594fe4d,Professional Responsibility and Ethics for Accountants,University of Illinois Urbana-Champaign,Beginner,3.67015304519218,3.7806232054339985,4679.0,6034.24869849075
+course_e1066dcc90460f3c,The Nuts and Bolts of Machine Learning,Google,Advanced,4.631108786634139,4.46757340280706,42767.00000000002,29347.654849778894
+course_4939fc3e4c223fdf,Fundamental Skills in Engineering Design,University of Leeds,Beginner,3.892984550710717,3.9096265112976836,7816.000000000003,8121.317909312505
+course_9f9bd55a0227d512,Frontend Development using React,Board Infinity,Intermediate,3.7910587435918255,3.790371371273089,6181.000000000001,6171.224863511578
+course_a19689f649731af5,Art & Ideas: Teaching with Themes,The Museum of Modern Art,Intermediate,4.7378046778199225,4.432044260583361,54677.00000000002,27042.339487138335
+course_c021d2f41e99389e,Data and Urban Governance,Sciences Po,Beginner,3.564902672529205,3.6466770370522354,3671.9999999999995,4432.788771408372
+course_138ed67b60ccf177,"Understanding China, 1700-2000: A Data Analytic Approach, Part 1",The Hong Kong University of Science and Technology,Not specified,4.021891873919109,4.001337096123366,10516.999999999993,10030.835219049573
+course_be3c8897b6244fdd,Advanced Digital Transformation Specialization,IIMA - IIM Ahmedabad,Intermediate,3.5691397254724593,3.7006659981800913,3707.999999999998,5019.564026278319
+course_7b9e5a0f5643dd63,Agile Project Management,Google,Beginner,5.72975263382445,5.638073162650338,536725.9999999995,434583.4293325642
+course_eb8739907e0341f4,Computational Social Science Capstone Project,"University of California, Davis",Intermediate,3.630122642859312,3.6655308579785064,4267.0,4629.465564068614
+course_625a6b6882a22b69,Social Network Analysis,"University of California, Davis",Beginner,4.203794139588068,4.1689341349693185,15988.000000000011,14754.827448327107
+course_3a83d229355ab6e8,Soul Beliefs: Causes and Consequences - Unit 3: How Does It All End?,Rutgers the State University of New Jersey,Not specified,4.064158372463118,3.9826746282993235,11591.999999999996,9608.921120910989
+course_82a834fbe0d1ad6e,Water Cooperation and Diplomacy,University of Geneva,Intermediate,3.2420442393695508,3.4690569154851243,1745.9999999999993,2944.8075336300503
+course_285d62fc71396248,Palo Alto Networks Network Security Fundamentals,Palo Alto Networks,Intermediate,4.021850577434325,4.052653933498741,10515.999999999996,11288.959981427692
+course_dfc867f46de54afe,"Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning",DeepLearning.AI,Intermediate,5.584944910115532,5.744860202860094,384542.99999999994,555725.3433721868
+course_9c07fcf5a69ec140,Just Reading and Writing English 1,Tsinghua University,Intermediate,4.321246212990591,4.117400002066579,20952.999999999985,13103.882858092747
+course_d53370afbf2291aa,Foundations of Data Structures and Algorithms Specialization,University of Colorado Boulder,Advanced,4.490688716713189,4.199809035259063,30952.00000000002,15841.964482038165
+course_b0a7971313fc961d,Organisational design: Know your organisation,Macquarie University,Beginner,4.836222810718678,4.829526195920264,68584.00000000006,67534.57885003956
+course_282acc65953ec616,"Sustainability of Social-Ecological Systems: the Nexus between Water, Energy and Food",Universitat Autònoma de Barcelona,Intermediate,4.228117924136845,4.111370776402283,16909.000000000007,12923.221153062848
+course_45135eeb62a7ceb6,Intro to Operating Systems 2: Memory Management,Codio,Advanced,4.032940937780854,3.716178637054875,10788.000000000005,5202.099289320516
+course_41f3a849e7a51601,International Business II,University of New Mexico,Not specified,4.364438420639926,4.623836733073104,23143.99999999999,42056.84918284949
+course_b74ad19519064b81,Containerized Applications on AWS,Amazon Web Services,Beginner,4.3812775721514825,4.34458464953664,24059.000000000022,22109.791623569763
+course_e410e7256fd699fc,Agroforestry I: Principles and Practices,University of Florida,Intermediate,3.239549720840473,3.472983358505855,1735.999999999999,2971.552164264548
+course_ac904d62feeff5e6,Customising your models with TensorFlow 2,Imperial College London,Intermediate,4.145848756590544,4.195389543442853,13991.000000000007,15681.570087685348
+course_13b1cb5c678bb5fc,Product Management: Initial Product Strategy and Plan,SkillUp EdTech,Beginner,3.803934849863842,3.9124033141306658,6367.000000000002,8173.410551393355
+course_99cc8e2d3cc653e2,Major Engineering Project Performance,University of Leeds,Intermediate,4.365319475896217,4.619160933226041,23191.00000000001,41606.47599069119
+course_1d67875c8a0ef84d,Intro to Acoustics (Part 1),Korea Advanced Institute of Science and Technology(KAIST),Intermediate,4.213225472773401,4.072155104128473,16339.000000000015,11807.422511830115
+course_fdc749e5f37435f6,Excel Skills for Business: Advanced,Macquarie University,Intermediate,5.338755217322839,5.298845033692003,218149.9999999999,198996.31474478738
+course_d5cc1b2703129150,Conflict Resolution Skills,"University of California, Irvine",Not specified,4.853704294289349,4.6989146821311785,71401.00000000001,49993.63120144155
+course_604b883f75d22f27,American Contract Law I,Yale University,Beginner,4.81733394859946,4.688742955186058,65665.00000000003,48836.32274371153
+course_6ac5936c9be65be1,Microeconomics Principles Specialization,University of Illinois Urbana-Champaign,Beginner,3.3197304943302246,3.2925654799154906,2088.0000000000005,1961.3968790266763
+course_1ae6ac764716c997,Introduction to Sustainability,University of Illinois Urbana-Champaign,Not specified,5.1963420201397685,5.1381481746666005,157160.0,137451.0857202558
+course_5a610178981e982f,Industrial IoT Markets and Security,University of Colorado Boulder,Intermediate,4.4680074432592365,4.474064890597402,29376.999999999996,29789.61501053755
+course_e40e507f5caff450,"Linguistic Diversity, What for?",Universitat Autònoma de Barcelona,Beginner,3.638389407665336,3.4337895194696277,4348.999999999998,2715.1230673369582
+course_f4fae0c16296a542,Feeding the World,University of Pennsylvania,Beginner,4.165807979003786,4.268788276694995,14648.999999999989,18568.989758550168
+course_57c2f7e3626a170a,Business Case Analysis,The Hong Kong University of Science and Technology,Not specified,3.8319337304667456,3.6002228015578908,6791.000000000002,3983.1145971103706
+course_33a13a6ac9ce92dd,Design and Implementation of Digital Health Interventions,Imperial College London,Intermediate,3.701222484256557,3.881770881542597,5025.999999999999,7616.770700411694
+course_dbf0a3a08063663e,Symptom Management in Palliative Care,Stanford University,Intermediate,3.346548558548474,3.488396574808965,2221.0,3078.907026940949
+course_fb86f70a63750670,Addiction Treatment: Clinical Skills for Healthcare Providers,Yale University,Beginner,4.819504452430618,4.962555489062116,65993.99999999996,91739.31416524449
+course_cfdc12cbf79547a2,Innovative Finance: Hacking finance to change the world,University of Cape Town,Beginner,4.202951245040243,4.196445544387303,15957.000000000007,15719.746722725422
+course_5f396c3501e85bb2,"Ethics, Technology and Engineering",Eindhoven University of Technology,Beginner,4.518553419399928,4.716964434621662,33003.00000000003,52115.20310138443
+course_21d5e405be8c7cd4,Docker for Beginners with Hands-on labs,KodeKloud,Beginner,3.279894980011638,3.394829392698608,1905.0000000000002,2482.157828252914
+course_5deb20987a96b5d8,"Data Modeling, Transformation, and Serving",DeepLearning.AI,Intermediate,3.3047058982127653,3.4887809456405914,2016.9999999999993,3081.633209195079
+course_2a5e975f15148e8c,Front-End Developer Capstone,Meta,Intermediate,4.74238730260704,4.554800234862093,55256.99999999998,35875.687705132405
+course_aed83520d2057387,Antimicrobial resistance - theory and methods,Technical University of Denmark (DTU),Intermediate,4.827272321500369,4.981801531989605,67185.00000000001,95896.2295683203
+course_d1170a383b68b452,"Client Intake, Assessments, Skill Analysis and Planning",Goodwill Industries International,Beginner,3.6524397475894204,3.740485558010937,4492.000000000002,5501.55625381571
+course_4be3c93349e7b365,Introduction to Indoor Air Quality,The Hong Kong University of Science and Technology,Beginner,4.1009561030594925,4.564240003565245,12616.999999999995,36664.01345083112
+course_a9e0d88dcb554b86,Air Pollution – a Global Threat to our Health,University of Copenhagen,Beginner,4.37500481553064,4.704896645272228,23714.000000000015,50687.0067432668
+course_942d9ddd19739503,Node.js & MongoDB: Developing Back-end Database Applications,IBM,Intermediate,3.641077313325374,3.519816237801862,4375.999999999998,3309.9104023918517
+course_2cbd3dd4a6e983e9,Finance of Mergers and Acquisitions: Designing an M&A Deal,University of Illinois Urbana-Champaign,Intermediate,3.9981721219394406,3.7385206922755696,9957.999999999998,5476.721945791836
+course_dfedc65f55a37bb8,Architecting with Google Compute Engine Specialization,Google Cloud,Intermediate,5.272825202347866,5.311385969139123,187423.99999999985,204826.41753061803
+course_fcc7f8e8af02104d,Using Git for Distributed Development,The Linux Foundation,Beginner,4.2587809065412605,4.6431132789426535,18146.000000000004,43965.6277966746
+course_4f8ca412234cbddf,Leadership Development for Engineers Specialization,Rice University,Beginner,4.268577971882843,4.254383113426461,18559.999999999996,17963.17551899261
+course_d44299d6b82898f7,Fintech: Foundations & Applications of Financial Technology Specialization,University of Pennsylvania,Beginner,4.679854712765105,4.827262176189479,47846.99999999996,67183.43054706146
+course_b0a85eb94cd8be30,Machine Learning for Trading Specialization,Google Cloud,Intermediate,4.518474456766636,4.462836273699884,32996.99999999997,29029.28062448905
+course_87a68ba6509e7df0,Introduction to Statistics,Stanford University,Beginner,5.710975792773827,5.225897620060382,514014.9999999997,168227.74367246372
+course_93cb3549a89a62e8,"The American South: Its Stories, Music, and Art",The University of North Carolina at Chapel Hill,Not specified,4.556736578246606,4.344214373569252,36036.000000000015,22090.949027480718
+course_75e457f20256e597,Probability & Statistics for Machine Learning & Data Science,DeepLearning.AI,Intermediate,4.827860161898507,4.561309303832732,67275.99999999996,36417.43081472538
+course_911887d6b60edf49,Music as Biology: What We Like to Hear and Why,Duke University,Not specified,4.822782459070745,4.699826100164683,66493.99999999994,50098.658882562566
+course_01c3c546af75e40d,Exploring Beethoven’s Piano Sonatas Part 2,Curtis Institute of Music,Beginner,3.9902056151848067,4.087966561722432,9777.0,12245.219142080045
+course_2066709f2c2eef1a,AI and Public Health,DeepLearning.AI,Beginner,4.131458260106525,4.247374850320163,13534.999999999995,17675.62789679655
+course_41a7c130e5c5bfc9,Privacy in the Western World,EIT Digital,Beginner,3.9224140241456342,4.094603772132885,8364.0,12433.79698677925
+course_b471df9779527bd8,Machine Learning: Clustering & Retrieval,University of Washington,Not specified,4.993846081581259,5.1292827895840665,98593.00000000009,134673.69924758558
+course_0b6144a6c495875f,Python Data Representations,Rice University,Beginner,4.425093833965443,4.747137608255914,26613.000000000022,55864.71766906114
+course_9b85b71289f4b140,Fundamentals of Immunology: Innate Immunity and B-Cell Function,Rice University,Intermediate,4.855349523582764,4.9326254083410115,71672.00000000001,85629.89437969393
+course_8be57e2167e78669,Design Principles: an Introduction,University of California San Diego,Beginner,4.820359117213135,4.907002458577134,66123.99999999999,80723.96000863273
+course_69dc686c14fb199c,Intro to Siemens NX: Engineering Essentials and Part Design,Siemens,Beginner,3.2725377773752373,3.545270875650163,1872.9999999999998,3509.7071112783287
+course_fb9ea1fec0052604,Finding Your Professional Voice: Confidence & Impact,University of London,Beginner,5.095054221972937,4.652359817527863,124466.99999999991,44911.7334248288
+course_4d727dbcac164683,Google Meet,Google Cloud,Beginner,3.8953120244757873,3.769699571369162,7858.0,5884.364562629456
+course_d1049b33b83d1063,Delivery Problem,University of California San Diego,Beginner,4.3204163374561695,4.38313607763965,20912.999999999996,24162.17790202849
+course_d16f2e4e4a790822,Patient Safety and Quality Improvement: Developing a Systems View (Patient Safety I),Johns Hopkins University,Intermediate,4.513750150081823,4.737972816208764,32639.999999999985,54698.17245994742
+course_8d4addc30dd7ffea,Introduction to User Experience Principles and Processes,University of Michigan,Beginner,4.946692927161661,4.8786869939217565,88448.99999999996,75628.76245662718
+course_f42f3b797cad0678,Microsoft Project Management  Professional Certificate,Microsoft,Beginner,4.256164305279615,3.9135978770807407,18037.000000000015,8195.923141390682
+course_0607b7abbda0d872,Master Microsoft Office 365 and Power Platform  Specialization,Microsoft,Beginner,3.2975416678181597,3.4027475677945334,1983.9999999999993,2527.8282776770216
+course_7531d9be27de9ca5,Analysis for Business Systems,University of Minnesota,Beginner,4.570519590088516,4.478087883561581,37198.00000000002,30066.846719140405
+course_6e7ae21a04aa0e74,Introduction to Android Mobile Application Development,Meta,Beginner,4.83475758042328,4.898357051986414,68353.0,79132.89458584314
+course_580d511e6030c0db,Google Data Analytics Professional Certificate,Google,Beginner,6.383311327895724,6.17331832911544,2417192.9999999986,1490453.1495932557
+course_ae391d9d743ba169,"Mechanics of Materials IV: Deflections, Buckling, Combined Loading & Failure Theories",Georgia Institute of Technology,Intermediate,4.478696331677028,4.641117487512147,30109.0,43764.048183436345
+course_895e7f17fa34cecb,Privacy and Standardisation Specialization,EIT Digital,Intermediate,3.650598898172657,4.003020715405933,4473.000000000002,10069.79699615769
+course_99b9d2b5061c9c39,Managing Project Risks and Changes,"University of California, Irvine",Not specified,5.240074759568821,5.407897747835476,173809.99999999997,255798.35533283345
+course_067b5a69f296d682,Become an EMT Specialization,University of Colorado System,Beginner,4.613672720547386,4.532988334057696,41084.00000000002,34118.37466807921
+course_be590a0d6bcf2848,Electrodynamics: In-depth Solutions for Maxwell’s Equations,Korea Advanced Institute of Science and Technology(KAIST),Advanced,3.868232868422465,3.9717835822303713,7383.0,9370.949171068425
+course_1685a7e9b338f816,Product Management: Foundations & Stakeholder Collaboration,SkillUp EdTech,Beginner,4.042023927248867,4.265687634520901,11016.000000000004,18436.888724679062
+course_21fe682196e04ecc,What does it mean to identify as Transgender or Gender Non-Conforming (TGNC)?,University of Minnesota,Beginner,4.034868996361131,4.168056381011362,10836.000000000005,14725.036535062787
+course_bdd2c8a4f54ea3b7,Algorithmic Thinking (Part 2),Rice University,Intermediate,4.405977788301573,4.153071581595156,25467.000000000015,14225.632385345543
+course_ec41cbfc33b670fa,Oracle SQL Proficiency,LearnQuest,Beginner,3.8917046762391827,3.8774744984657534,7793.0,7541.79109562871
+course_eebf64d9f0efb0ec,HTML and CSS in depth,Meta,Beginner,5.077698497399807,4.931229236358133,119590.99999999997,85355.05300203981
+course_dd5a2f2e1c07d3ca,Project Management Project,"University of California, Irvine",Not specified,4.860176239191593,5.142905086756765,72473.00000000004,138964.8896068425
+course_c0257b1dd6c0df8a,Embedded Interface Design Specialization,University of Colorado Boulder,Intermediate,3.4220971631317103,3.451656535452825,2642.9999999999995,2829.153656689656
+course_22424e8697374db3,Machine Learning Specialization,University of Washington,Intermediate,5.323722245326064,5.322130365836621,210727.99999999983,209957.00346808814
+course_8b5c5b0f578b2a46,Windows OS Forensics,Infosec,Intermediate,3.752202153176521,3.708186486329576,5651.999999999998,5107.2425822185705
+course_8ade7b7a2b0a4f1c,"Designing, Running, and Analyzing Experiments",University of California San Diego,Intermediate,4.495211204457828,4.754574901784694,31275.999999999967,56829.6395899371
+course_1c7b33caffca6bd3,Concurrency in Go,"University of California, Irvine",Intermediate,4.402862957968563,4.715070264663966,25284.99999999998,51888.398256853376
+course_07e8a615eb6d80ca,Successful Negotiation: Essential Strategies and Skills,University of Michigan,Beginner,6.203093292196517,5.759573852236518,1596221.9999999995,574875.5687332435
+course_5b4435435d4597a6,Linux OS - Master's,Illinois Tech,Intermediate,3.443888546777372,3.7380874280797465,2779.0000000000014,5471.260940868311
+course_8d4a9087e434c05d,Matrix Methods,University of Minnesota,Intermediate,4.110320296840297,4.305123485418091,12892.000000000004,20189.403388568608
+course_046811fe7c6a4fdd,Schizophrenia,Wesleyan University,Intermediate,4.931778133748881,5.099887413520405,85462.99999999993,125859.90903334864
+course_1b2ba9cbf9b7184e,Crowdfunding,University of Pennsylvania,Not specified,4.146314122011972,4.288678160987892,14005.999999999989,19439.189837880174
+course_0a16ac5895d19a01,Cybersecurity Fundamentals Specialization,IBM,Beginner,3.249931756634195,3.3083414606355954,1778.0000000000005,2033.9555640640174
+course_d558743a8ad5516d,Google Digital Marketing & E-commerce Professional Certificate,Google,Beginner,5.904107215317397,5.875261581514221,801876.0000000003,750346.0169360184
+course_7d3e6b07052b3487,Problem Solving with Excel,PwC,Beginner,5.167426633210038,5.35711062568739,147037.00000000003,227567.70289145948
+course_9426a69157f5f2ca,Oracle Cloud Infrastructure Foundations,Oracle,Beginner,4.233046902098183,4.040673630053373,17102.000000000007,10981.802527583048
+course_86279d9165e838a7,"Gender, Family, and Social Change in Contemporary South Korea",Yonsei University,Beginner,4.37383114507383,4.313387790199103,23649.999999999996,20577.271615055713
+course_0c9086433ea1b0c2,Fundamentals of Red Hat Enterprise Linux 9,Red Hat,Beginner,3.362105319293773,3.4470125186031995,2301.9999999999995,2799.0620018510963
+course_729e9d0c057accbf,Grit and Growth Mindset,Arizona State University,Not specified,3.295127085252191,3.437668880989944,1972.999999999999,2739.484710998626
+course_24605b691856e972,Fundamental Neuroscience for Neuroimaging,Johns Hopkins University,Beginner,4.866972215920721,4.87714501509826,73616.0,75360.71583939067
+course_e3e4f39a5050faeb,IT Fundamentals for Cybersecurity Specialization,IBM,Beginner,4.763689988776926,4.861866025635873,58035.00000000003,72755.53282821289
+course_52fb8343ac71a6db,Software Development Lifecycle Specialization,University of Minnesota,Intermediate,4.813274005348324,4.789377559407247,65054.00000000006,61571.19170541379
+course_1044bcd354b4dca8,Linux on LinuxONE,IBM,Beginner,3.3199384399803087,3.394320576050362,2089.0000000000005,2479.251450833454
+course_144151537d0345d5,Innovative Teaching with ChatGPT,Vanderbilt University,Beginner,4.465427468452574,4.401552021763828,29202.99999999997,25208.7912389558
+course_c166a4df4f54f8d2,Introduction to Cloud Computing,IBM,Beginner,5.5472699908719685,5.212175376911291,352590.00000000035,162995.41082530268
+course_78c3b356c5e2f0a8,Medical Terminology II,Rice University,Beginner,4.008387230114159,4.015554665646051,10194.999999999998,10364.650584631316
+course_41b63b69bb8c1e82,Communicating Business Analytics Results,University of Colorado Boulder,Intermediate,4.421899935843169,4.372539955553193,26417.999999999975,23579.791225638408
+course_db08db950e236faa,Generative AI for Everyone,DeepLearning.AI,Beginner,5.600614645499269,5.042985023216845,398671.00000000035,110404.05460566717
+course_01e8b58ba428a538,U.S. Taxation of International Transactions,University of Illinois Urbana-Champaign,Intermediate,3.6940784620807596,3.695490937703324,4944.000000000003,4960.105771794961
+course_5969903e31c2f41e,ART of the MOOC: Activism and Social Movements,Duke University,Not specified,4.332842266994351,4.068635799177186,21519.99999999999,11712.127706074594
+course_183b9c93bedffbfc,AI Product Management Specialization,Duke University,Beginner,4.554804015342861,4.3191683291850556,35876.00000000002,20852.989722495393
+course_b3f535677a4d8111,Solving Problems with Creative and Critical Thinking,IBM,Beginner,4.500456037257972,4.465777013367361,31656.000000000022,29226.5136976579
+course_ad43580f42aa31b9,Introduction to Genomic Technologies,Johns Hopkins University,Not specified,5.030470183325297,5.190092357104002,107268.0000000001,154914.60254200263
+course_b68b003dafe83010,Know Thyself - The Value and Limits of Self-Knowledge: The Examined Life,The University of Edinburgh,Beginner,4.830870836339318,4.662776588609267,67743.99999999997,46001.98675631955
+course_847fb096a851534f,Memoir and Personal Essay: Managing Your Relationship with the Reader,Wesleyan University,Beginner,4.410085184269148,4.601577300958945,25708.999999999985,39955.567270704305
+course_a86bd92048cfb5ec,"Engineering Life: Synbio, Bioethics & Public Policy",Johns Hopkins University,Intermediate,3.912487761332324,3.868550606446913,8175.000000000004,7388.40351830204
+course_713abfde26f9c3df,Data Visualization Best Practices,"University of California, Irvine",Not specified,3.6817837664678814,3.3749780112404513,4806.000000000001,2371.253643702849
+course_819a18942b94fbe1,Financial Forecasting and Reporting,University of Colorado Boulder,Intermediate,3.7846885995014214,3.738007850414062,6091.000000000003,5470.258509786671
+course_84ee599ccaceadce,Generative AI for Software Development Skill Certificate,DeepLearning.AI,Beginner,4.099024215610893,3.932977692994826,12560.999999999995,8569.938256596226
+course_9ed2df83b81d99af,ChatGPT: Master Free AI Tools to Supercharge Productivity Specialization,Vanderbilt University,Beginner,3.647480773173676,3.801041001100749,4441.000000000001,6324.715592636989
+course_ecb637f0d2e90ad2,Understanding Modern Physics III: Simplicity and Complexity,The Hong Kong University of Science and Technology,Beginner,3.4437322414015967,3.5033334067279203,2777.9999999999995,3186.642960320684
+course_1f97fd9ce239e14f,"History of Rock, Part One",University of Rochester,Beginner,4.794048650259805,4.691243416924022,62237.00000000003,49118.310133799365
+course_d9ae94aba39da205,Amazon Junior Software Developer Professional Certificate,Amazon,Beginner,3.5595475555804343,3.4987900975251125,3627.0,3153.4801203128904
+course_914c8d1a4ab20bbe,Project Management Principles and Practices Specialization,"University of California, Irvine",Beginner,5.343879070762267,5.526753808066381,220739.00000000017,336320.86247054016
+course_b48d1d22099ad201,Mechanics of Materials II: Thin-Walled Pressure Vessels and Torsion,Georgia Institute of Technology,Not specified,4.552631719244076,4.65253458005344,35696.99999999996,44929.80979401729
+course_db590bf337ab72e6,Positive Psychology: Resilience Skills,University of Pennsylvania,Beginner,4.92553897945812,4.921458968782479,84243.99999999993,83456.26968467023
+course_14f1bf34f055b8d0,Introduction to Particle Accelerators (NPAP MOOC),Lund University,Intermediate,3.8363241157067516,4.13145430602603,6859.999999999998,13534.87676970788
+course_42483dc0f5a33778,Business Strategies for Social Impact,University of Pennsylvania,Not specified,4.137543994554653,4.569623484607982,13726.000000000007,37121.32629730341
+course_f6addd7ffadd4130,English in the Workplace: Soft skills,Pontificia Universidad Católica de Chile,Intermediate,3.8138477542288545,3.7172615939203943,6514.000000000003,5215.087432739874
+course_34d88ea03b77a967,Machine Learning for Supply Chains Specialization,LearnQuest,Intermediate,3.475235222604128,3.5645126356641645,2986.9999999999986,3668.70368266414
+course_4bf4f26dca9caba3,Environmental Management & Ethics,Technical University of Denmark (DTU),Not specified,4.377032909310364,4.430879993243511,23824.99999999998,26969.940805076152
+course_7d39c2c52470845c,Nursing Informatics Leadership Theory and Practice,University of Minnesota,Beginner,3.420945405921972,3.677898725857839,2635.9999999999995,4763.198997063298
+course_bfa7c5938fa4f964,Blockchain Basics,University at Buffalo,Beginner,5.403437972237107,5.300708920387679,253184.99999999974,199852.19401445874
+course_6748d973469ee441,Introduction to Hospitality Management in the 21st Century,Starweaver,Beginner,3.585009279902461,3.585883706669065,3846.0000000000005,3853.751499055328
+course_0754a749153f1d6c,Cities and Consumption: Urban Sustainability and the Sharing Economy,Lund University,Beginner,3.948999454026953,4.040531211878685,8892.000000000002,10978.201855869813
+course_2be9aa3b59f09b24,Prepare for DP-100: Data Science on Microsoft Azure Exam,Microsoft,Intermediate,3.8898617212581885,3.773847600748506,7760.000000000002,5940.836508063123
+course_18d6f9c171189414,Energy Justice: Fostering More Equitable Energy Futures,Dartmouth College,Beginner,3.229681842317676,3.5212979503802337,1697.0000000000002,3321.2223389583214
+course_f8d22174e9f88fff,Autonomous Vehicle Engineering Specialization,Università di Napoli Federico II,Beginner,3.359645792674543,3.403916767326187,2289.0,2534.6428188543787
+course_fe7e5684fab489b7,An Introduction to Programming using Python,University of Leeds,Beginner,3.8505237088789945,3.661867607590486,7088.000000000003,4590.580500502793
+course_ef8679a0697e1b7d,Statistical Analysis Fundamentals using Excel,IBM,Intermediate,3.6451273992583912,3.765272366578437,4417.000000000001,5824.683966860951
+course_e7f5aed9dff43e7b,"Excel/VBA for Creative Problem Solving, Part 2",University of Colorado Boulder,Intermediate,4.610319406319237,4.790876453640737,40767.999999999985,61784.06143064096
+course_513e89a2739b712f,Leading Teams,University of Michigan,Beginner,4.959337184511873,5.030644764553265,91061.99999999991,107311.12913117312
+course_427476050bd11616,Introduction to Meteor.js Development,University of London,Not specified,4.649003655942019,4.908464375845852,44565.99999999998,80996.14997199396
+course_a21b6b0715cc5e61,Introduction to battery-management systems,University of Colorado Boulder,Intermediate,4.800978126239632,4.973403132039855,63237.99999999994,94059.60097818138
+course_08cb6e71ac56e9e8,Political Economy of Institutions and Development,Universiteit Leiden,Beginner,4.496888152987568,4.375718110187063,31397.000000000015,23752.980389191984
+course_1944708acec29353,Introduction to Industrial Bioprocess Development,Technical University of Denmark (DTU),Beginner,4.088171539864352,4.152019463334585,12251.000000000002,14191.211195734766
+course_5c50317a9a50fde2,Health Data Science Foundation,University of Illinois Urbana-Champaign,Advanced,3.617000341120899,3.454773789057219,4140.000000000001,2849.533644457847
+course_352b5d343daa3388,Engineering and Product Design Processes,Arizona State University,Beginner,3.4363217001397333,3.4945924776668873,2730.9999999999995,3123.147371231976
+course_07ebb1b85770074d,Persuasive Communication,IESE Business School,Beginner,3.3951515915045425,3.526497685252217,2483.9999999999995,3361.2257754129646
+course_0ba552d1c1b0a2b8,DevOps Culture and Mindset,"University of California, Davis",Intermediate,4.668199484198662,4.594935219317759,46580.000000000015,39349.137671074015
+course_a4f1fa130f53c88f,Generative AI for Legal Services Primer,Vanderbilt University,Beginner,3.3960248966085933,3.4710320582436793,2489.0000000000005,2958.2308257259624
+course_e3e2ad7a99061be6,Generative AI: Enhance your Data Analytics Career,IBM,Intermediate,3.915610862661467,3.8308212197111855,8233.999999999998,6773.626092663103
+course_5b99a8bd3fa7779c,Learn to Teach Java Specialization,University of California San Diego,Beginner,3.4759615891924236,3.4373115763036073,2991.999999999999,2737.2317968526318
+course_0aa6fb7bae88ce68,"High Performance Collaboration: Leadership, Teamwork, and Negotiation",Northwestern University,Not specified,5.0669480304702175,5.162187234813558,116667.00000000001,145273.77928582314
+course_6bfd7ebb689628a4,Generative AI: Business Transformation and Career Growth,IBM,Beginner,3.8530895298518657,3.8665459107609994,7130.000000000003,7354.37737014754
+course_4318781608a5ae1c,Development of Secure Embedded Systems Specialization,EIT Digital,Intermediate,4.2060429010925215,4.402701814129968,16070.99999999999,25275.619806832183
+course_8e04f84e43270421,Operations and Process Management,Illinois Tech,Intermediate,3.6072405038317426,3.845501744761879,4047.9999999999986,7006.509976990014
+course_567810d850771cd2,Statistical Molecular Thermodynamics,University of Minnesota,Beginner,4.4008659607565725,4.2719623127638835,25168.999999999996,18705.19813226991
+course_5147e301e5b11617,"Social Norms, Social Change II",University of Pennsylvania,Beginner,4.283120234959775,4.4588569413240835,19192.000000000015,28764.507420519836
+course_368f9addc9324c31,Physics 101 - Energy and Momentum,Rice University,Intermediate,3.834738518903841,3.6977155666648516,6834.999999999998,4985.578590374632
+course_1a0a8e9c8c04ac87,Mandarin Chinese 3: Chinese for Beginners,Shanghai Jiao Tong University,Beginner,4.258876629372131,4.259594505139519,18149.999999999993,18180.026215617745
+course_dca8c6f44db2247b,Measuring Disease in Epidemiology,Imperial College London,Beginner,4.393662930667503,4.592000682682699,24755.000000000007,39084.15101693711
+course_f19475018256c1a3,Sustainable Urban Regeneration,Università Bocconi,Beginner,3.2750808984568587,3.3446558963410813,1884.0000000000005,2211.341907287949
+course_e2c210b06e631e72,Decision-Making and Scenarios,University of Pennsylvania,Not specified,4.688917906987809,4.840399575018326,48856.000000000015,69246.77867034735
+course_981d93a9ac64f537,IBM AI Engineering Professional Certificate,IBM,Intermediate,5.0224489924661775,5.189533069751609,105305.00000000009,154715.23087941055
+course_6de7633f8754babb,TensorFlow: Data and Deployment Specialization,DeepLearning.AI,Intermediate,4.582926545910041,4.47048980802041,38275.99999999998,29545.39550826211
+course_01426a7e13d3b7eb,Mastering the Software Engineering Interview,University of California San Diego,Intermediate,4.847665183621084,4.670541019282029,70415.0,46831.81821184548
+course_d1d752c04c8cfe83,Introduction to Abnormal Psychology,Wesleyan University,Beginner,4.42059928229144,4.468784401448318,26339.000000000015,29429.602855180103
+course_b5160cd7f6885ce5,Generative AI and LLMs: Architecture and Data Preparation,IBM,Intermediate,3.5998830720736876,3.628191225149893,3979.999999999998,4248.065702795552
+course_6eb40a757cda2127,Getting started with Google Workspace Specialization,Google Cloud,Beginner,4.445822074161696,4.354195955384992,27914.00000000001,22604.554665898155
+course_9735db0875884984,Energy and Environment,Dartmouth College,Beginner,3.4807253789884878,3.611830539745503,3025.0000000000005,4091.0099874082684
+course_fb37342bf6f99abe,Microsoft Cloud Support Associate Professional Certificate,Microsoft,Beginner,3.665299499499897,3.7563395309582064,4627.0,5706.102003850789
+course_7f021ea46aea0c1d,Building Generative AI-Powered Applications with Python,IBM,Intermediate,3.9555915504057246,3.761971734300964,9028.000000000004,5780.584237244715
+course_ab620c9609e04814,Russian Invasion of Ukraine Teach-Out,University of Michigan,Beginner,3.7432745235119333,3.604799943541599,5537.0,4025.3156664499497
+course_32ad4d08154a5aee,Science and Engineering of Climate Change,EDHEC Business School,Beginner,4.016029963076024,4.050198503393521,10376.000000000005,11225.314135686678
+course_7a8b1d4dc517d810,Privacy Law and Data Protection,University of Pennsylvania,Not specified,4.465472080873497,4.567802474776804,29205.999999999993,36966.00132780964
+course_c501fb527b22d864,Recovering the Humankind's Past and Saving the Universal Heritage,Sapienza University of Rome,Not specified,4.230065551206047,4.483211529283388,16985.0,30423.664925869878
+course_99986f16c273b067,Data Analysis and Reporting in SAS Visual Analytics,SAS,Not specified,4.167789779159089,4.18438242779694,14715.999999999995,15289.117833860377
+course_679429ec6d7a8105,Ethical Leadership Through Giving Voice to Values,University of Virginia,Beginner,4.523486332343228,4.603037017208869,33379.999999999985,40090.08870677468
+course_a8305daac5bf25a4,Introduction to Software Development,Amazon,Beginner,3.6399842480415887,3.4400416165983905,4365.000000000002,2754.492642040191
+course_18941ce5b315a69a,Practical Python for AI Coding 2,Korea Advanced Institute of Science and Technology(KAIST),Beginner,3.364550995353972,3.437571509932167,2315.0000000000005,2738.8705732776757
+course_42b166340baa627e,Write A Feature Length Screenplay For Film Or Television,Michigan State University,Beginner,4.905385669546877,4.427216777578172,80423.99999999997,26743.409697026083
+course_882c143d32bf25a8,The Korean Economic Development,Yonsei University,Not specified,4.278707883337975,4.257206956966989,18997.999999999996,18080.355148142775
+course_6eae98624ab335bc,Music Production Specialization,Berklee,Beginner,4.698552881382324,4.602089811078349,49952.000000000044,40002.74659480163
+course_7ed6009f7ff26939,Soul Beliefs: Causes and Consequences - Unit 1: Historical Foundations,Rutgers the State University of New Jersey,Not specified,4.740267923996125,4.515502105776686,54987.99999999995,32771.93658240421
+course_cb32ddae93ca1fef,Psychosocial and Spiritual Aspects of Palliative Care,University of Colorado System,Beginner,3.651568738865792,3.7454037424657787,4482.999999999999,5564.212947271079
+course_783475f235bdbf07,Getting Started with TikTok,Aptly,Beginner,3.226084115975824,3.400374392044878,1682.9999999999998,2514.052785933741
+course_6cbdcb35e443052e,The Foundations of Cybersecurity,Kennesaw State University,Beginner,4.424538637154054,4.50837670532782,26579.0,32238.639457793364
+course_a518339d0866628b,Implant Dentistry,The University of Hong Kong,Not specified,4.781604601638779,5.074942175525945,60479.0,118834.39939247543
+course_f0c15e53c1e42828,The Outcomes and Interventions of Health Informatics,Johns Hopkins University,Beginner,3.8846254632562345,3.8342165184028714,7667.0,6826.789603074008
+course_4ffb6bbe144cc9a7,SQL for Data Science Capstone Project,"University of California, Davis",Intermediate,4.577767454865143,4.446437448960492,37824.00000000001,27953.580857010118
+course_81357ef825cda79e,Mathematics for Machine Learning: PCA,Imperial College London,Intermediate,4.961088719767896,5.200285077836589,91429.99999999999,158593.38831999272
+course_e20d68fea4f6be22,Advanced Portfolio Construction and Analysis with Python,EDHEC Business School,Intermediate,4.360441933102638,4.4107521116702015,22931.999999999996,25748.510537726543
+course_142760603c652ce3,Introduction to Finance: The Basics,University of Illinois Urbana-Champaign,Beginner,4.771205192319161,4.449425450118364,59048.00000000001,28146.56816861252
+course_6a772b6ce902e605,Generative AI for Data Scientists Specialization,IBM,Intermediate,3.7904962769671093,3.7899612753326717,6172.999999999997,6165.40024483661
+course_b09343c268db488d,Professional Selling: Step 1 - Think Like a High-Performer,Kennesaw State University,Beginner,3.4749443354653877,3.4506471525091036,2984.9999999999986,2822.5858011437317
+course_62b38b8a4b00425b,Introduction to Environmental Law and Policy,The University of North Carolina at Chapel Hill,Not specified,4.921332654449853,5.1694182418911305,83431.99999999997,147712.83786063723
+course_599e9750eff33612,Probabilistic Graphical Models  Specialization,Stanford University,Advanced,4.420186870354286,4.688756552507976,26313.999999999978,48837.85178362497
+course_ea701ed5a6940a36,Windows Registry Forensics,Infosec,Intermediate,3.645815118296642,3.5894147909342786,4424.000000000002,3885.212621673281
+course_f0bec07be3b32f44,Microcontroller and Industrial Applications,L&T EduTech,Beginner,3.8004421213362565,4.241450700518379,6315.999999999998,17436.15417545141
+course_d65fe80d5d59cfd0,Questionnaire Design for Social Surveys,University of Michigan,Intermediate,4.578581911401869,4.499630959195629,37894.99999999997,31595.916628820498
+course_e6d79b3c644b8297,Big Data Modeling and Management Systems,University of California San Diego,Not specified,4.993383318302054,5.15743772090638,98487.99999999999,143693.69776330347
+course_5bcce90640a2ffac,An Introduction to the U.S. Food System: Perspectives from Public Health,Johns Hopkins University,Beginner,4.159115821827769,4.1405293507629795,14425.00000000001,13820.678065213719
+course_91d4da50d598a13e,The New Nordic Diet - from Gastronomy to Health,University of Copenhagen,Not specified,4.746844290604291,4.555839350020848,55826.99999999998,35961.62848001119
+course_17ae482aa71c60d9,Fundamentals of Software Architecture for Big Data,University of Colorado Boulder,Advanced,3.927626962444954,4.152197196746295,8465.0,14197.020085022752
+course_7ab61e2f39df044c,Credit Risk Management: Frameworks and Strategies,New York Institute of Finance,Beginner,4.268437552261454,4.256405011909248,18553.999999999996,18046.999733014116
+course_ee14a5ae9a786368,"Everyday Excel, Part 3 (Projects)",University of Colorado Boulder,Advanced,4.403566602538052,4.168771780182139,25326.00000000001,14749.312597779934
+course_5780c41b95c0c591,Genomic Data Science Specialization,Johns Hopkins University,Intermediate,4.859588576735493,4.907835130599675,72375.00000000001,80878.88037757429
+course_77481e8ad317f0b1,FinTech: Finance Industry Transformation and Regulation Specialization,The Hong Kong University of Science and Technology,Beginner,4.331609479764093,4.2691040199669,21458.999999999996,18582.494800938508
+course_1a16a2ea64784d5a,Data-driven Astronomy,The University of Sydney,Intermediate,4.570764700328436,4.708218341162204,37219.00000000003,51076.1720434967
+course_29a38a66df31a7fc,Computer Architecture,Princeton University,Advanced,5.439432175353214,5.188328421847744,275063.0,154286.67574464658
+course_dc6aaa82cbbdcb31,Violence Against Healthcare,University of Geneva,Beginner,3.705521613422667,3.9178868787365517,5075.999999999997,8277.265365952788
+course_fc3ee1250e4ebca9,Artificial Intelligence for Breast Cancer Detection,Johns Hopkins University,Intermediate,3.598790506763115,3.8096049211802074,3970.000000000001,6450.671427805818
+course_17ad9fda49003e72,UX and Interface Design for Embedded Systems,University of Colorado Boulder,Intermediate,3.7329563695756245,3.485728974288013,5406.999999999998,3060.053181629859
+course_e79ac4f2b6e63655,Building Relationships with Communication,Arizona State University,Beginner,3.193958978019187,3.366134473571279,1562.9999999999998,2323.456112597999
+course_6e0b68d187cd004b,America Through Foreign Eyes,Rice University,Beginner,4.2659022043017565,4.492319533491087,18446.000000000004,31068.446178301496
+course_4ab343bea366406a,Digital Transformation with Google Cloud,Google Cloud,Beginner,4.983549613625716,4.877504571927449,96283.00000000001,75423.1335789108
+course_1b929b1c3e701ad8,Introduction to NoSQL Databases,IBM,Beginner,4.6329227197661975,4.414988531011492,42945.99999999998,26000.908982210196
+course_88d6fd18f4a0615a,Organizational Analysis,Stanford University,Beginner,5.284505177946391,4.9399131948896855,192533.0000000002,87078.95225008581
+course_ff1791a910c78aeb,Arm Cortex-M Architecture and Software Development Specialization,Arm,Intermediate,3.668292710448221,3.77914310943011,4658.999999999998,6013.718698821052
+course_871526e9b86dba0f,Introduction to SIEM (Splunk),EDUCBA,Beginner,3.4686426683915115,3.535221876764121,2942.0000000000014,3429.4294796563354
+course_7c1d2fc91a5f267d,Machine Learning: Classification,University of Washington,Not specified,5.101901660763523,5.32825918595571,126444.99999999997,212940.9493571196
+course_16e539a328e3c0ab,"Programming Foundations with JavaScript, HTML and CSS",Duke University,Beginner,5.763905454937392,5.5674074513121985,580637.9999999994,369323.93258789426
+course_5468611fd548aeeb,Computer and Peripheral Hardware,Illinois Tech,Beginner,3.4742162640762553,3.8006201862580418,2980.0000000000005,6318.590151808737
+course_ab441540579f651c,Foundations of Red Hat Cloud-native Development,Red Hat,Intermediate,3.8180938691466357,3.9438738853664734,6577.999999999997,8787.672948264686
+course_7a2493adb8ed46ae,API Security on Google Cloud's Apigee API Platform,Google Cloud,Beginner,4.145009840142142,4.503583217812864,13964.000000000011,31884.76480577819
+course_776da7dee7341c72,Digital Signal Processing 3: Analog vs Digital,École Polytechnique Fédérale de Lausanne,Intermediate,4.095866453478543,3.8441811490832802,12470.000000000004,6985.237053665805
+course_c6744fd623e7c271,Digital Information Literacy,The State University of New York,Intermediate,3.459241664878082,3.4914227752302525,2878.9999999999995,3100.436030508772
+course_af7d8a90bb92f4f9,Introduction to Scrum Master Profession,SkillUp EdTech,Beginner,4.2646997921671455,4.434279756605226,18394.999999999985,27181.89663273607
+course_ffce50328fb61dd4,Animal Welfare in the Clinic,The University of Edinburgh,Intermediate,3.3911116137028023,3.393372345347381,2460.999999999999,2473.8442033274778
+course_76783db455dd0861,Excel Skills for Data Analytics and Visualization Specialization,Macquarie University,Intermediate,4.959022302034187,4.773479471737274,90995.99999999993,59358.029013251435
+course_1fa22a284f2d1716,Digitalisation in Space Research,Technical University of Munich (TUM),Intermediate,3.678700434998304,3.856469985001979,4771.999999999998,7185.714946886331
+course_b8ff6ebf12aee61d,Machine Learning Algorithms: Supervised Learning Tip to Tail,Alberta Machine Intelligence Institute,Not specified,4.224740190060544,4.460585652398453,16777.999999999996,28879.232848483778
+course_fc2b8dcc3aa1b23f,"Programming Languages, Part B",University of Washington,Intermediate,4.789312720562536,4.694360828016646,61562.00000000005,49472.1549356242
+course_731466e7b8cf3eac,Agile Development Specialization,University of Virginia,Beginner,4.7861833455676335,4.81386437768038,61119.99999999999,65142.49340574628
+course_15cc51c65f052f4c,Energy: The Enterprise,University at Buffalo,Beginner,4.330190480474565,4.596028996832472,21388.99999999998,39448.36399511565
+course_4fdaba73987020e2,Introduction to Quantum Information,Korea Advanced Institute of Science and Technology(KAIST),Advanced,4.262142464890878,4.097969826048005,18286.999999999993,12530.541121080138
+course_63ec051c43b1cda2,Custom and Distributed Training with TensorFlow,DeepLearning.AI,Intermediate,4.333003684755698,4.423002161606634,21528.0,26485.133209747855
+course_b38962d23fdee84c,Create Serverless Applications,Microsoft,Intermediate,4.263754388840006,4.01356786004234,18355.00000000002,10317.342789599406
+course_5a80702f28a34848,Business Models For Sustainability,Copenhagen Business School,Beginner,3.8252313231999002,3.6694896894409528,6687.000000000001,4671.858596089612
+course_96b635edb04d875a,Fundamentals of Investing,SoFi,Beginner,4.224377652161807,3.848950546379694,16764.000000000004,7062.3712963654525
+course_5c24c2ed53ac2974,"Understanding, Using, and Securing Crypto and Digital Assets",Association of International Certified Professional Accountants,Beginner,3.5691397254724593,3.5909135857001626,3707.999999999998,3898.6440518984778
+course_935e002dcb649ab7,Mandarin Chinese for Intermediate Learners: Part 1,Shanghai Jiao Tong University,Intermediate,4.088242433511572,3.9932759430717644,12252.999999999993,9846.365277726713
+course_264402e454793ad6,The Fundamentals of Computing Capstone Exam,Rice University,Intermediate,3.5376931943673906,3.8376101099270064,3448.999999999999,6880.343326852872
+course_96623ef864ae3e35,"Major Engineering Projects: Governance, Risk and Scope",University of Leeds,Intermediate,3.937568038600383,4.251484381942964,8661.000000000004,17843.67818120009
+course_7e217383373e554d,"Medical Emergencies: CPR, Toxicology, and Wilderness",University of Colorado System,Beginner,4.469748400505167,4.3933295617236245,29495.00000000003,24736.00509679726
+course_433d6adbef444b04,Introduction to Cybersecurity Careers,IBM,Beginner,4.422343571355003,4.34056482492608,26444.999999999985,21906.087846859602
+course_c5126bd1b6144d44,Data Analysis with R Programming,Google,Beginner,5.784754904383573,5.546768034816081,609193.0000000002,352182.7131166383
+course_9d0a5f534a19049c,The Emergence of the Modern Middle East - Part I,Tel Aviv University,Not specified,4.695341558895207,4.637719904169352,49583.999999999956,43423.007954771354
+course_02c3957415f3c273,Foundations of Quantum Mechanics,University of Colorado Boulder,Intermediate,4.090011024007147,3.8955745304933793,12302.999999999996,7862.751144468565
+course_3e7fc9ec8af8acf0,The Making of Modern Ukraine,Yale University,Beginner,3.2227164711475833,3.388627516968966,1670.0,2446.963644798317
+course_c4219b791e16572a,Machine Translation,Karlsruhe Institute of Technology,Intermediate,4.234972598405243,4.273012697688457,17178.000000000015,18750.493290360515
+course_204f05e4d5c2a6cd,Algebra: Elementary to Advanced Specialization,Johns Hopkins University,Beginner,4.394679275545099,4.183520742960853,24813.00000000001,15258.812728682744
+course_d24217ed422ebfbe,Big Data - Capstone Project,University of California San Diego,Not specified,4.240324555090434,4.591359309153444,17391.000000000007,39026.47347337626
+course_eab50ca7c31c4d5d,Verbal Communications and Presentation Skills,Starweaver,Beginner,3.9391696796251776,3.570945460346052,8693.000000000004,3723.4494342336184
+course_8a98620c53cb3a9c,"Anatomy: Gastrointestinal, Reproductive and Endocrine Systems",University of Michigan,Beginner,4.498544871715604,4.512443613852066,31517.00000000003,32541.953026720483
+course_4c3069f7dd5f96c1,Open Source LLMOps Solutions,Duke University,Beginner,3.2626883443016963,3.404117546344534,1830.9999999999993,2535.8148824473146
+course_a0a0cb6293bf8c9e,"Data Science with NumPy, Sets, and Dictionaries",Duke University,Beginner,3.263636068588108,3.4247889679576797,1834.9999999999998,2659.432476384769
+course_ef049ba8d71a7138,Ceramics and Composites,Arizona State University,Intermediate,3.2247919564926817,3.6021853077552026,1678.000000000001,4001.1543734893107
+course_e0a02ae65cbd0efe,Amazon Bedrock - Getting Started with Generative AI,Amazon Web Services,Beginner,3.5040628826786917,3.739501463978833,3191.999999999999,5489.104059456848
+course_df95b76a6dfecfde,Impact Measurement & Management for the SDGs,Duke University,Not specified,4.5641450718453225,4.42681256502503,36656.000000000015,26718.530281565912
+course_7bca661eef715a04,IT Infrastructure and Emerging Trends,University of Minnesota,Beginner,4.473953859292526,4.45286812429692,29781.999999999996,28370.574108832712
+course_6212f80f67fc9983,Introduction to Biology: Evolution,Rice University,Beginner,3.5622928644564746,3.5570180481331515,3649.9999999999995,3605.9362803033305
+course_2b1819afeedf5718,Exploring Quantum Physics,"University of Maryland, College Park",Not specified,4.578065883836092,4.05563168682977,37850.00000000003,11366.629044938052
+course_874c19d09a14205f,Cloud Machine Learning Engineering and MLOps,Duke University,Intermediate,3.899546931090867,3.9193940423325278,7935.000000000001,8306.040460733051
+course_d89de9c932bd64e8,Battery Technologies Specialization,Arizona State University,Beginner,3.596707029681446,3.5456988721097367,3950.999999999998,3513.1676264422945
+course_cdc18cd5d16df0c0,Mastering Laravel Framework and PHP,Board Infinity,Intermediate,3.920801381825654,4.070720088579851,8333.0,11768.472276192892
+course_04ee4c11f4f435f8,Health Informatics Specialization,Johns Hopkins University,Beginner,4.499109471835013,4.302442146523444,31558.0,20065.137793914477
+course_d8aba166f9c871d7,Electrical Power Distribution,L&T EduTech,Beginner,3.9149246482051483,3.837509729554085,8220.999999999996,6878.75322693849
+course_1a2396ac1700fab0,Teaching and Assessing Clinical Skills,University of Michigan,Intermediate,4.3664603142843506,4.51397115511328,23252.0,32656.614164532763
+course_4f3b6736fdef9394,Data Visualization with Tableau Project,"University of California, Davis",Intermediate,4.764840893742412,4.670435545274841,58189.00000000005,46820.44588276993
+course_885f95508de5c99b,Preventing Chronic Pain: A Human Systems Approach,University of Minnesota,Beginner,4.561911946127568,4.431578695823918,36468.0,27013.3655651133
+course_c95f7c7deb418cc1,"Sequences, Time Series and Prediction",DeepLearning.AI,Intermediate,5.151262565953748,5.35935332597527,141664.99999999997,228745.90388841584
+course_1b947aa60b417f1e,Population Health: Study Design,Universiteit Leiden,Intermediate,3.66576855071938,3.533007510539373,4632.0,3411.9881214579264
+course_5e2a82f482fce10d,Fundamentals of Machine Learning for Supply Chain,LearnQuest,Beginner,3.5460488664017342,3.564958979936533,3515.9999999999995,3672.4761151993453
+course_32cfe8b469b8ae2b,Six Sigma Yellow Belt Specialization,Kennesaw State University,Beginner,5.090423836399926,5.006663840136058,123147.00000000001,101546.2383450078
+course_cbd1d4ed4b43317f,Regression & Forecasting for Data Scientists using Python,EDUCBA,Intermediate,3.244771761495295,3.5378671841209157,1756.9999999999998,3450.382036629514
+course_c9af8ee0eac44a27,Six Sigma Advanced Define and Measure Phases,Kennesaw State University,Intermediate,4.5217002095962755,4.746195511178936,33243.00000000002,55743.66399088024
+course_4ba75d09b4e77a3e,SAP Customer Engagement and Discovery,SAP,Beginner,4.0080889362915775,3.853390705612311,10188.0,7134.946247351279
+course_dce945f3f279b3da,Cluster Analysis in Data Mining,University of Illinois Urbana-Champaign,Not specified,4.627611614110506,4.459947199853677,42424.00000000001,28836.80893032788
+course_7be716268ba70004,Fundamentals of Finance,"University of California, Irvine",Beginner,4.08181520063228,3.96813221678481,12073.000000000013,9292.492447307299
+course_d15918d59d1e5f88,IBM AI Foundations for Business Specialization,IBM,Beginner,4.289923239524004,4.42539321515552,19494.99999999998,26631.35201401794
+course_2ea5111d47a3774c,Introductory Human Physiology,Duke University,Beginner,5.734636638574419,5.345425835029143,542795.9999999998,221526.5760513886
+course_9786a661c17603f5,South Asian Religions & Ecology,Yale University,Beginner,3.442793225939769,3.41837170057823,2772.0,2620.4247975034264
+course_93d9c053b47d236b,Nanotechnology: A Maker’s Course,Duke University,Not specified,4.829020584860415,5.298161373217019,67456.00000000001,198683.3038821739
+course_c1d8b232a3cd090d,The Integration of Art and Science in Modern Dental Medicine Specialization,University of Pennsylvania,Intermediate,3.3506356082589543,3.5124630057286588,2242.0,3254.3406104418486
+course_9ca4c6921d1f0f92,Introduction to Embedded Systems Software and Development Environments,University of Colorado Boulder,Intermediate,5.092467992833974,4.567517853915611,123728.00000000013,36941.7830872232
+course_2a4c54f417ff364e,Spring - Cloud Overview,LearnQuest,Intermediate,3.812311609131124,3.746188275845558,6491.000000000004,5574.273531080297
+course_a094134717e663ce,Understanding Plants - Part II: Fundamentals of Plant Biology,Tel Aviv University,Intermediate,4.683677298818692,4.679446331627271,48269.999999999985,47802.02906659834
+course_407ff9c593e7156e,Business Analysis: Key Definitions & Strategy Analysis,Starweaver,Intermediate,3.910304168068569,3.8142232334304644,8134.000000000002,6519.634262563846
+course_f7f5fa1a1802f827,Quantum Computing For Everyone - An Introduction,Fractal Analytics,Beginner,3.228913405994688,3.302900969576458,1693.9999999999995,2008.6347394855181
+course_6ba1b27af33e1b65,Python Classes and Inheritance,University of Michigan,Intermediate,5.052736253763671,5.123645704735865,112910.99999999993,132936.9482527163
+course_aacb7712a72b391f,Mandarin Chinese for Intermediate Learners: Part 3,Shanghai Jiao Tong University,Intermediate,3.5637183399656776,3.5117674373716374,3661.999999999999,3249.1326128660216
+course_c2fc16e23042130d,Reproducible Research,Johns Hopkins University,Not specified,5.022523220970396,5.085687357817019,105323.0000000001,121811.23821027095
+course_349a741b1adca7a1,Mental Health and Resilience for Healthcare Workers,University of Toronto,Beginner,4.1927068066128585,4.148273492022867,15584.999999999996,14069.33245463705
+course_effa036fe72ef920,Spatial Analysis and Satellite Imagery in a GIS,University of Toronto,Beginner,4.469085299123121,4.564060715592249,29450.00000000002,36648.88072343992
+course_a18dd689cad667a6,"Foundations: Data, Data, Everywhere",Google,Beginner,6.457909739111414,6.200930810050847,2870184.0000000014,1588293.6882470427
+course_77c8981dcfb621d6,Fundamentals of Data Governance,Edureka,Beginner,3.548880562637515,3.3901384411493276,3538.9999999999995,2455.4915341804035
+course_160920bb197b793a,Microsoft Azure Security Engineer Associate (AZ-500) Professional Certificate,Microsoft,Intermediate,3.8116420214531512,3.644092710368962,6481.000000000004,4406.489203401364
+course_75b128440da56cbf,Programming Fundamentals in Kotlin,Meta,Beginner,4.300964846605394,4.377452623918589,19997.000000000004,23848.03629107231
+course_34599b45746855e9,Positive Psychology,The University of North Carolina at Chapel Hill,Not specified,5.481846635392593,5.310296616391357,303281.9999999999,204313.28963110986
+course_70415275f28d842c,Plant Bioinformatics,University of Toronto,Intermediate,4.038222638368718,4.186901326369371,10919.99999999999,15378.052044514505
+course_0b23b34600320458,Go Beyond the Numbers: Translate Data into Insights,Google,Advanced,4.746906520474098,4.614219050245492,55834.99999999997,41135.71498604601
+course_6879540a4e816b43,Deploy and Maintain Power BI Assets and Capstone project,Microsoft,Beginner,4.321867580630788,4.3631657923434535,20982.999999999985,23076.27959823592
+course_cfe67908b3dbada2,Structured Query Language (SQL) using SAS,SAS,Not specified,4.1923722835985116,4.218222971135701,15572.999999999995,16528.10149715142
+course_138fd1bb152a78df,Introduction to Microsoft Power Platform,Microsoft,Beginner,3.514414920580369,3.4671814583279543,3269.0000000000014,2932.1180964327477
+course_de4b90b541955ecf,Quantum Mechanics for Engineers Specialization,University of Colorado Boulder,Intermediate,3.651956069533074,3.490531860488031,4486.999999999999,3094.0822935969613
+course_5436bd6d1c5f2036,Check Point Jump Start: Maestro Hyperscale Network Security,Check Point Software Technologies Ltd.,Intermediate,3.3544926005894364,3.265754993475767,2261.9999999999995,1843.9748502826287
+course_ecacdc83e992d182,Uncommon Sense Teaching: Teaching Online,Deep Teaching Solutions,Beginner,3.656385719058688,3.559687168243333,4533.000000000001,3628.166159254549
+course_3d7efba5714b2dae,Data Structures and Algorithms,Amazon,Beginner,3.2367890994092927,3.3287825614558653,1724.999999999999,2131.9772272511973
+course_0c4011d673279a2c,Principles of Accounts Payable and Receivable Management,Tally Education and Distribution Services Private Limited,Intermediate,3.967032882158702,3.8557951777490485,9268.999999999998,7174.558444682346
+course_76cc987df178dcbc,"Basic Data Descriptors, Statistical Distributions, and Application to Business Decisions",Rice University,Not specified,4.82633400562222,5.0447644371449405,67040.00000000001,110857.33580709397
+course_532025558093b85f,"Start the UX Design Process: Empathize, Define, and Ideate",Google,Beginner,5.726655499702549,5.876978674070451,532912.0000000001,753318.5712921957
+course_7a35d196dec9fe7c,Calculus through Data & Modelling: Integration Applications,Johns Hopkins University,Intermediate,3.1934029030624176,3.398173473292054,1561.0000000000002,2501.344291678991
+course_a71690624f7ee01a,Advanced Cybersecurity Concepts and Capstone Project,Microsoft,Beginner,3.8553374044695405,3.78046104666436,7167.000000000004,6031.99602495089
+course_3738874a906f04e3,Data Visualization with Python,Duke University,Intermediate,3.4634450317704277,3.4894222762486744,2906.9999999999995,3086.187275050971
+course_8c53fda2c7c56166,"Intro to Analytic Thinking, Data Science, and Data Mining","University of California, Irvine",Intermediate,3.978864984347657,4.110821798073583,9525.0,12906.895626211463
+course_425e7e39d6a759b4,Systems Thinking In Public Health,Johns Hopkins University,Not specified,4.76281355657375,4.6433672780239945,57917.99999999999,43991.34881265618
+course_83f1e3141956dc0b,Battery State-of-Charge (SOC) Estimation,University of Colorado Boulder,Intermediate,4.285579810729595,4.184243769170963,19301.000000000015,15284.23720615037
+course_4386afe9feab20c4,Inspiring Leadership through Emotional Intelligence,Case Western Reserve University,Beginner,5.092018470752797,4.916248306377715,123600.00000000003,82460.9447877008
+course_406cf515374ab867,The Piano Sonata: Origins to Mozart,University of Michigan,Intermediate,3.3900514964589874,3.4923913902266035,2455.000000000001,3107.35870721231
+course_033e52db30635321,Capstone: Following the AWS Well Architected Framework,Amazon Web Services,Beginner,3.4234097277330933,3.45896522898048,2650.999999999999,2877.1680501430824
+course_0a3f020eb5ca2588,Linear Algebra from Elementary to Advanced Specialization,Johns Hopkins University,Beginner,3.6580113966571126,3.548249459490024,4550.000000000002,3533.8609708147974
+course_54fb0b5a9f86d379,Equine Welfare and Management,"University of California, Davis",Beginner,4.3863384163575105,4.410496936155123,24340.999999999978,25733.386100666703
+course_f4567abcd6c8f817,Hospitality Luxury Brand Management,Starweaver,Intermediate,3.7281913985899466,3.7788983705104684,5347.999999999998,6010.330729468989
+course_6e0c9b838f54d3ec,Designing an SAP Solution,SAP,Beginner,4.007534417897258,3.833838899548815,10175.000000000004,6820.856292505128
+course_f2167a8a7a7ddabe,Modern Data Warehouse Analytics in Microsoft Azure,Microsoft,Beginner,4.059108817913594,3.839174178819684,11458.000000000004,6905.166880084949
+course_f5f31f26f23db13d,Lesson | Business English Skills: Introducing Yourself in Business Settings,University of Washington,Intermediate,4.66337107549875,4.515369569575855,46064.99999999999,32761.936903716003
+course_c62c79dc5276b86c,"C++ Object Basics: Functions, Recursion, and Objects",Codio,Intermediate,4.168497483523033,4.073986490111603,14739.999999999998,11857.318622407765
+course_6f872a39d22c77df,"Comparing Genes, Proteins, and Genomes (Bioinformatics III)",University of California San Diego,Intermediate,4.329092647195331,4.125479731979244,21335.00000000002,13349.952854238945
+course_8e224023b00b855f,IBM Full-Stack JavaScript Developer Professional Certificate,IBM,Beginner,4.1176026916900845,4.093072901536151,13110.000000000007,12390.045508452453
+course_36513b4d38eab063,Physics 102 - Electric Potential and DC Circuits,Rice University,Intermediate,3.61857102812013,3.5478209357951296,4155.000000000002,3530.37578654766
+course_6b8a5e0801598c6a,Creating Sounds for Electronic Music,Berklee,Not specified,4.590496311814564,4.192761819708581,38948.99999999996,15586.974313370212
+course_90efe32ff448d99c,Inclusive Online Teaching Teach-Out,Johns Hopkins University,Not specified,3.881498779614983,3.699051655691869,7612.000000000001,5000.9401343481995
+course_9a693f580727a18f,Building Cloud Services with the Java Spring Framework,Vanderbilt University,Intermediate,4.467652494573867,4.543981582513251,29353.00000000003,34993.032692772125
+course_0d1a4ab3075076c7,Derivatives - Options & Futures,Interactive Brokers,Intermediate,4.480409413545738,4.419792757378364,30228.000000000007,26290.131438196844
+course_4387714e5e93adb9,IBM Data Analyst Professional Certificate,IBM,Beginner,5.495719130177512,5.566504749306688,313126.0000000001,368557.07225367083
+course_69a3312fcef9101e,Business English: Meetings,University of Washington,Intermediate,4.992959788501495,4.7937076728768355,98391.99999999994,62188.15507640322
+course_e74583e7d83c3090,High Stakes Leadership: Leading in Times of Crisis,University of Michigan,Intermediate,4.430558769522757,4.464502977972215,26949.999999999975,29140.901167185562
+course_0d9689f863ebf54a,Introduction to Game Design,Epic Games,Beginner,3.7955324427101544,4.069619788232111,6245.000000000002,11738.694175544777
+course_c47e2b4d38807de7,Biohacking Your Brain's Health,Emory University,Beginner,5.03214714629759,4.678648424621909,107683.00000000009,47714.28547528294
+course_1f32d7dbf467a27c,"C++ For C Programmers, Part A","University of California, Santa Cruz",Intermediate,5.398002542575099,4.965802073370412,250035.99999999994,92427.68453205802
+course_31630e9865c2794c,Information & Digital Literacy for University Success,The University of Sydney,Beginner,4.937367417517289,5.167528579918597,86569.99999999993,147071.51965964347
+course_2d2f2e9b0986d4da,Population Health: Panel Management Next Level,Universiteit Leiden,Intermediate,3.217220655644519,3.6572721417276797,1649.0000000000002,4542.261589938181
+course_2720577cd38aa084,Interfacing with the Arduino,"University of California, Irvine",Not specified,5.068441908639337,5.219609510841629,117069.00000000003,165809.53862079655
+course_7a20034a78251db1,Using Sensors With Your Raspberry Pi,Johns Hopkins University,Not specified,3.1818435879447726,3.4283051749248825,1520.0000000000002,2681.0516145201386
+course_b5bbec7a10919640,Strategies for Assisted Living Communities during COVID-19,Johns Hopkins University,Beginner,3.948706308904852,4.225313477859354,8885.999999999996,16800.1623216185
+course_e8030ee1ab6f0d21,Foundations of Business Intelligence,Google,Advanced,5.071443811370624,4.8798015367415175,117881.00000000003,75823.10005506803
+course_d442f434be2d6aab,Arabic for Beginners: Arabic Alphabet and Phonology,Khalifa University,Beginner,3.6774244377012475,3.584438546297528,4758.000000000001,3840.949049903235
+course_073d29fde4ab5a30,Impacts of the Environment on Global Public Health Specialization,University of Michigan,Beginner,3.8093576702111056,3.810414367277248,6446.999999999998,6462.705519855752
+course_884d8817b664a14e,AI Strategy and Governance,University of Pennsylvania,Beginner,4.123753668755842,4.084766150711989,13297.00000000001,12155.313119821567
+course_262203db0df718f4,Depressive and Bipolar Disorders,American Psychological Association,Beginner,3.2402995820027125,3.4340067515758492,1739.0000000000002,2716.481499143836
+course_52ad218e78ccd161,Conflict Management Specialization,"University of California, Irvine",Beginner,4.483144932872129,4.611951337240695,30419.00000000003,40921.48045831754
+course_fdec1c3f8c5b9484,Development of Real-Time Systems,EIT Digital,Intermediate,4.56426353410347,4.528995416619261,36666.00000000001,33806.12684155834
+course_7d958aa903bfb45a,Think like a CFO Specialization,IESE Business School,Beginner,4.2745965422569965,4.270110675483565,18818.99999999999,18625.617308949757
+course_845ac3742bffb979,Data Analytics and Databases on AWS,Amazon Web Services,Beginner,3.5548524343720547,3.5955288372014986,3588.000000000002,3940.295903843923
+course_1458fe93bdfd5f4a,Introduction to Software Product Management,University of Alberta,Not specified,5.12179613063615,5.3384565861761075,132372.0,218000.0464675251
+course_3a7ae18a05ff60f1,Guitar Performance Techniques,Berklee,Intermediate,4.136213065513025,3.754802939789297,13684.0,5685.948735699226
+course_f88854349bb67d9d,The Path to Insights: Data Models and Pipelines,Google,Advanced,4.639864837955078,4.580591106003124,43638.00000000001,38070.72137270253
+course_e02f1afd399b4f70,COVID-19 Training for Healthcare Workers,Stanford University,Not specified,5.070514404965734,5.385840288612472,117629.00000000003,243130.97327802086
+course_b067869c7f8d72a7,Tinkering Fundamentals: Motion and Mechanisms,Exploratorium,Beginner,3.819609732751585,3.470107435468472,6600.999999999997,2951.939385072438
+course_4bce9a664cd5a728,Management of Urban Infrastructures – part 1,École Polytechnique Fédérale de Lausanne,Not specified,4.497040282255931,4.584455619519093,31407.999999999985,38411.000503554744
+course_eb00e960903a242b,Career Discovery Specialization,Kennesaw State University,Beginner,3.658964842664435,3.6687795784401587,4559.999999999998,4664.225923880796
+course_4a5d2da4ab990633,Programming for Data Science,University of Leeds,Beginner,3.4875625602563782,3.4897416396758563,3073.0,3088.45757289446
+course_f4ffa96ac7dc7059,Creative Writing: The Craft of Style,Wesleyan University,Not specified,4.8228216453031045,4.7096071251444815,66499.99999999999,51239.7645120338
+course_3b5630f0449bab91,Understanding 9/11: Why 9/11 Happened & How Terrorism Affects Our World Today,Duke University,Beginner,4.1062249048967985,4.195753139961173,12770.999999999989,15694.704382460226
+course_df29f901018e6532,Introduction to Agile Development and Scrum,IBM,Beginner,4.931259494185134,4.9506392333755285,85360.99999999999,89256.37267036822
+course_89896629929f17bb,"GIS, Mapping, and Spatial Analysis Specialization",University of Toronto,Beginner,4.70943109504765,4.711097900654124,51219.00000000003,51415.95427220367
+course_6c415f6e52a40102,Drug Commercialization,University of California San Diego,Beginner,4.7291404814855245,4.802686888685719,53597.0,63487.3045283953
+course_882e7b066886fcac,Algorithmic Toolbox,University of California San Diego,Intermediate,5.727755911356619,5.547388784325292,534264.0000000001,352686.4578516937
+course_b04beb3d0ae91b22,Active Learning in STEM with PhET Interactive Simulations Specialization,University of Colorado Boulder,Beginner,3.7274599208579087,3.5446533831391136,5338.999999999998,3504.720453674499
+course_a31fb0e9837966e6,Embedded Software and Hardware Architecture,University of Colorado Boulder,Intermediate,4.684540171536475,4.479414198894346,48366.000000000044,30158.809837441982
+course_11ea036ab8deed10,Visualizing the Living Body: Diagnostic Imaging,Yale University,Intermediate,4.453776859690442,4.271103478369407,28429.999999999985,18668.24441908642
+course_9d4ff1a89a57bc4f,Learning Mindsets & Skills,High Tech High Graduate School of Education,Not specified,4.083538451230139,3.8622746087841007,12120.999999999996,7282.401325721722
+course_753f131773c347b6,Foundations of Cybersecurity,Google,Beginner,5.978846289904616,5.874653669396949,952459.0000000003,749296.4403117802
+course_0b73cb4c1e13cf77,The Payroll Cycle,"Automatic Data Processing, Inc. (ADP)",Beginner,3.404149249209695,3.524576253720514,2535.9999999999995,3346.387687980117
+course_3b4a7f74f7ccc9ee,Introduction to Software Engineering,IBM,Beginner,5.209753542908981,4.982071544655186,162088.99999999994,95955.8693946688
+course_64a6cfed73c5b444,Advanced Application Management with Red Hat OpenShift,Red Hat,Intermediate,3.4984484031739997,3.647284486852433,3151.000000000001,4438.993272704212
+course_2d180f6ffc47f5df,Deploy a website with Azure Virtual Machines,Microsoft,Intermediate,3.588271706842329,3.5357173099970933,3874.999999999998,3433.3439268677353
+course_382a9c7d1101669a,Introduction to Data Analytics in Google Cloud,Google Cloud,Beginner,3.9028184680822533,3.7472493848693693,7994.999999999996,5587.9097710380165
+course_2d2f4652c596c048,Basics of Extracellular Vesicles,"University of California, Irvine",Intermediate,4.276116989163544,4.371109253586723,18885.000000000007,23502.239821818068
+course_f798e9e2176beb42,Healthcare Marketplace Specialization,University of Minnesota,Beginner,4.468849285541113,4.578726179553373,29434.000000000007,37907.59041958176
+course_f35c0895a2448f72,Teaching Tips for Tricky English Grammar,"University of California, Irvine",Intermediate,4.312346639030853,3.966824314426188,20527.99999999998,9264.549678249883
+course_7b4e010f0422928b,Project Management Specialization,University of Colorado Boulder,Beginner,4.4097979133420635,4.394173397389856,25692.000000000022,24784.113962155705
+course_2fe064f84a051bb9,Compensation and Benefits,HRCI,Beginner,4.295764961229772,4.37464854692578,19759.00000000002,23694.55446325747
+course_7d72c2123c69a914,Materials in Oral Health,The University of Hong Kong,Not specified,4.371714202642618,4.5887163953308905,23535.00000000001,38789.6977274754
+course_111ce3e07497d7d7,Developing Applications with Google Cloud: Foundations,Google Cloud,Beginner,3.215637563435062,3.4195116269224513,1643.0000000000002,2627.3118638635615
+course_c1eefc8ef5c245b6,Theory of Angular Momentum,University of Colorado Boulder,Intermediate,3.7577754910119254,3.484691842433443,5724.999999999997,3052.7542352419728
+course_3677778ce4a37557,Modeling and Control of Power Electronics Specialization,University of Colorado Boulder,Intermediate,3.6400837313731205,3.68707938439176,4366.000000000001,4864.961238588121
+course_a7ddefc0e694790d,Building Interactive 3D Characters and Social VR,University of London,Intermediate,4.162952529345726,4.142743737127088,14553.000000000004,13891.327078640215
+course_155ee059d4f04556,RESTful Web Services with JAX-RS,LearnQuest,Beginner,3.2135177569963047,3.33856821508123,1634.9999999999993,2180.5608732292085
+course_f10c57ab95776894,Statistical Mechanics: Algorithms and Computations,École normale supérieure,Not specified,4.572325487841481,4.29733212313168,37353.0,19830.429618701026
+course_01295ed98d360081,Introduction to Cybersecurity Fundamentals,Coursera Instructor Network,Beginner,4.502932137431551,4.428363581818561,31837.000000000007,26814.122049337155
+course_620e4c4178624ffa,A Circular Economy of Metals: Towards a Sustainable Societal Metabolism,Universiteit Leiden,Beginner,3.8632038590286295,3.973083201330879,7298.000000000001,9399.033582585875
+course_75c8900040617075,Python Project: Software Engineering and Image Manipulation,University of Michigan,Intermediate,4.866700756042499,4.927024423902723,73569.99999999993,84532.63833853361
+course_23c8fe71a6e8d0f0,Advanced Python Scripting for Cybersecurity Specialization,Infosec,Beginner,3.5137501500818233,3.5196517554221294,3263.9999999999986,3308.6570619059635
+course_3e79ca4b691be960,C for Everyone: Programming Fundamentals,"University of California, Santa Cruz",Beginner,5.480127723301325,5.329681949240218,302084.0000000003,213639.69497918306
+course_e0e3fbc10edd3f13,Advanced Deep Learning Methods for Healthcare,University of Illinois Urbana-Champaign,Advanced,3.576341350205793,3.4113040372066576,3770.0000000000014,2578.1253975969457
+course_8cbe438f9f2c4341,Skills for Working as an AWS Cloud Consultant,Amazon Web Services,Beginner,3.53198955141255,3.573100864334996,3403.9999999999986,3741.974850655832
+course_810ca5353580d48d,Legal Tech and the Digital Transformation of Law,Universidad Austral,Beginner,4.062506775208683,3.910124412323711,11548.000000000002,8130.634010468149
+course_7ebe0568ff9802fe,Introduction to Modern Data Engineering with Snowflake,Snowflake,Intermediate,3.2229764498933915,3.488543499473793,1671.0000000000007,3079.9488175458837
+course_f5a31293fa6fe394,ESG Impact: Investor Perspective,University of Pennsylvania,Not specified,3.98109342314593,4.122855361801987,9574.000000000002,13269.524535521614
+course_a75048c2e882b19f,Programming Fundamentals in Swift,Meta,Beginner,4.117304446641002,4.290794649291893,13100.99999999999,19534.155892699528
+course_b548b5a7daf175a5,"Uncommon Sense Teaching: Part 2, Building Community and Habits of Learning",Deep Teaching Solutions,Intermediate,3.8061121101690913,3.771486241001618,6399.000000000003,5908.622460151138
+course_8913f068f04eb35c,Global Systemic Risk,Princeton University,Beginner,3.8165726960261033,4.332298759288738,6555.000000000003,21493.085151728694
+course_2d7e73fc23d7bf05,Computer Simulations,"University of California, Davis",Beginner,3.9417598138146954,3.926794596595691,8745.000000000002,8448.791576031344
+course_44e25168f87abc30,Google IT Automation with Python Professional Certificate,Google,Beginner,5.866316881921654,5.9424112635242174,735050.0,875812.7504107704
+course_24795242e7e640dd,"Machine Learning Under the Hood: The Technical Tips, Tricks, and Pitfalls",SAS,Beginner,3.689486448364248,3.6558187220590033,4892.000000000002,4527.085763313749
+course_a45cfd038f2eaba4,Advanced Digital Transformation (Part 1),IIMA - IIM Ahmedabad,Intermediate,4.145320738918325,3.9088357715426723,13974.000000000011,8106.544509070498
+course_b33608fa4b4b80dd,Measurement and Analysis,Unilever,Beginner,3.4575791469957626,3.5512423557805155,2868.000000000001,3558.298321642561
+course_5fa884a1fa44dbeb,Teaching Impacts of Technology in K-12 Education Specialization,University of California San Diego,Beginner,3.6852937813867843,3.465459568106663,4845.000000000002,2920.515853730855
+course_4a34d81458a77d20,Excel Essentials and Beyond,Board Infinity,Beginner,3.4516329474569907,3.4416335222861534,2828.999999999999,2764.60775729721
+course_627f58389d9654a6,Business Applications of Hypothesis Testing and Confidence Interval Estimation,Rice University,Not specified,4.555239592393597,4.818340067793707,35912.000000000015,65817.30081534683
+course_12b9c2f68e7627f9,Introduction to Secure Networking,Microsoft,Beginner,3.755722444903458,3.9923387629570453,5698.0,9825.140351419454
+course_bebb217f6bd23a16,Statistical Modeling for Data Science Applications Specialization,University of Colorado Boulder,Intermediate,3.6697816152085365,3.5339979600691196,4674.999999999999,3419.7783620090513
+course_d7a5b718723b22fe,Fundraising and Development Foundations,"University of California, Davis",Beginner,4.3289094048711885,4.4254343656429995,21325.999999999993,26633.875520726488
+course_54e6c78b4f82a278,Introduction to Javascript and Ajax: Building Web Apps,Johns Hopkins University,Not specified,3.2342641243787895,3.411501543635669,1715.000000000001,2579.298132145906
+course_3d1ad8a3c9d94cc5,"Global Postharvest Loss Prevention: Fundamentals, Technologies, and Actors",University of Illinois Urbana-Champaign,Beginner,4.026206297083118,4.180851078049712,10621.999999999998,15165.302517814143
+course_97a09bdcc73543a8,English for Interactions in the Workplace Intermediate Level,Pontificia Universidad Católica de Chile,Intermediate,4.151982395457474,4.117061679748505,14190.000000000005,13093.678699767894
+course_a2d1fee143f72a9b,Introduction to High-Performance and Parallel Computing,University of Colorado Boulder,Beginner,4.201069231151306,4.2241913899950445,15887.999999999987,16756.81172201417
+course_d3f2b3f68ec5d93b,International Law in Action: the Arbitration of International Disputes,Universiteit Leiden,Not specified,4.776548645763242,4.638025562288905,59778.999999999985,43453.57999116035
+course_b3d075e09a07d17d,Energy management for real estate. Methods and digital tools,Politecnico di Milano,Beginner,3.4189638307036225,3.823797736047637,2623.999999999999,6664.962896280623
+course_1185cfdfb96d4e4a,Predictive Modeling and Machine Learning with MATLAB,MathWorks,Beginner,4.196480167700148,4.019966667862563,15721.000000000004,10470.481839321705
+course_db289bd07adcd243,Getting a Consulting Job,Emory University,Beginner,3.9682026681428497,4.1484923138007,9294.000000000002,14076.423155080302
+course_b3443e22b8dd0275,Cortex-M Software Development Fundamentals,Arm,Intermediate,3.563599728881531,3.617273188173202,3661.0,4142.601786924307
+course_2ce0679007082b9f,Scaling Operations: Linking Strategy and Execution,Northwestern University,Not specified,4.376540460188395,4.248778982549871,23798.00000000002,17732.86805195572
+course_792aae23d97e3825,Customer Understanding and Digital Marketing Channels,Unilever,Beginner,4.031125575731565,3.9193483829317683,10742.999999999989,8305.167253933234
+course_1a9bebbcd07b4202,"Musicianship: Chord Charts, Diatonic Chords, and Minor Keys",Berklee,Intermediate,4.545826474411603,4.5138520457293945,35141.99999999996,32647.659006203758
+course_4b5b5ba8e7077b63,Developing Interpersonal Skills,IBM,Beginner,4.965530943622861,4.827910960429088,92370.00000000009,67283.86959531796
+course_92e0716e7aa3639d,In Search for the Origins of Korean Philosophy,Sungkyunkwan University,Intermediate,3.3316297176299323,3.415529389157913,2146.0,2603.3309955213863
+course_54784f92f97f5cc8,Web3 and Blockchain Fundamentals,INSEAD,Not specified,3.9559281568969507,3.793677778318629,9035.0,6218.38745167468
+course_d20c8b0ccd019d0a,Sustainable Vikings:  Sustainability & Corporate Social Responsibility in Scandinavia,Copenhagen Business School,Beginner,3.821840927200454,3.879875840328215,6634.999999999996,7583.607376416688
+course_ead43a47a9228944,Sharpened Visions: A Poetry Workshop,California Institute of the Arts,Beginner,5.14654041958469,4.918263246588207,140132.99999999997,82844.41710555075
+course_c24e0c147e7cfb89,"Python for Data Science, AI & Development",IBM,Beginner,6.005645456440276,5.933916521372825,1013084.0000000006,858848.4206784868
+course_13280aec91806617,The Blockchain,"University of California, Irvine",Beginner,4.220918363556553,4.143857163511258,16631.000000000015,13926.98678529602
+course_2592e6ec95d6df8e,Corruption,University of Pennsylvania,Intermediate,4.246473960229344,4.552697026473988,17639.000000000004,35702.36835620793
+course_4ea73d2eb1362edf,Preparing for the SAS Programming Certification Exam,SAS,Intermediate,3.839037873388306,4.014218970954337,6903.000000000002,10332.822545877996
+course_64792dd4bd968b14,Validity and Bias in Epidemiology,Imperial College London,Intermediate,3.963268251526235,4.137884598046021,9189.000000000002,13736.769092108865
+course_34633520cc63a11f,The Construction Industry: The Way Forward,Columbia University,Beginner,4.128334636753716,4.222056434939735,13438.0,16674.638791529556
+course_13ba1c5d0330e5f4,Using Data for Geographic Mapping and Forecasting in SAS Visual Analytics,SAS,Intermediate,3.9770831203158528,3.998573746546162,9486.000000000002,9967.213167177171
+course_3b5a7ddac995f2bf,Searching for the Grand Paris,Sciences Po,Beginner,3.523616419054371,3.568074411713962,3339.000000000001,3698.915513117971
+course_355474a17f1dabf5,Better Business Writing in English,Georgia Institute of Technology,Beginner,4.956014670699672,4.4845383788734825,90368.00000000006,30516.75695704836
+course_cd0b1466c16af8f8,Fundamentals of Management,"University of California, Irvine",Not specified,5.190928093158139,5.152873603729894,155213.0,142191.4895391305
+course_4ee84f5a6648fd03,Data-Driven Decisions with Power BI,Knowledge Accelerators,Beginner,4.628787276361574,4.531603507743792,42539.00000000004,34009.755342773744
+course_7483914ce1d0d808,GIS Applications Across Industries,"University of California, Davis",Intermediate,3.484869032720402,3.8266450560525,3053.9999999999986,6708.803259332753
+course_64b45e0e19268bb3,Our Earth's Future,American Museum of Natural History,Not specified,4.577169981014124,4.585710210734201,37772.00000000002,38522.12274604103
+course_08c35f8100a53010,AI for Course Design,University of Colorado Boulder,Beginner,3.3240765797394864,3.2714967736273786,2109.0000000000005,1868.515796005109
+course_78e398f30fc27094,Regression Models,Johns Hopkins University,Not specified,5.168300032061617,5.11138390415404,147333.0,129236.11799065511
+course_d5e78a63e698fd02,Prompt Engineering for Web Developers,Scrimba,Not specified,3.330413773349191,3.2708156566782725,2140.000000000001,1865.5876438787477
+course_ec6a72716cdd147b,Material Processing,Georgia Institute of Technology,Not specified,4.488621213129428,4.701077932621031,30804.999999999975,50243.2741226041
+course_25233bdc2a1f9e7f,Cloud Application Development Foundations Specialization,IBM,Beginner,3.9819544444699737,4.169328112033966,9593.000000000004,14768.218595010538
+course_ebf224ec64eca2d4,Advanced React,Meta,Intermediate,4.9819770798897745,4.855726863031762,95935.0000000001,71734.29972169863
+course_a0cfc86b770e8c30,"Synapses, Neurons and Brains",Hebrew University of Jerusalem,Not specified,4.908811957064237,4.894608058592578,81061.0,78452.72960561147
+course_6e32904e9203ab5c,Data Pipelines with TensorFlow Data Services,DeepLearning.AI,Intermediate,4.417986230686384,4.608513547695321,26180.99999999998,40598.83277467663
+course_dfe407c7978b45fd,Supply Chain Analytics Specialization,Rutgers the State University of New Jersey,Beginner,4.576813403214398,4.579164974281033,37740.99999999999,37945.910171143514
+course_7a642a695470d6fd,Developing Your Musicianship: Final Project,Berklee,Intermediate,3.5402042998420598,3.7721944747398406,3468.9999999999995,5918.265916215001
+course_36ca11a538549fc7,Getting Started with Terraform for Google Cloud,Google Cloud,Beginner,3.678700434998304,3.5929824961508636,4771.999999999998,3917.2608862134716
+course_77494e0fa88d7966,Google Cloud Storage and Containers for AWS Professionals,Google Cloud,Intermediate,3.237292337567459,3.368422371869141,1727.0000000000007,2335.7285642209727
+course_4b010ca07bf4bf29,Taxation of Business Entities I: Corporations,University of Illinois Urbana-Champaign,Intermediate,4.161876876828287,4.259232867176629,14517.000000000013,18164.893969313332
+course_cbe0aa3c2bfec0bf,Marketing in a Digital World,University of Illinois Urbana-Champaign,Beginner,5.757361860925065,5.723712443908795,571955.0000000001,529312.8579556147
+course_3f2a224f04e2434f,Print and Digital Elements of Design: Branding and User Experience,University of Colorado Boulder,Beginner,4.253846646198501,4.07788906676411,17941.000000000015,11964.34883063496
+course_a03ec4e5fa36013a,A Technical Leader's Qualities and Effectiveness,University of Colorado Boulder,Beginner,3.38147609027503,3.435141606631742,2406.999999999999,2723.5892204075994
+course_8dfc163a9485002b,Django Application Development with SQL and Databases,IBM,Intermediate,4.652207649348266,4.364495030386266,44895.99999999997,23147.016988282117
+course_33afbdddff98b15a,Materials Science for Advanced Technological Applications Specialization,Arizona State University,Intermediate,3.34713478291002,3.493682801369749,2224.0000000000005,3116.612451066726
+course_161a1070325a90bd,Rust Fundamentals,Duke University,Beginner,4.019988159591286,4.132028747092488,10471.00000000001,13552.791188667437
+course_ce51a3b204f1de38,Simple Regression Analysis in Public Health,Johns Hopkins University,Beginner,4.158483112699248,4.300280594809772,14403.999999999998,19965.51857371607
+course_0994c58f87b58b05,Understanding Financial Statements: Company Performance,University of Illinois Urbana-Champaign,Beginner,4.62591921586773,4.64326484587597,42258.99999999998,43980.97429219136
+course_c1af8c678572edc9,Identity Protection and Governance,Microsoft,Intermediate,3.230704313612569,3.3428582801859608,1701.0,2202.2077171134256
+course_e9ec28a5147fa807,High Level Biocontainment for Healthcare Facilities,University of Nebraska,Intermediate,3.6057358938767465,3.9075236734226846,4033.999999999999,8082.089834402264
