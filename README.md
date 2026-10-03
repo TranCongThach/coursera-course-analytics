@@ -68,7 +68,7 @@ Yêu cầu Python 3.11 trở lên.
 
 ```powershell
 python -m venv venv
-.\venv\Scripts\Activate.ps1
+venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
@@ -77,7 +77,7 @@ Nếu PowerShell chặn `Activate.ps1`, chỉ mở quyền cho phiên terminal h
 
 ```powershell
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-.\venv\Scripts\Activate.ps1
+venv\Scripts\Activate.ps1
 ```
 
 Không cần đổi execution policy cho toàn máy. Lỗi
