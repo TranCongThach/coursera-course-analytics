@@ -7,7 +7,7 @@ cắt ngang, không phải time-series forecasting.
 Loại bỏ các biến gây leakage theo README: enrolled_percentile,
 popularity_score, review_to_enrollment_ratio.
 
-Chạy:  python dashboard/forecast_model.py
+Chạy:  python -m Hoa.forecast_app.forecast_model
 """
 import json
 from pathlib import Path
@@ -18,9 +18,9 @@ from sklearn.ensemble import HistGradientBoostingRegressor
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.model_selection import train_test_split
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "Data" / "processed" / "fact_courses_eda_ready.csv"
-OUT = ROOT / "outputs" / "forecast"
+OUT = ROOT / "Hoa" / "outputs" / "forecast"
 
 NUMERIC = [
     "num_reviews", "rating_num", "hours_to_complete", "hours_per_week",

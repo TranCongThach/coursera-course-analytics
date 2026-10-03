@@ -18,7 +18,7 @@ xóa chúng khỏi raw nếu chưa xác nhận với thành viên cung cấp d�
 
 ## Mapping quốc gia trụ sở
 
-`scripts/org_country_mapping.PY` là mapping thủ công Organization → HQ country,
+`Thach/org_country_mapping.py` là mapping thủ công Organization → HQ country,
 không phải trường có sẵn trong nguồn Coursera. Hiện mapping chưa lưu URL chứng
 minh theo từng tổ chức. Vì vậy:
 

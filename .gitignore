@@ -30,3 +30,12 @@ idea/
 
 # Log files
 *.log
+
+# Local browser verification screenshots
+Thach/outputs/dashboard-preview/
+Hoa/outputs/trend/*.html
+
+# Python cache / test
+.pytest_cache/
+.coverage
+htmlcov/

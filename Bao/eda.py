@@ -19,7 +19,7 @@ import seaborn as sns
 
 PROJECT_DIR = Path(__file__).resolve().parents[1]
 PROCESSED_DIR = PROJECT_DIR / "Data" / "processed"
-OUTPUT_DIR = PROJECT_DIR / "outputs" / "eda"
+OUTPUT_DIR = PROJECT_DIR / "Bao" / "outputs" / "eda"
 
 FACT_PATH = PROCESSED_DIR / "fact_courses_eda_ready.csv"
 SUBJECT_BRIDGE_PATH = PROCESSED_DIR / "bridge_course_subject.csv"
