@@ -298,11 +298,11 @@ def build_internet_forecast(
 # 3. Chế độ 2: đường xu hướng giữa hai biến của khóa học
 # --------------------------------------------------------------------------- #
 COURSE_LABELS = {
-    "hours_to_complete": "Số giờ học",
-    "duration_weeks": "Số tuần học",
-    "enrolled_num": "Số người học",
-    "num_reviews": "Số lượt đánh giá",
-    "rating_num": "Điểm đánh giá (0–5)",
+    "hours_to_complete": "Giờ học",
+    "duration_weeks": "Tuần học",
+    "enrolled_num": "Người học",
+    "num_reviews": "Lượt đánh giá",
+    "rating_num": "Điểm đánh giá (0 đến 5)",
     "skill_count": "Số kỹ năng",
     "satisfaction_rate_num": "Mức hài lòng (%)",
 }
@@ -370,7 +370,7 @@ class EnrollmentModel:
         """Dự đoán trung vị enrollment và khoảng thực nghiệm cho một course có review."""
         values = np.array([reviews, rating, hours, skills], dtype=float)
         if not np.isfinite(values).all() or reviews <= 0 or hours <= 0:
-            raise ValueError("Số lượt đánh giá và số giờ học phải lớn hơn 0.")
+            raise ValueError("Lượt đánh giá và giờ học phải lớn hơn 0.")
         if not 0 <= rating <= 5 or skills < 0 or not float(skills).is_integer():
             raise ValueError("Điểm đánh giá từ 0 đến 5; số kỹ năng là số nguyên từ 0 trở lên.")
         if level not in LEVELS:
@@ -391,7 +391,7 @@ class EnrollmentModel:
         ):
             lower, upper = self.feature_ranges[field]
             if not lower <= value <= upper:
-                warnings.append(f"{label} nằm ngoài dữ liệu đã học ({lower:g}–{upper:g}) nên kết quả chỉ để tham khảo.")
+                warnings.append(f"{label} nằm ngoài khoảng {lower:g} đến {upper:g} của các khóa dùng để tính. Kết quả có thể kém chính xác.")
         return {
             "estimate": float(10**prediction_log),
             "lower": float(10**(prediction_log - self.interval_half_width)),
@@ -460,19 +460,19 @@ def enrollment_diagnostic_figures(model: EnrollmentModel) -> tuple[go.Figure, go
     lo, hi = float(min(actual.min(), predicted.min())), float(max(actual.max(), predicted.max()))
     comparison = go.Figure()
     comparison.add_scatter(x=10**predicted, y=10**actual, mode="markers",
-                           marker=dict(size=6, opacity=0.45, color=BLUE), name="Khóa học")
+                           marker=dict(size=6, opacity=0.45, color=BLUE), name="Khóa dùng để kiểm tra")
     comparison.add_scatter(x=[10**lo, 10**hi], y=[10**lo, 10**hi], mode="lines",
-                           line=dict(color="gray", dash="dash"), name="Dự đoán đúng hoàn toàn")
-    _base_layout(comparison, "Số liệu thực tế so với dự đoán", "Số người học dự đoán (log)", "Số người học thực tế (log)")
+                           line=dict(color="gray", dash="dash"), name="Trùng với số thật")
+    _base_layout(comparison, "Số thật so với dự đoán", "Người học dự đoán (log10)", "Người học thực tế (log10)")
     comparison.update_xaxes(type="log")
     comparison.update_yaxes(type="log")
 
     residual = go.Figure()
     residual.add_scatter(x=predicted, y=actual - predicted, mode="markers",
-                         marker=dict(size=6, opacity=0.45, color=BLUE), name="Khóa học")
+                         marker=dict(size=6, opacity=0.45, color=BLUE), name="Khóa dùng để kiểm tra")
     residual.add_hline(y=0, line_dash="dash", line_color="gray")
-    _base_layout(residual, "Sai số của mô hình",
-                 "Mức dự đoán (thang log)", "Chênh lệch thực tế – dự đoán")
+    _base_layout(residual, "Mức chênh giữa số thật và dự đoán",
+                 "Người học dự đoán (log10)", "Số thật trừ dự đoán (log10)")
     return comparison, residual
 
 
@@ -508,9 +508,9 @@ def build_course_trend(
         d = d[d[y_col] > 0]
     n_used = len(d)
     if x_col == y_col:
-        raise ValueError("x và y phải là hai biến khác nhau.")
+        raise ValueError("Trục ngang và trục dọc phải là hai chỉ số khác nhau.")
     if n_used < 5:
-        raise ValueError(f"Chỉ còn {n_used} khóa có đủ '{x_col}' và '{y_col}' sau khi lọc.")
+        raise ValueError(f"Chỉ còn {n_used} khóa có đủ hai chỉ số sau khi lọc; cần ít nhất 5 khóa.")
 
     fx = np.log10(d[x_col]) if log_x else d[x_col]
     fy = np.log10(d[y_col]) if log_y else d[y_col]
@@ -525,12 +525,11 @@ def build_course_trend(
     warnings: list[str] = []
     if {x_col, y_col} in _SAME_SNAPSHOT_PAIRS:
         rank_corr = float(d[[x_col, y_col]].rank().corr().iloc[0, 1])
-        warnings.append(f"Số lượt đánh giá và số người học được ghi cùng thời điểm "
-                        f"(tương quan = {rank_corr:.2f}); không kết luận cái này gây ra cái kia.")
+        warnings.append(f"Spearman = {rank_corr:.2f}. Hai chỉ số cùng tăng không có nghĩa cái này gây ra cái kia.")
     if trend.r2 < 0.1:
-        warnings.append(f"R² = {trend.r2:.3f}: đường xu hướng chỉ để tham khảo vì giải thích được rất ít.")
+        warnings.append(f"R² = {trend.r2:.3f}: đường xu hướng chỉ giải thích được khoảng {trend.r2:.0%} chênh lệch giữa các khóa.")
     if n_used < len(df):
-        warnings.append(f"Dùng {n_used:,}/{len(df):,} khóa (bỏ khóa thiếu dữ liệu).")
+        warnings.append(f"Chỉ {n_used:,}/{len(df):,} khóa có đủ hai chỉ số để tính.")
 
     table = pd.DataFrame(columns=[x_col, f"{y_col}_pred", "lower", "upper"])
     if x_new:
@@ -538,7 +537,7 @@ def build_course_trend(
         if not np.isfinite(xn).all() or (log_x and (xn <= 0).any()):
             raise ValueError("Giá trị phải lớn hơn 0 khi dùng thang log.")
         if (xn < d[x_col].min()).any() or (xn > d[x_col].max()).any():
-            warnings.append(f"Có giá trị nằm ngoài dữ liệu hiện có ({d[x_col].min():g}–{d[x_col].max():g}) nên kết quả chỉ để tham khảo.")
+            warnings.append(f"Khoảng dữ liệu hiện có là {d[x_col].min():g} đến {d[x_col].max():g}; giá trị nằm ngoài khoảng này có thể kém chính xác.")
         fxn = np.log10(xn) if log_x else xn
         l2, h2 = trend.interval(fxn, "prediction")
         table = pd.DataFrame({x_col: xn, f"{y_col}_pred": back(trend.predict(fxn)),
@@ -554,15 +553,15 @@ def build_course_trend(
                              hovertemplate=f"{xl}: %{{x:,.4g}}<br>{yl}: %{{y:,.4g}}<extra></extra>"))
     fig.add_trace(go.Scatter(x=grid_x, y=back(hi), mode="lines", line=dict(width=0), showlegend=False, hoverinfo="skip"))
     fig.add_trace(go.Scatter(x=grid_x, y=back(lo), mode="lines", line=dict(width=0), fill="tonexty",
-                             fillcolor=TREND_FILL, name=f"Khoảng tin cậy {pct}%", hoverinfo="skip"))
+                             fillcolor=TREND_FILL, name=f"Khoảng dự đoán {pct}%", hoverinfo="skip"))
     fig.add_trace(go.Scatter(x=grid_x, y=back(line), mode="lines", name="Đường xu hướng",
                              line=dict(color=TREND, width=2), hoverinfo="skip"))
     if len(table):
-        fig.add_trace(go.Scatter(x=table[x_col].to_numpy(), y=table[f"{y_col}_pred"].to_numpy(), mode="markers", name="Điểm dự đoán",
+        fig.add_trace(go.Scatter(x=table[x_col].to_numpy(), y=table[f"{y_col}_pred"].to_numpy(), mode="markers", name="Điểm ước lượng",
                                  marker=dict(symbol="diamond", size=11, color=TREND, line=dict(color=BLUE, width=1)),
                                  hovertemplate=f"{xl}: %{{x:,.4g}}<br>Ước lượng: %{{y:,.4g}}<extra></extra>"))
-    _base_layout(fig, title or f"{yl} theo {xl}", xl + (" (log)" if log_x else ""),
-                 yl + (" (log)" if log_y else ""))
+    _base_layout(fig, title or f"{yl} theo {xl}", xl + (" (log10)" if log_x else ""),
+                 yl + (" (log10)" if log_y else ""))
     if log_x:
         fig.update_xaxes(type="log")
     if log_y:
@@ -570,15 +569,15 @@ def build_course_trend(
     _stat_box(fig, f"R² = {trend.r2:.3f} · n = {trend.n:,}")
 
     if log_x and log_y:
-        meaning = f"khi {xl} tăng 10%, {yl} thay đổi khoảng {((1.1 ** trend.slope) - 1) * 100:+.1f}% (độ co giãn {trend.slope:.2f})"
+        meaning = f"Khi {xl} tăng 10%, {yl} thường thay đổi khoảng {((1.1 ** trend.slope) - 1) * 100:+.1f}% theo đường xu hướng"
     elif log_x:
-        meaning = f"khi {xl} tăng 10 lần, {yl} thay đổi {trend.slope:+.4g} đơn vị theo đường hồi quy"
+        meaning = f"Khi {xl} tăng 10 lần, {yl} thường thay đổi {trend.slope:+.4g} theo đường xu hướng"
     elif log_y:
-        meaning = f"khi {xl} tăng 1 đơn vị, {yl} thay đổi khoảng {(10**trend.slope - 1) * 100:+.1f}% theo đường hồi quy"
+        meaning = f"Khi {xl} tăng 1, {yl} thường thay đổi khoảng {(10**trend.slope - 1) * 100:+.1f}% theo đường xu hướng"
     else:
-        meaning = f"mỗi +1 đơn vị {xl} ứng với {trend.slope:+.4g} đơn vị {yl} theo đường hồi quy"
-    summary = (f"{meaning}. R² = {trend.r2:.2f}, n = {trend.n:,}. "
-               "Kết quả tính trên dữ liệu tĩnh, không phải dự báo theo thời gian và không cho biết nguyên nhân.")
+        meaning = f"Khi {xl} tăng 1, {yl} thường thay đổi {trend.slope:+.4g} theo đường xu hướng"
+    summary = (f"{meaning}. "
+               f"R² = {trend.r2:.2f}: đường này giải thích được khoảng {trend.r2:.0%} chênh lệch của {yl} giữa {trend.n:,} khóa.")
     return TrendChart(fig, trend, table, summary, warnings)
 
 

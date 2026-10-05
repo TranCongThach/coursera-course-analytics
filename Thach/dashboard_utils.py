@@ -1,4 +1,3 @@
-"""Read-only dashboard transformations at one row per course_id."""
 from pathlib import Path
 import numpy as np
 import pandas as pd
@@ -10,10 +9,10 @@ LEVELS = insights.LEVEL_ORDER
 # Sequential: dùng cho treemap / choropleth (giá trị lớn = màu đậm).
 COLORS = ["#2f6fed", "#12a594", "#f59e0b", "#94a3b8", "#8e4ec6", "#0ea5e9", "#e5484d"]
 LEVEL_COLORS = {
-    "Beginner": "#2f6fed",       # xanh dương Coursera
-    "Intermediate": "#12a594",   # xanh ngọc
-    "Advanced": "#f59e0b",       # cam
-    "Not specified": "#94a3b8",  # xám (thiếu dữ liệu)
+    "Beginner": "#2f6fed",       
+    "Intermediate": "#12a594",  
+    "Advanced": "#f59e0b",       
+    "Not specified": "#94a3b8",  
 }
 COVERAGE_COLORS = {
     "reported_hours_and_weeks": "#2f6fed",
@@ -26,7 +25,6 @@ DIVERGING_SCALE = [[0, "#d92d20"], [0.5, "#f8fafc"], [1, "#175cd3"]]
 CHART_HEIGHT = 400
 NUMERIC = ["enrolled_num", "num_reviews", "rating_num", "hours_to_complete", "skill_count"]
 LABELS = ["Người học", "Lượt đánh giá", "Điểm đánh giá", "Giờ học", "Số kỹ năng"]
-# Display mapping only; the source's HQ assignments are not modified.
 COUNTRY_ISO = dict(zip(
     ["United States", "South Africa", "Denmark", "Spain", "Mexico", "South Korea",
      "India", "Netherlands", "United Kingdom", "Canada", "Australia", "Israel",
@@ -38,7 +36,6 @@ COUNTRY_ISO = dict(zip(
      "AUS", "ISR", "JPN", "BEL", "FRA", "HKG", "SWE", "CHN", "CHE", "TWN",
      "ITA", "NOR", "DEU", "IRL", "MAR", "CZE", "ARG", "COL", "SAU", "PER",
      "ARE", "SGP", "BRA", "CHL"], strict=True))
-
 
 def load_data():
     directory = ROOT / "Data" / "processed"
@@ -53,14 +50,11 @@ def load_data():
         bridges[kind] = bridge.drop_duplicates(["course_id", f"{kind}_normalized"])
     return fact, bridges
 
-
 def bridge_options(bridge, kind):
     labels = bridge.groupby(f"{kind}_normalized")[kind].first().sort_values()
     return [{"label": label, "value": key} for key, label in labels.items()]
 
-
 def filter_courses(fact, filters, bridges, drill=None):
-    """OR within each selection, AND across fields; never expand the fact grain."""
     out = fact
     for key, column in (("organizations", "Organization"), ("levels", "level_clean")):
         if filters.get(key):
@@ -93,7 +87,6 @@ def filter_courses(fact, filters, bridges, drill=None):
             out = out[out[key].eq(value)]
     return out.copy()
 
-
 def chart_title(title, subtitle):
     """Tiêu đề Plotly hai tầng: nội dung chính và phạm vi dữ liệu."""
     return (
@@ -108,11 +101,12 @@ def style_figure(fig):
     m = fig.layout.margin
     is_default_margin = (m.l == 80 and m.r == 80 and m.t == 100 and m.b == 80)
     fig.update_layout(template="plotly_white", paper_bgcolor="white", plot_bgcolor="white",
-                      font=dict(family="sans-serif", color="#344054", size=12.5),
+                      # Tahoma/Arial render các dấu kép tiếng Việt (ấ, ố, ể...)
+                      font=dict(family="Tahoma, Arial, Segoe UI, sans-serif", color="#344054", size=12.5),
                       colorway=COLORS,
                       height=CHART_HEIGHT, autosize=True,
-                      title=dict(x=0.01, xanchor="left", y=0.97, yanchor="top",
-                                 font=dict(size=17, color="#172033")),
+                      title=dict(x=0.01, xanchor="left", y=0.95, yanchor="top",
+                                 font=dict(size=18, color="#172033")),
                       legend=dict(orientation="h", y=-0.28, x=0, yanchor="top",
                                   font=dict(size=11)),
                       hoverlabel=dict(bgcolor="white", align="left"))
@@ -126,17 +120,14 @@ def style_figure(fig):
     fig.update_yaxes(gridcolor="#f0f2f5", automargin=True)
     return fig
 
-
-def empty_figure(message="Không có dữ liệu phù hợp với bộ lọc"):
+def empty_figure(message="Không có khóa học phù hợp với bộ lọc."):
     fig = go.Figure()
     fig.add_annotation(text=message, x=0.5, y=0.5, xref="paper", yref="paper", showarrow=False)
     fig.update_xaxes(visible=False)
     fig.update_yaxes(visible=False)
     return style_figure(fig)
 
-
 def pairwise_spearman(df):
-    """Rank each pair on its common observations, not ranks from different samples."""
     rho = np.full((len(NUMERIC), len(NUMERIC)), np.nan)
     counts = np.zeros_like(rho, dtype=int)
     for i, left in enumerate(NUMERIC):
@@ -147,7 +138,6 @@ def pairwise_spearman(df):
             if len(pair) >= 3 and a.nunique() > 1 and b.nunique() > 1:
                 rho[i, j] = a.rank().corr(b.rank())
     return rho, counts
-
 
 def build_figures(df, bridges, tree_kind="subject"):
     keys = ["level", "coverage", "histogram", "rating", "tree", "map", "scatter", "heatmap", "ecdf", "organizations"]
@@ -165,49 +155,49 @@ def build_figures(df, bridges, tree_kind="subject"):
         marker_line=dict(color="white", width=1),
         text=[f"{v:,}" for v in level_values], textposition="outside", cliponaxis=False,
         customdata=[[v / total_lv] for v in level_values],
-        hovertemplate="%{x}<br>%{y:,} khóa · %{customdata[0]:.1%}<extra></extra>"))
+        hovertemplate="%{x}<br>%{y:,} khóa học · %{customdata[0]:.1%}<extra></extra>"))
     figures["level"].update_layout(
-        title=chart_title("Cơ cấu khóa học theo trình độ", f"{len(df):,} khóa trong phạm vi đang chọn"),
+        title=chart_title("Phân bố khóa học theo trình độ", f"Đang tính trên {len(df):,} khóa"),
         yaxis_title="Số khóa học", showlegend=False,
     )
     status_order = ["reported_hours_and_weeks", "reported_hours_only", "estimated_from_months", "missing"]
     status = df.schedule_parse_status.fillna("missing").value_counts().reindex(status_order, fill_value=0)
     status = status[status.gt(0)]
-    status_labels = {"reported_hours_and_weeks": "Có giờ và tuần", "reported_hours_only": "Có số giờ",
-                     "estimated_from_months": "Giờ ước lượng từ tháng", "missing": "Thiếu lịch học"}
+    status_labels = {"reported_hours_and_weeks": "Có giờ và số tuần", "reported_hours_only": "Chỉ có số giờ",
+                     "estimated_from_months": "Ước tính giờ học từ số tháng", "missing": "Chưa có lịch học"}
     # 02 / coverage: pie 4 lát màu phân loại (không dùng 4 sắc xanh gần nhau).
     figures["coverage"] = go.Figure(go.Pie(labels=[status_labels.get(s, s) for s in status.index],
         values=status.values, hole=0.55,
         marker_colors=[COVERAGE_COLORS.get(key, "#94a3b8") for key in status.index], sort=False,
         marker_line=dict(color="white", width=2),
         textinfo="percent", textfont_size=12,
-        hovertemplate="%{label}<br>%{value:,} khóa · %{percent}<extra></extra>"))
+        hovertemplate="%{label}<br>%{value:,} khóa học · %{percent}<extra></extra>"))
     figures["coverage"].update_layout(
-        title=chart_title("Mức độ đầy đủ của lịch học", f"{len(df):,} khóa được phân loại theo trạng thái dữ liệu"),
+        title=chart_title("Tình trạng thông tin lịch học", f"Đang kiểm tra {len(df):,} khóa"),
     )
     enrolled = df.loc[df.enrolled_num.gt(0), "enrolled_num"]
-    figures["histogram"] = empty_figure("Không có khóa nào có người học")
-    figures["ecdf"] = empty_figure("Không có khóa nào có người học")
+    figures["histogram"] = empty_figure("Chưa có khóa học nào ghi số người học.")
+    figures["ecdf"] = empty_figure("Chưa có khóa học nào ghi số người học.")
     if len(enrolled):
         # 03 / histogram: 1 màu duy nhất là đúng (phân phối 1 biến) + viền trắng từng cột.
         figures["histogram"] = go.Figure(go.Histogram(x=np.log10(enrolled), nbinsx=30,
             marker_color="#2f6fed", marker_line=dict(color="white", width=0.8), opacity=0.88,
-            hovertemplate="Mức log: %{x:.2f}<br>%{y} khóa<extra></extra>"))
+            hovertemplate="log10 người học: %{x:.2f}<br>Số khóa học: %{y}<extra></extra>"))
         figures["histogram"].update_layout(
-            title=chart_title("Phân phối số người học", f"{len(enrolled):,} khóa có dữ liệu · trục ngang dùng log10"),
-            xaxis_title="Số người học (log10)", yaxis_title="Số khóa học",
+            title=chart_title("Phân bố số người học", f"{len(enrolled):,} khóa có số người học · trục ngang dùng log10"),
+            xaxis_title="Người học (log10)", yaxis_title="Số khóa học",
         )
         values, counts = np.unique(enrolled, return_counts=True)
         # 10 / ecdf: 1 đường duy nhất + vùng tô nhạt để đọc tích lũy.
         figures["ecdf"] = go.Figure(go.Scatter(x=values, y=np.cumsum(counts) / len(enrolled),
             mode="lines", line=dict(shape="hv", width=3, color="#0b3d9c"), fill="tozeroy",
             fillcolor="rgba(47,111,237,0.12)",
-            hovertemplate="Enrollment ≤ %{x:,.0f}<br>%{y:.1%} số khóa<extra></extra>"))
+            hovertemplate="Người học ≤ %{x:,.0f}<br>%{y:.1%} số khóa học<extra></extra>"))
         figures["ecdf"].update_layout(title=chart_title(
                 "Phân phối tích lũy số người học",
-                f"{len(enrolled):,} khóa có dữ liệu · trục ngang dùng thang log",
+                f"{len(enrolled):,} khóa có số người học · trục ngang dùng log10",
             ),
-            xaxis=dict(type="log", title="Số người học (thang log)"),
+            xaxis=dict(type="log", title="Người học (log10)"),
             yaxis=dict(title="Tỷ lệ khóa học", tickformat=".0%", range=[0, 1.02]))
     # 04 / rating: mỗi box 1 màu theo level (trước đây cả 4 box cùng 1 màu xanh).
     figures["rating"] = insights.fig_rating_by_level(df)
@@ -216,7 +206,7 @@ def build_figures(df, bridges, tree_kind="subject"):
         trace.marker.color = LEVEL_COLORS.get(lv, "#2f6fed")
         trace.line.color = LEVEL_COLORS.get(lv, "#2f6fed")
     figures["rating"].update_layout(title=chart_title(
-        "Điểm đánh giá theo trình độ",
+        "Điểm đánh giá ở từng trình độ",
         f"{df.rating_num.count():,} khóa có điểm đánh giá",
     ), yaxis_title="Điểm đánh giá (0–5)")
     bridge = bridges[tree_kind]
@@ -225,43 +215,43 @@ def build_figures(df, bridges, tree_kind="subject"):
     tree = selected.groupby(norm).agg(n=("course_id", "nunique"), label=(tree_kind, "first"))
     tree = tree.sort_values(["n", "label"], ascending=[False, True]).head(20)
     tree_label = "chủ đề" if tree_kind == "subject" else "kỹ năng"
-    figures["tree"] = empty_figure(f"Không có {tree_label} nào được ghi nhận")
+    figures["tree"] = empty_figure(f"Chưa có khóa học nào ghi {tree_label}.")
     if len(tree):
         # 05 / treemap: sequential (giá trị lớn = đậm) + chữ trắng trên ô đậm.
         figures["tree"] = go.Figure(go.Treemap(ids=tree.index.tolist(), labels=tree.label,
             parents=[""] * len(tree), values=tree.n, root_color="#f1f5f9", tiling=dict(pad=3, packing="squarify"),
             marker=dict(colors=tree.n, colorscale=BLUE_SCALE, showscale=True,
-                        colorbar=dict(title="Số khóa", thickness=12, len=0.6, x=1.0, xpad=6),
+                        colorbar=dict(title="Số khóa học", thickness=12, len=0.6, x=1.0, xpad=6),
                         line=dict(color="white", width=2)),
             textinfo="label+value", textfont=dict(size=12),
-            hovertemplate="%{label}<br>%{value:,} khóa<extra></extra>"))
+            hovertemplate="%{label}<br>%{value:,} khóa học<extra></extra>"))
         figures["tree"].update_layout(
             title=chart_title(
-                f"Phân bố khóa học theo {tree_label}",
-                f"{len(tree):,} nhóm hiển thị · dữ liệu ở {selected.course_id.nunique():,}/{len(df):,} khóa",
+                f"Top {tree_label} phổ biến nhất",
+                f"Hiển thị {len(tree):,} nhóm có nhiều khóa nhất · {selected.course_id.nunique():,}/{len(df):,} khóa có thông tin",
             ),
             margin=dict(l=20, r=72, t=76, b=20),
         )
     countries = df.groupby("organization_hq_country").agg(n=("course_id", "nunique"), organizations=("Organization", "nunique"))
     countries["iso"] = countries.index.map(COUNTRY_ISO)
     countries = countries.dropna(subset=["iso"])
-    figures["map"] = empty_figure("Không đủ dữ liệu trụ sở để vẽ bản đồ")
+    figures["map"] = empty_figure("Chưa đủ thông tin trụ sở để vẽ bản đồ.")
     if len(countries):
         # 06 / map: sequential xanh + viền trắng, nước nhiều khóa đậm hơn rõ rệt.
         figures["map"] = go.Figure(go.Choropleth(locations=countries.iso, z=countries.n,
             locationmode="ISO-3", colorscale=BLUE_SCALE, marker_line_color="white", marker_line_width=0.8,
             customdata=np.column_stack([countries.index, countries.organizations]),
-            colorbar=dict(title="Số khóa", thickness=12, len=0.65, x=1.0, xpad=6),
-            hovertemplate="%{customdata[0]}<br>%{z:,} khóa<br>%{customdata[1]} tổ chức<extra></extra>"))
+            colorbar=dict(title="Số khóa học", thickness=12, len=0.65, x=1.0, xpad=6),
+            hovertemplate="%{customdata[0]}<br>%{z:,} khóa học<br>%{customdata[1]} tổ chức<extra></extra>"))
         figures["map"].update_layout(title=chart_title(
-                "Phân bố khóa học theo trụ sở tổ chức",
-                f"Ánh xạ được quốc gia cho {countries.n.sum():,}/{len(df):,} khóa",
+                "Bản đồ trụ sở tổ chức",
+                f"{countries.n.sum():,}/{len(df):,} khóa xác định được quốc gia của tổ chức",
             ),
             margin=dict(l=20, r=72, t=76, b=20),
             geo=dict(projection_type="natural earth", showframe=False, showcoastlines=False,
                      showland=True, landcolor="#eef2f6", bgcolor="white"))
     scatter = df[df.num_reviews.gt(0) & df.enrolled_num.gt(0)]
-    figures["scatter"] = empty_figure("Không có dữ liệu đánh giá và người học để vẽ")
+    figures["scatter"] = empty_figure("Chưa có khóa học nào ghi cả lượt đánh giá và số người học.")
     if len(scatter):
         # 08 / scatter: mỗi level 1 màu phân loại tương phản (xanh / ngọc / cam / xám).
         fig = go.Figure()
@@ -275,12 +265,12 @@ def build_figures(df, bridges, tree_kind="subject"):
                             line=dict(color="white", width=0.5)),
                 hovertemplate="%{customdata[1]}<br>Lượt đánh giá: %{x:,.0f}<br>Người học: %{y:,.0f}<extra>%{fullData.name}</extra>"))
         fig.update_layout(title=chart_title(
-                               "Mối liên hệ giữa lượt đánh giá và người học",
-                               f"{len(scatter):,} khóa có đủ hai chỉ số · hai trục dùng thang log",
+                               "Quan hệ giữa lượt đánh giá và số người học",
+                               f"{len(scatter):,} khóa có đủ cả hai chỉ số · hai trục dùng log10",
                            ),
-                           xaxis=dict(type="log", title="Số lượt đánh giá (log)",
+                           xaxis=dict(type="log", title="Lượt đánh giá (log10)",
                                       exponentformat="power", showexponent="all"),
-                           yaxis=dict(type="log", title="Số người học (log)",
+                           yaxis=dict(type="log", title="Người học (log10)",
                                       exponentformat="power", showexponent="all"))
         figures["scatter"] = fig
     rho, counts = pairwise_spearman(df)
@@ -290,11 +280,11 @@ def build_figures(df, bridges, tree_kind="subject"):
         customdata=counts, texttemplate="%{z:.2f}", textfont=dict(size=11),
         hoverongaps=False,
         xgap=1, ygap=1,
-        colorbar=dict(title="Tương quan", thickness=12, len=0.75, x=1.0, xpad=6),
-        hovertemplate="%{x} × %{y}<br>Tương quan: %{z:.3f}<br>Số khóa so được: %{customdata:,}<extra></extra>"))
+        colorbar=dict(title="Mức liên hệ", thickness=12, len=0.75, x=1.0, xpad=6),
+        hovertemplate="%{x} × %{y}<br>Spearman: %{z:.3f}<br>Số khóa có đủ hai chỉ số: %{customdata:,}<extra></extra>"))
     figures["heatmap"].update_layout(title=chart_title(
-            "Tương quan Spearman giữa các chỉ số",
-            "Cỡ mẫu được tính riêng cho từng cặp sau khi bỏ giá trị thiếu",
+            "Tương quan giữa các chỉ số khóa học",
+            "Số gần 1 là cùng tăng, gần -1 là ngược chiều · mỗi ô chỉ tính khóa có đủ hai chỉ số",
         ),
         margin=dict(l=105, r=72, t=76, b=78),
         xaxis=dict(tickangle=-20, automargin=True),
@@ -308,11 +298,10 @@ def build_figures(df, bridges, tree_kind="subject"):
                     line=dict(color="white", width=1)),
         text=[f"{v:,}" for v in org_vals], textposition="outside", cliponaxis=False)
     figures["organizations"].update_layout(title=chart_title(
-        "Các tổ chức có nhiều khóa học nhất",
-        f"10 tổ chức dẫn đầu trong {df.Organization.nunique():,} tổ chức đang chọn",
+        "Top 10 tổ chức có nhiều khóa học nhất",
+        f"10 tổ chức có nhiều khóa nhất trong tổng số {df.Organization.nunique():,} tổ chức",
     ))
     return {key: style_figure(fig) for key, fig in figures.items()}
-
 
 def insight_text(df, bridges):
     if df.empty:
@@ -335,12 +324,10 @@ def insight_text(df, bridges):
     if not skill.empty:
         row = skill.iloc[0]
         messages.append(f"Kỹ năng phổ biến nhất: {row['skill']} ({int(row.n_courses):,} khóa). "
-                        f"Dữ liệu kỹ năng phủ {df.course_id.isin(bridges['skill'].course_id).sum():,}/{len(df):,} khóa.")
+                        f"Có thông tin kỹ năng ở {df.course_id.isin(bridges['skill'].course_id).sum():,}/{len(df):,} khóa.")
     return messages
 
-
 TABLE_COLUMNS = ["course_id", "title", "Organization", "level_clean", "rating_num", "enrolled_num", "num_reviews", "hours_to_complete"]
-
 
 def table_records(df):
     result = df[TABLE_COLUMNS].copy().round(2)

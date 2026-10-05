@@ -163,8 +163,11 @@ Mục tiêu hiển thị:
 
 - Tối ưu trước cho màn hình trình chiếu Full HD `1920 × 1080` giống dashboard
   tham khảo của nhóm.
-- Mười biểu đồ chính dùng lưới hai cột: bar, donut, histogram, box, scatter,
-  heatmap, treemap, choropleth HQ, ECDF và xếp hạng tổ chức.
+- Dashboard có **14 biểu đồ**: 7 biểu đồ ở `Tổng quan`, 4 biểu đồ ở
+  `Phân tích` (gồm một biểu đồ so sánh tùy chọn) và 3 biểu đồ ở
+  `Dự đoán người học`. Tab `Dữ liệu` dùng bảng và khối chi tiết, không có biểu đồ.
+- Các biểu đồ chính dùng lưới hai cột; riêng biểu đồ `Top 10 tổ chức có nhiều
+  khóa học nhất` chiếm toàn bộ chiều rộng của hàng để tận dụng vùng hiển thị.
 - Dưới `1280 px`, lưới biểu đồ chuyển thành một cột; trên điện thoại sidebar
   đổi thành thanh điều hướng ngang và không tràn chiều rộng.
 - Thanh lọc gồm organization, level, subject, skill, rating, số giờ và
@@ -178,6 +181,11 @@ Mục tiêu hiển thị:
 lọc thu gọn và các phần tổng quan/insight/dự đoán. Khi chỉnh tiếp giao diện, phải giữ
 lại các quy tắc đã kiểm thử:
 
+- Thanh đầu dùng dải màu xanh đồng bộ với logo HCMUTE, hiển thị nhanh tổng số khóa
+  học và tổ chức; sidebar có icon và trạng thái hover/active màu xanh.
+- Giao diện dùng font cục bộ `Be Vietnam Pro`. Bốn KPI tổng quan dùng các ảnh
+  `course.png`, `people.png`, `star.png` và `organize.png` trong `Thach/assets/`;
+  ảnh được hiển thị bằng `object-fit: contain`, không cắt nội dung.
 - Một hàm lọc dùng chung cho KPI, biểu đồ và bảng khóa.
 - Subject/skill lọc qua tập `course_id`, không merge làm nhân bản fact.
 - Missing không tự động đổi thành `0`; biểu đồ luôn công bố cỡ mẫu/coverage.
@@ -220,7 +228,8 @@ bộ lọc và drill-down. Phương pháp, metric và giới hạn mô hình n�
 
 App chỉ đọc fact và bridge trong `Data/processed`; không ghi đè dữ liệu.
 Dashboard dùng `Thach/dashboard.py`, `Thach/dashboard_utils.py` và
-`Thach/assets/dashboard.css`.
+`Thach/assets/dashboard.css`; font, logo, icon KPI và nền bản đồ cục bộ nằm trong
+`Thach/assets/`.
 
 Kiểm tra dữ liệu, callback và hồi quy:
 

@@ -1,45 +1,34 @@
-"""Data-grain checks and real Dash callback requests (no browser dependency)."""
 import sys
 import unittest
 from pathlib import Path
-
 import numpy as np
 import pandas as pd
 
-# Support both `python -m Thach.test_dashboard` and
-# `python Thach/test_dashboard.py` from the project root.
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-
 from Thach import dashboard as app
 from Thach import dashboard_utils as du
-
 
 def find_component(component, component_id):
     """Return the first Dash component with the requested id."""
     if getattr(component, "id", None) == component_id:
         return component
-
     children = getattr(component, "children", None)
     if children is None:
         return None
     if not isinstance(children, (list, tuple)):
         children = [children]
-
     for child in children:
         found = find_component(child, component_id)
         if found is not None:
             return found
     return None
 
-
 def descendant_ids(component):
-    """Collect component ids below one section of the layout."""
     ids = set()
     component_id = getattr(component, "id", None)
     if component_id:
         ids.add(component_id)
-
     children = getattr(component, "children", None)
     if children is None:
         return ids
@@ -49,31 +38,25 @@ def descendant_ids(component):
         ids.update(descendant_ids(child))
     return ids
 
-
 class DashboardTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.fact, cls.bridges = app.FACT, app.BRIDGES
         cls.client = app.server.test_client()
 
-    def test_coefficient_chart_uses_forward_bars_and_preserves_signs(self):
+    def test_coefficient_chart_uses_signed_vertical_bars(self):
         figure = app.coefficient_figure()
         traces = {trace.name: trace for trace in figure.data}
-        self.assertEqual(set(traces), {"Dương (+)", "Âm (−)"})
-        self.assertEqual(traces["Dương (+)"].marker.color, "#12a594")
-        self.assertEqual(traces["Âm (−)"].marker.color, "#e5484d")
-
-        values = []
-        for trace in traces.values():
-            values.extend(value for value in trace.x if value is not None)
-        self.assertTrue(np.all(np.asarray(values, dtype=float) >= 0))
-
-        negative = [value for value in traces["Âm (−)"].customdata if value is not None]
-        positive = [value for value in traces["Dương (+)"].customdata if value is not None]
+        self.assertEqual(set(traces), {"Hệ số dương (+)", "Hệ số âm (−)"})
+        self.assertEqual(traces["Hệ số dương (+)"].marker.color, "#12a594")
+        self.assertEqual(traces["Hệ số âm (−)"].marker.color, "#e5484d")
+        negative = [value for value in traces["Hệ số âm (−)"].y if value is not None]
+        positive = [value for value in traces["Hệ số dương (+)"].y if value is not None]
         self.assertEqual(len(negative), 2)
         self.assertTrue(np.all(np.asarray(negative) < 0))
         self.assertTrue(np.all(np.asarray(positive) >= 0))
-
+        self.assertNotEqual(figure.layout.yaxis.zerolinewidth, 0)
+        self.assertNotIn("?", figure.layout.title.text)
         prediction_panel = find_component(app.app.layout, "prediction-panel")
         self.assertNotIn("Cách đọc kết quả", str(prediction_panel))
 
@@ -92,22 +75,25 @@ class DashboardTests(unittest.TestCase):
         sidebar = find_component(app.app.layout, "app-sidebar")
         main = find_component(app.app.layout, "dashboard-main")
         filters = find_component(app.app.layout, "filter-panel")
-        page_intro = find_component(app.app.layout, "page-intro")
-
         self.assertIsNotNone(sidebar)
         self.assertIsNotNone(main)
         self.assertIsNotNone(filters)
-        self.assertIsNotNone(page_intro)
-
+        self.assertIsNone(find_component(app.app.layout, "page-intro"))
+        self.assertIsNone(find_component(app.app.layout, "page-title"))
+        self.assertIsNone(find_component(app.app.layout, "page-subtitle"))
         sidebar_ids = descendant_ids(sidebar)
         filter_ids = descendant_ids(filters)
         self.assertIn("hcmute-logo", sidebar_ids)
+        self.assertIn("header-stats", sidebar_ids)
         self.assertIn("project-identity", sidebar_ids)
+        self.assertNotIn("ĐỀ TÀI", str(sidebar))
+        self.assertIn("DASHBOARD", str(sidebar))
+        self.assertIn("COURSERA", str(sidebar))
         self.assertIn("page-tab", sidebar_ids)
         self.assertNotIn("filter-organizations", sidebar_ids)
         self.assertNotIn("breadcrumb", sidebar_ids)
         self.assertNotIn("clear-drill", sidebar_ids)
-        self.assertIn("page-intro", descendant_ids(main))
+        self.assertNotIn("page-intro", descendant_ids(main))
         self.assertIn("filter-panel", descendant_ids(main))
         self.assertTrue({
             "filter-organizations", "filter-levels", "filter-subjects",
@@ -120,10 +106,13 @@ class DashboardTests(unittest.TestCase):
         sidebar = find_component(app.app.layout, "app-sidebar")
         tabs = find_component(sidebar, "page-tab")
         data_panel = find_component(app.app.layout, "data-panel")
-
         self.assertEqual(
             [tab.value for tab in tabs.children],
             ["overview", "insight", "prediction", "data"],
+        )
+        self.assertEqual(
+            [tab.label for tab in tabs.children],
+            ["Tổng quan", "Phân tích", "Dự đoán người học", "Dữ liệu"],
         )
         self.assertIsNotNone(data_panel)
         self.assertTrue({
@@ -131,10 +120,11 @@ class DashboardTests(unittest.TestCase):
         }.issubset(descendant_ids(data_panel)))
         self.assertNotIn("data-source-note", descendant_ids(data_panel))
         self.assertNotIn("coverage-note", descendant_ids(data_panel))
-        self.assertIn("Phân tích xu hướng học trực tuyến", str(sidebar))
+        self.assertIn("DASHBOARD", str(sidebar))
+        self.assertIn("COURSERA", str(sidebar))
         self.assertNotIn("source-note", descendant_ids(sidebar))
         self.assertEqual(
-            app.switch_tab("data")[:5],
+            app.switch_tab("data"),
             (
                 {"display": "none"},
                 {"display": "none"},
@@ -143,9 +133,7 @@ class DashboardTests(unittest.TestCase):
                 {"display": "block"},
             ),
         )
-        self.assertEqual(app.switch_tab("data")[5:], app.PAGE_COPY["data"])
         self.assertEqual(app.switch_tab("prediction")[4], {"display": "none"})
-        self.assertEqual(app.switch_tab("prediction")[5:], app.PAGE_COPY["prediction"])
 
     def test_default_preserves_all_courses_and_missing(self):
         filters = app.store_filters([], [], [], [], [0, 5], [0, app.HOURS_MAX], [0, app.ENROLL_MAX], ["missing"])
@@ -193,15 +181,12 @@ class DashboardTests(unittest.TestCase):
     def test_every_chart_matches_its_source_rows(self):
         """Khóa số liệu hiển thị với fact/bridge để tránh biểu đồ đúng hình nhưng sai số."""
         figures = du.build_figures(self.fact, self.bridges)
-
         level_expected = self.fact.level_clean.fillna("Not specified").value_counts()
         level_trace = figures["level"].data[0]
         self.assertEqual(dict(zip(level_trace.x, level_trace.y)), level_expected.to_dict())
-
         status_order = ["reported_hours_and_weeks", "reported_hours_only", "estimated_from_months", "missing"]
         status_expected = self.fact.schedule_parse_status.fillna("missing").value_counts().reindex(status_order, fill_value=0)
         self.assertEqual(list(figures["coverage"].data[0].values), status_expected.tolist())
-
         enrolled = self.fact.loc[self.fact.enrolled_num.gt(0), "enrolled_num"]
         np.testing.assert_allclose(
             np.sort(figures["histogram"].data[0].x),
@@ -211,7 +196,6 @@ class DashboardTests(unittest.TestCase):
         values, counts = np.unique(enrolled, return_counts=True)
         np.testing.assert_array_equal(ecdf.x, values)
         np.testing.assert_allclose(ecdf.y, np.cumsum(counts) / len(enrolled))
-
         rating_traces = figures["rating"].data
         self.assertEqual(sum(len(trace.y) for trace in rating_traces), self.fact.rating_num.count())
         for trace in rating_traces:
@@ -221,7 +205,6 @@ class DashboardTests(unittest.TestCase):
                 "rating_num",
             ]
             np.testing.assert_array_equal(np.sort(trace.y), np.sort(expected))
-
         tree_trace = figures["tree"].data[0]
         tree_expected = (
             self.bridges["subject"]
@@ -230,7 +213,6 @@ class DashboardTests(unittest.TestCase):
             .head(20)
         )
         self.assertEqual(dict(zip(tree_trace.ids, tree_trace.values)), tree_expected.to_dict())
-
         mapped = self.fact[self.fact.organization_hq_country.isin(du.COUNTRY_ISO)]
         map_expected = mapped.groupby("organization_hq_country").course_id.nunique()
         map_trace = figures["map"].data[0]
@@ -239,7 +221,6 @@ class DashboardTests(unittest.TestCase):
             map_actual,
             {du.COUNTRY_ISO[country]: count for country, count in map_expected.items()},
         )
-
         scatter_ids = {
             course_id
             for trace in figures["scatter"].data
@@ -254,7 +235,6 @@ class DashboardTests(unittest.TestCase):
         rho, counts = du.pairwise_spearman(self.fact)
         np.testing.assert_allclose(figures["heatmap"].data[0].z, rho, equal_nan=True)
         np.testing.assert_array_equal(figures["heatmap"].data[0].customdata, counts)
-
         organizations = app.du.insights.top_organizations(self.fact, 10)
         org_trace = figures["organizations"].data[0]
         self.assertEqual(list(org_trace.y), organizations.Organization.tolist())
@@ -262,13 +242,11 @@ class DashboardTests(unittest.TestCase):
 
     def test_chart_visual_contract_is_consistent(self):
         figures = du.build_figures(self.fact, self.bridges)
-
         self.assertEqual(app.GRAPH_CONFIG["topojsonURL"], "/assets/plotly-topojson/")
         for figure in figures.values():
             self.assertTrue(figure.layout.autosize)
             self.assertEqual(figure.layout.height, 400)
             self.assertTrue(figure.layout.title.text.startswith("<b>"))
-
         level = figures["level"].data[0]
         self.assertEqual(
             dict(zip(level.x, level.marker.color)),
@@ -276,7 +254,7 @@ class DashboardTests(unittest.TestCase):
         )
         coverage = figures["coverage"].data[0]
         coverage_colors = dict(zip(coverage.labels, coverage.marker.colors))
-        self.assertEqual(coverage_colors["Thiếu lịch học"], "#94a3b8")
+        self.assertEqual(coverage_colors["Chưa có lịch học"], "#94a3b8")
 
         scatter_colors = {
             trace.name: trace.marker.color for trace in figures["scatter"].data
@@ -340,7 +318,6 @@ class DashboardTests(unittest.TestCase):
                      "/assets/plotly-topojson/world_110m.json"):
             with self.client.get(path) as response:
                 self.assertEqual(response.status_code, 200)
-
 
 if __name__ == "__main__":
     unittest.main()

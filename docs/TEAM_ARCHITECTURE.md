@@ -78,12 +78,13 @@ Project_CK_TTDLTQ/
 
 | File                                       | Trách nhiệm                                                                                                            |
 | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `scripts/dashboard_utils.py`             | Đọc fact/bridge, lọc đa cấp, giữ grain, chuẩn hóa style và gom figure từ các module để dashboard sử dụng. |
-| `dashboard.py`                           | Layout, sidebar, tabs, KPI, callback, filter, reset, cross-filter, drill-down, bảng và chi tiết khóa học.           |
-| `assets/dashboard.css`                   | UI/UX và responsive layout.                                                                                             |
-| `assets/plotly-topojson/world_110m.json` | Nền bản đồ chạy cục bộ.                                                                                           |
-| `tests/test_dashboard.py`                | Kiểm thử data grain, layout, callback và filter.                                                                      |
-| `tests/dashboard_browser_smoke.mjs`      | Smoke test trên trình duyệt thật.                                                                                    |
+| `Thach/dashboard_utils.py`                 | Đọc fact/bridge, lọc đa cấp, giữ grain, chuẩn hóa style và gom figure từ các module để dashboard sử dụng. |
+| `Thach/dashboard.py`                       | Layout, sidebar, bốn trang, KPI, callback, filter, reset, cross-filter, drill-down, bảng và chi tiết khóa học. |
+| `Thach/assets/dashboard.css`               | UI/UX, font Be Vietnam Pro, lưới biểu đồ và responsive layout. |
+| `Thach/assets/*.png`                       | Logo HCMUTE và bốn icon KPI khóa học, người học, điểm đánh giá, tổ chức. |
+| `Thach/assets/plotly-topojson/world_110m.json` | Nền bản đồ chạy cục bộ. |
+| `Thach/test_dashboard.py`                  | Kiểm thử data grain, layout, callback và filter. |
+| `Thach/dashboard_browser_smoke.mjs`        | Smoke test trên trình duyệt thật, gồm desktop, laptop, 125% scaling và mobile. |
 
 Thạch không thay đổi công thức EDA, insight hoặc mô hình do thành viên khác bàn
 giao. Khi tích hợp, Thạch chỉ truyền DataFrame đã lọc vào hàm và hiển thị
@@ -133,6 +134,11 @@ Các biểu đồ/phần Hoa bàn giao cho Thạch tích hợp:
 5. Residual;
 6. hệ số mô hình và câu giải thích giới hạn snapshot.
 
+Dashboard hiện tích hợp tổng cộng **14 biểu đồ**: 7 biểu đồ Tổng quan do lớp EDA
+cung cấp, 4 biểu đồ Phân tích (ba biểu đồ chính và một biểu đồ so sánh tùy chọn),
+và 3 biểu đồ kiểm tra mô hình ở Dự đoán người học. Biểu đồ xếp hạng tổ chức chiếm
+toàn bộ hàng; các biểu đồ còn lại dùng lưới hai cột trên màn hình rộng.
+
 Mô hình trong dashboard chính sử dụng `scripts/prediction.py`. Thư mục
 `forecast_app/` là phiên bản mini-app độc lập, không được `dashboard.py` import.
 Để bám đúng barem yêu cầu hồi quy tuyến tính/logistic, phần được dùng khi chấm
@@ -144,8 +150,8 @@ hình tuyến tính chính thức.
 
 | File/nhóm file                | Người quyết định | Người cung cấp nội dung                                                                       |
 | ------------------------------ | --------------------- | ------------------------------------------------------------------------------------------------- |
-| `dashboard.py`               | Thạch                | Bảo cung cấp figure EDA; Hoa cung cấp insight và prediction figure.                           |
-| `scripts/dashboard_utils.py` | Thạch                | Chỉ chứa lớp tích hợp/lọc; công thức chuyên môn phải thống nhất với Bảo hoặc Hoa. |
+| `Thach/dashboard.py`         | Thạch                | Bảo cung cấp figure EDA; Hoa cung cấp insight và prediction figure.                           |
+| `Thach/dashboard_utils.py`   | Thạch                | Chỉ chứa lớp tích hợp/lọc; công thức chuyên môn phải thống nhất với Bảo hoặc Hoa. |
 | `Data/processed/*`           | Thạch                | Bảo và Hoa chỉ đọc, không ghi đè khi chạy EDA/dashboard.                                 |
 | `outputs/eda/*`              | Bảo                  | Thạch cung cấp kết quả validation.                                                            |
 | `outputs/forecast/*`         | Hoa                   | Thạch chỉ đọc khi tích hợp.                                                                 |

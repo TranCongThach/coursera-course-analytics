@@ -1,25 +1,14 @@
-"""Kiểm định độc lập dữ liệu đã xử lý và đầu ra EDA.
-
-Chạy sau `eda.py`. Kết quả được lưu tại
-`Thach/outputs/00_pipeline_validation.csv`; script trả exit code khác 0 nếu có
-kiểm tra quan trọng không đạt.
-"""
-
 from __future__ import annotations
-
 import hashlib
 from pathlib import Path
-
 import numpy as np
 import pandas as pd
-
 
 PROJECT_DIR = Path(__file__).resolve().parents[1]
 RAW_DIR = PROJECT_DIR / "Data" / "raw"
 PROCESSED_DIR = PROJECT_DIR / "Data" / "processed"
 EDA_OUTPUT_DIR = PROJECT_DIR / "Bao" / "outputs" / "eda"
 OUTPUT_DIR = PROJECT_DIR / "Thach" / "outputs"
-
 PLACEHOLDERS = {
     "",
     "[]",
@@ -63,7 +52,6 @@ def main() -> None:
     subjects = pd.read_csv(PROCESSED_DIR / "bridge_course_subject.csv")
     skills = pd.read_csv(PROCESSED_DIR / "bridge_course_skill.csv")
     quality = pd.read_csv(EDA_OUTPUT_DIR / "01_data_quality.csv")
-
     checks: list[dict[str, object]] = []
 
     def record(
@@ -349,7 +337,6 @@ def main() -> None:
         raise AssertionError(
             "Pipeline validation failed: " + ", ".join(failures["Check"])
         )
-
 
 if __name__ == "__main__":
     main()

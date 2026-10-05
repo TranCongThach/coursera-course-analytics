@@ -154,7 +154,7 @@ def coverage_of(df: pd.DataFrame, bridge: pd.DataFrame) -> tuple[int, int]:
 # ---------------------------------------------------------------------------
 # 4. Biểu đồ (Plotly)
 # ---------------------------------------------------------------------------
-def empty_figure(message: str = "Không có dữ liệu sau khi lọc") -> go.Figure:
+def empty_figure(message: str = "Không có khóa học phù hợp với bộ lọc.") -> go.Figure:
     """Figure trống kèm thông báo, dùng khi bộ lọc không còn dữ liệu hoặc hồi quy lỗi."""
     fig = go.Figure()
     fig.add_annotation(text=message, xref="paper", yref="paper", x=0.5, y=0.5, showarrow=False, font=dict(size=14))
@@ -207,7 +207,7 @@ def fig_rating_by_level(df: pd.DataFrame) -> go.Figure:
     d = df.dropna(subset=["rating_num"])
     levels = [x for x in LEVEL_ORDER if (d["level_clean"] == x).any()]
     if not levels:
-        return empty_figure("Không có dữ liệu rating sau khi lọc")
+        return empty_figure("Chưa có khóa học nào ghi điểm đánh giá.")
     fig = go.Figure()
     for lv in levels:
         r = d.loc[d["level_clean"] == lv, "rating_num"]
@@ -215,8 +215,8 @@ def fig_rating_by_level(df: pd.DataFrame) -> go.Figure:
         fig.add_trace(go.Box(y=r.to_numpy(), name=f"{lv} (n={len(r):,})",
                              boxpoints=False, marker_color=c, line_color=c,
                              fillcolor=c, opacity=0.85,
-                             hovertemplate=f"{lv}<br>%{{y:.2f}}<extra>n={len(r):,}</extra>"))
-    fig.update_layout(template="plotly_white", title="Rating theo level", yaxis_title="Rating (0–5)", showlegend=False,
+                             hovertemplate=f"{lv}<br>Điểm đánh giá: %{{y:.2f}}<extra>{len(r):,} khóa</extra>"))
+    fig.update_layout(template="plotly_white", title="Điểm đánh giá theo trình độ", yaxis_title="Điểm đánh giá (0 đến 5)", showlegend=False,
                       margin=dict(l=50, r=20, t=60, b=40))
     return fig
 

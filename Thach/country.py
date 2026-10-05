@@ -1,24 +1,14 @@
-"""Bước 2: gán quốc gia trụ sở cho tổ chức cung cấp khóa học.
-
-`organization_hq_country` là quốc gia trụ sở của tổ chức, KHÔNG phải quốc gia
-của người học. Tên cột được đặt rõ để tránh suy luận sai ở bước Insight.
-"""
-
 from __future__ import annotations
-
 import ast
 from collections import Counter
 from importlib.machinery import SourceFileLoader
 from pathlib import Path
 from types import ModuleType
-
 import pandas as pd
-
 
 PROJECT_DIR = Path(__file__).resolve().parents[1]
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROCESSED_DIR = PROJECT_DIR / "Data" / "processed"
-
 
 def load_country_mapping() -> dict[str, str]:
     """Nạp file mapping có đuôi .PY viết hoa theo đường dẫn tuyệt đối."""
@@ -44,14 +34,12 @@ def load_country_mapping() -> dict[str, str]:
     )
     if duplicate_keys:
         raise ValueError(f"ORG_COUNTRY_MAP có key trùng: {duplicate_keys}")
-
     module = ModuleType("org_country_mapping")
     SourceFileLoader(module.__name__, str(path)).exec_module(module)
     mapping = getattr(module, "ORG_COUNTRY_MAP", None)
     if not isinstance(mapping, dict):
         raise TypeError("ORG_COUNTRY_MAP phải là dict.")
     return mapping
-
 
 def main() -> None:
     input_path = PROCESSED_DIR / "fact_courses.csv"
@@ -60,7 +48,6 @@ def main() -> None:
     missing = sorted(required.difference(fact.columns))
     if missing:
         raise ValueError(f"{input_path.name} thiếu cột: {missing}")
-
     mapping = load_country_mapping()
     fact = fact.drop(columns=["Country"], errors="ignore")
     fact["organization_hq_country"] = fact["Organization"].map(mapping)
@@ -75,7 +62,6 @@ def main() -> None:
         fact["Organization"].notna() & fact["organization_hq_country"].isna(),
         "organization_hq_country_status",
     ] = "unmapped"
-
     dim = pd.DataFrame(
         list(mapping.items()), columns=["Organization", "organization_hq_country"]
     )
@@ -89,7 +75,6 @@ def main() -> None:
         "Country represents organization headquarters, not learner location."
     )
     dim = dim.drop_duplicates("Organization").sort_values("Organization")
-
     unmatched = (
         fact.loc[
             fact["Organization"].notna() & fact["organization_hq_country"].isna(),
@@ -108,14 +93,12 @@ def main() -> None:
 
     fact.to_csv(PROCESSED_DIR / "fact_courses_with_country.csv", index=False)
     dim.to_csv(PROCESSED_DIR / "dim_organization_country.csv", index=False)
-
     mapped = fact["organization_hq_country"].notna().sum()
     print(
         "Coverage organization_hq_country:",
         f"{mapped:,}/{len(fact):,} ({mapped / len(fact) * 100:.1f}%)",
     )
     print("Note: this is organization HQ country, not learner country.")
-
 
 if __name__ == "__main__":
     main()
