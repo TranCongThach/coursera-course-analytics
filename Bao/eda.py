@@ -1,21 +1,11 @@
-"""Bước 5: EDA tái lập được trên bảng fact đã qua kiểm định.
-
-Script này không sửa dữ liệu nguồn. Mọi quy tắc làm sạch nằm trong pipeline và
-được kết tinh ở `fact_courses_eda_ready.csv`.
-"""
-
 from __future__ import annotations
-
 from pathlib import Path
-
 import matplotlib
-
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
-
 
 PROJECT_DIR = Path(__file__).resolve().parents[1]
 PROCESSED_DIR = PROJECT_DIR / "Data" / "processed"
@@ -25,6 +15,7 @@ FACT_PATH = PROCESSED_DIR / "fact_courses_eda_ready.csv"
 SUBJECT_BRIDGE_PATH = PROCESSED_DIR / "bridge_course_subject.csv"
 SKILL_BRIDGE_PATH = PROCESSED_DIR / "bridge_course_skill.csv"
 
+# Format định dạng biểu đồ
 sns.set_theme(style="whitegrid", palette="muted")
 plt.rcParams["font.family"] = "sans-serif"
 plt.rcParams["font.sans-serif"] = ["Arial", "Tahoma", "DejaVu Sans"]
@@ -43,18 +34,18 @@ PLACEHOLDER_VALUES = {
     "instructor not found",
 }
 
-
+# Kiểm tra cột bắt buộc
 def require_columns(df: pd.DataFrame, required: set[str], source: Path) -> None:
     missing = sorted(required.difference(df.columns))
     if missing:
         raise ValueError(f"{source.name} thiếu cột bắt buộc: {missing}")
 
-
+# Tải dữ liệu đầu vào
 def load_inputs() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     for path in [FACT_PATH, SUBJECT_BRIDGE_PATH, SKILL_BRIDGE_PATH]:
         if not path.exists():
             raise FileNotFoundError(
-                f"Chưa có {path}. Hãy chạy pipeline theo thứ tự trong README."
+                f"Chưa có {path}. Hãy chạy theo thứ tự trong README."
             )
 
     fact = pd.read_csv(FACT_PATH, low_memory=False)
@@ -83,9 +74,11 @@ def load_inputs() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
         },
         FACT_PATH,
     )
+    # Kiểm tra cột bắt buộc trong các bảng bridge
     require_columns(subjects, {"course_id", "subject", "subject_normalized"}, SUBJECT_BRIDGE_PATH)
     require_columns(skills, {"course_id", "skill", "skill_normalized"}, SKILL_BRIDGE_PATH)
 
+    # Kiểm tra tính duy nhất và tồn tại của course_id
     if fact["course_id"].isna().any() or fact["course_id"].duplicated().any():
         raise ValueError("fact_courses_eda_ready.csv phải có course_id đầy đủ và duy nhất.")
     unknown_subject_ids = set(subjects["course_id"]).difference(fact["course_id"])
@@ -98,14 +91,14 @@ def load_inputs() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
         raise ValueError("bridge_course_skill có quan hệ trùng.")
     return fact, subjects, skills
 
-
+# Kiểm tra placeholder trong cột
 def placeholder_mask(series: pd.Series) -> pd.Series:
     if not (pd.api.types.is_object_dtype(series) or pd.api.types.is_string_dtype(series)):
         return pd.Series(False, index=series.index)
     normalized = series.astype("string").str.strip().str.casefold()
     return normalized.isin(PLACEHOLDER_VALUES).fillna(False)
 
-
+# Kiểm tra giá trị invalid trong cột
 def invalid_mask(df: pd.DataFrame, column: str) -> pd.Series:
     result = pd.Series(False, index=df.index)
     ranges = {
@@ -127,6 +120,8 @@ def invalid_mask(df: pd.DataFrame, column: str) -> pd.Series:
         "subject_count",
         "skill_count",
     }
+
+    # Kiểm tra giá trị invalid dựa trên phạm vi hoặc điều kiện không âm
     if column in ranges:
         low, high = ranges[column]
         result = df[column].notna() & ~df[column].between(low, high)
@@ -139,7 +134,7 @@ def invalid_mask(df: pd.DataFrame, column: str) -> pd.Series:
         )
     return result
 
-
+# Ghi chú cho cột dựa trên tên cột và tỷ lệ missing
 def column_note(column: str, missing_pct: float) -> str:
     notes = {
         "organization_hq_country": "Headquarters only; not learner location.",
@@ -160,7 +155,7 @@ def column_note(column: str, missing_pct: float) -> str:
         note = (note + " " if note else "") + "High missingness; do not generalize without caveat."
     return note
 
-
+# Xây dựng bảng chất lượng dữ liệu
 def build_data_quality(df: pd.DataFrame) -> pd.DataFrame:
     rows: list[dict[str, object]] = []
     for column in df.columns:
@@ -186,7 +181,7 @@ def build_data_quality(df: pd.DataFrame) -> pd.DataFrame:
         )
     return pd.DataFrame(rows)
 
-
+# Thống kê mô tả cho các biến số chính
 def build_descriptive_statistics(df: pd.DataFrame) -> pd.DataFrame:
     columns = [
         "enrolled_num",
@@ -201,6 +196,8 @@ def build_descriptive_statistics(df: pd.DataFrame) -> pd.DataFrame:
         "internet_usage_pct",
     ]
     rows: list[dict[str, object]] = []
+
+    # Tính toán các thống kê mô tả cho từng cột
     for column in columns:
         series = df[column].dropna()
         rows.append(
@@ -222,19 +219,18 @@ def build_descriptive_statistics(df: pd.DataFrame) -> pd.DataFrame:
         )
     return pd.DataFrame(rows)
 
-
+# Thêm nhãn giá trị vào biểu đồ
 def add_bar_labels(ax: plt.Axes, fmt: str = "{:,.0f}") -> None:
     for container in ax.containers:
         labels = [fmt.format(value) for value in container.datavalues]
         ax.bar_label(container, labels=labels, padding=3, fontsize=9)
-
 
 def sample_title(label: str, series: pd.Series, total: int) -> str:
     count = int(series.notna().sum())
     missing = (1 - count / total) * 100
     return f"{label}\nn={count:,}; thiếu={missing:.1f}%"
 
-
+# Phân phối các biến số chính
 def save_numeric_distributions(df: pd.DataFrame) -> None:
     fig, axes = plt.subplots(2, 3, figsize=(19, 11))
     fig.suptitle("Phân phối các biến số chính", fontsize=17, fontweight="bold")
@@ -245,9 +241,10 @@ def save_numeric_distributions(df: pd.DataFrame) -> None:
         ("num_reviews", "Số reviews", "#55A868", True),
         ("rating_num", "Điểm đánh giá", "#C44E52", False),
         ("satisfaction_rate_num", "Satisfaction rate (%)", "#8172B2", False),
-        ("hours_to_complete", "Tổng số giờ (báo cáo/ước lượng)", "#CCB974", True),
+        ("hours_to_complete", "Tổng số giờ", "#CCB974", True),
         ("popularity_score", "Popularity score", "#64B5CD", False),
     ]
+
     for ax, (column, label, color, log_scale) in zip(axes.flat, plots):
         values = df[column].dropna()
         sns.histplot(values, bins=35, kde=True, ax=ax, color=color, log_scale=log_scale)
@@ -259,21 +256,24 @@ def save_numeric_distributions(df: pd.DataFrame) -> None:
     fig.savefig(OUTPUT_DIR / "03_numeric_distributions.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
 
-
+# Phân phối cấp độ khóa học
 def save_level_distribution(df: pd.DataFrame) -> None:
     order = df["level_clean"].value_counts().index
     fig, ax = plt.subplots(figsize=(11, 6))
     sns.countplot(data=df, y="level_clean", order=order, hue="level_clean", palette="pastel", legend=False, ax=ax)
-    ax.set_title("Số lượng khóa học theo độ khó\n'Not specified' là Level bị thiếu", fontweight="bold")
+    ax.set_title("Số lượng khóa học theo độ khó", fontweight="bold")
     ax.set_xlabel("Số lượng khóa học")
     ax.set_ylabel("Cấp độ")
     add_bar_labels(ax)
     fig.tight_layout()
+    fig.text(0.99, 0.01, "* Ghi chú: 'Not specified' là Level bị thiếu",
+             ha="right", va="bottom", fontsize=10, style="italic", color="dimgray")
     fig.savefig(OUTPUT_DIR / "04_level_distribution.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
 
-
+# Phân phối Subject multi-label
 def save_subject_distribution(df: pd.DataFrame, subjects: pd.DataFrame) -> None:
+    # Đếm số khóa học theo subject và lấy top 10
     counts = (
         subjects.groupby(["subject_normalized", "subject"])["course_id"]
         .nunique()
@@ -281,25 +281,29 @@ def save_subject_distribution(df: pd.DataFrame, subjects: pd.DataFrame) -> None:
         .sort_values("course_count", ascending=False)
         .head(10)
     )
+
+    # Số khóa học có subject để hiển thị coverage
     covered = subjects["course_id"].nunique()
+
     fig, ax = plt.subplots(figsize=(12, 6))
-    sns.barplot(data=counts, x="course_count", y="subject", hue="subject", palette="pastel", legend=False, ax=ax)
-    ax.set_title(
-        "Số khóa học theo Subject (multi-label)\n"
-        f"Coverage: {covered:,}/{len(df):,} khóa ({covered / len(df) * 100:.1f}%)",
-        fontweight="bold",
-    )
+    sns.barplot(data=counts, x="course_count", y="subject", hue="subject", palette="mako", legend=False, ax=ax)
+    ax.set_title("Số khóa học theo Subject (multi-label)\n", fontweight="bold")
     ax.set_xlabel("Số khóa học có Subject")
     ax.set_ylabel("")
     add_bar_labels(ax)
     fig.tight_layout()
+    note_text = f"* Ghi chú: Độ phủ: {covered:,}/{len(df):,} khóa học ({covered / len(df) * 100:.1f}%)"
+    fig.text(0.99, 0.01, note_text, ha="right", va="bottom", fontsize=9.5, style="italic", color="dimgray")
     fig.savefig(OUTPUT_DIR / "05_subject_distribution.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
 
-
+# Phân phối điểm đánh giá theo cấp độ khóa học
 def save_rating_by_level(df: pd.DataFrame) -> None:
     order = ["Beginner", "Intermediate", "Advanced", "Not specified"]
+
+    # Đếm số lượng khóa học theo level để hiển thị trên nhãn trục x
     counts = df.groupby("level_clean")["rating_num"].count().to_dict()
+
     labels = [f"{level}\n(n={counts.get(level, 0):,})" for level in order]
     fig, ax = plt.subplots(figsize=(11, 6))
     sns.boxplot(data=df, x="level_clean", y="rating_num", hue="level_clean", order=order, palette="Set2", legend=False, ax=ax)
@@ -311,8 +315,9 @@ def save_rating_by_level(df: pd.DataFrame) -> None:
     fig.savefig(OUTPUT_DIR / "06_rating_by_level.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
 
-
+# Ma trận tương quan Spearman giữa các biến số chính
 def save_correlation(df: pd.DataFrame) -> pd.DataFrame:
+    # Tương quan Spearman giữa các biến số chính
     columns = [
         "enrolled_num",
         "rating_num",
@@ -320,6 +325,7 @@ def save_correlation(df: pd.DataFrame) -> pd.DataFrame:
         "satisfaction_rate_num",
         "hours_to_complete",
     ]
+
     labels = ["Học viên", "Rating", "Reviews", "Hài lòng", "Số giờ"]
     data = df[columns]
     correlation = data.corr(method="spearman")
@@ -327,20 +333,25 @@ def save_correlation(df: pd.DataFrame) -> pd.DataFrame:
     pair_counts = present.T.dot(present)
     pair_counts.to_csv(OUTPUT_DIR / "07_correlation_sample_size.csv")
 
+    # Heatmap tương quan và số mẫu từng cặp
     fig, axes = plt.subplots(1, 2, figsize=(18, 7))
     sns.heatmap(correlation, annot=True, cmap="coolwarm", fmt=".2f", vmin=-1, vmax=1, xticklabels=labels, yticklabels=labels, ax=axes[0])
     axes[0].set_title("Tương quan Spearman", fontweight="bold")
     sns.heatmap(pair_counts, annot=True, cmap="Blues", fmt="d", xticklabels=labels, yticklabels=labels, ax=axes[1])
     axes[1].set_title("Số quan sát dùng cho từng cặp", fontweight="bold")
-    fig.suptitle("Tương quan không hàm ý quan hệ nhân quả", fontsize=14, fontweight="bold")
-    fig.tight_layout(rect=(0, 0, 1, 0.95))
+    fig.suptitle("Phân tích tương quan giữa các chỉ số tương tác của khóa học", fontsize=14, fontweight="bold")
+    fig.tight_layout(rect=[0, 0.04, 1, 0.95])
+    note_text = "* Ghi chú: Tương quan thống kê không hàm ý quan hệ nhân quả."
+    fig.text(0.99, 0.01, note_text, ha="right", va="bottom", fontsize=11, style="italic", color="dimgray")
     fig.savefig(OUTPUT_DIR / "07_correlation_spearman.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
     return correlation
 
-
+# Top 10 tổ chức có nhiều khóa học nhất
 def save_top_organizations(df: pd.DataFrame) -> None:
+    # Đếm số khóa học theo tổ chức và lấy top 10
     counts = df["Organization"].value_counts().head(10).rename_axis("Organization").reset_index(name="course_count")
+
     fig, ax = plt.subplots(figsize=(13, 7))
     sns.barplot(data=counts, x="course_count", y="Organization", hue="Organization", palette="viridis", legend=False, ax=ax)
     ax.set_title("Top 10 tổ chức có nhiều khóa học nhất", fontweight="bold")
@@ -351,9 +362,16 @@ def save_top_organizations(df: pd.DataFrame) -> None:
     fig.savefig(OUTPUT_DIR / "08_top_organizations.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
 
-
+# Top 10 quốc gia trụ sở tổ chức theo số khóa học và số tổ chức duy nhất
 def save_hq_countries(df: pd.DataFrame) -> None:
-    course_counts = df["organization_hq_country"].value_counts().head(10).rename_axis("country").reset_index(name="course_count")
+    # Số lượng khóa học theo quốc gia trụ sở
+    course_counts = (df["organization_hq_country"]
+                     .value_counts()
+                     .head(10)
+                     .rename_axis("country")
+                     .reset_index(name="course_count"))
+
+    # Số lượng tổ chức duy nhất theo quốc gia trụ sở
     org_counts = (
         df.dropna(subset=["organization_hq_country", "Organization"])
         .groupby("organization_hq_country")["Organization"]
@@ -363,6 +381,7 @@ def save_hq_countries(df: pd.DataFrame) -> None:
         .rename_axis("country")
         .reset_index(name="organization_count")
     )
+
     fig, axes = plt.subplots(1, 2, figsize=(19, 8))
     sns.barplot(data=course_counts, x="course_count", y="country", hue="country", palette="magma", legend=False, ax=axes[0])
     axes[0].set_title("Theo số khóa học", fontweight="bold")
@@ -374,58 +393,62 @@ def save_hq_countries(df: pd.DataFrame) -> None:
     axes[1].set_xlabel("Số tổ chức")
     axes[1].set_ylabel("")
     add_bar_labels(axes[1])
-    fig.suptitle(
-        "Quốc gia trụ sở tổ chức (không phải quốc gia người học)\n"
-        "Mapping thủ công, cần bổ sung nguồn cho từng tổ chức",
-        fontsize=15,
-        fontweight="bold",
-    )
+    fig.suptitle("Quốc gia trụ sở tổ chức", fontsize=15, fontweight="bold")
     fig.tight_layout(rect=(0, 0, 1, 0.95))
     fig.savefig(OUTPUT_DIR / "09_organization_hq_countries.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
 
-
+# Top 25 cột có tỷ lệ missing cao nhất
 def save_missing_values(quality: pd.DataFrame) -> None:
+    # Lọc các cột có missing > 0 & sắp xếp theo tỷ lệ missing giảm dần
+    # Lấy top 25
     missing = (
         quality.loc[quality["Effective_Missing_Count"].gt(0)]
         .sort_values("Effective_Missing_Percentage", ascending=False)
         .head(25)
     )
+
     fig, ax = plt.subplots(figsize=(13, 10))
     sns.barplot(data=missing, x="Effective_Missing_Percentage", y="Column", hue="Column", palette="Reds_r", legend=False, ax=ax)
-    ax.set_title("Top 25 cột có tỷ lệ thiếu hiệu dụng cao nhất\nChi tiết đầy đủ: 01_data_quality.csv", fontweight="bold")
+    ax.set_title("Top 25 cột có tỷ lệ thiếu hiệu dụng cao nhất", fontweight="bold")
     ax.set_xlabel("Phần trăm thiếu (%)")
     ax.set_ylabel("Tên cột")
     for index, value in enumerate(missing["Effective_Missing_Percentage"]):
         ax.text(value + 0.5, index, f"{value:.1f}%", va="center", fontsize=9)
     ax.set_xlim(0, 105)
     fig.tight_layout()
+    fig.text(0.99, 0.01, "* Chi tiết đầy đủ xem tại: 01_data_quality.csv",
+             ha="right", va="bottom", fontsize=10, style="italic", color="dimgray")
     fig.savefig(OUTPUT_DIR / "10_missing_values.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
 
-
+# Top 15 kỹ năng theo số khóa học, đã loại trùng trong từng khóa
 def save_top_skills(df: pd.DataFrame, skills: pd.DataFrame) -> None:
+    # Lấy tên hiển thị phổ biến nhất cho mỗi skill_normalized
     display_names = skills.groupby("skill_normalized")["skill"].agg(lambda values: values.mode().iloc[0])
+
+    # Đếm số khóa học theo skill_normalized và lấy top 15
     counts = skills.groupby("skill_normalized")["course_id"].nunique().sort_values(ascending=False).head(15)
+
     top = counts.rename("course_count").reset_index()
     top["skill"] = top["skill_normalized"].map(display_names)
     covered = skills["course_id"].nunique()
+
     fig, ax = plt.subplots(figsize=(13, 8))
     sns.barplot(data=top, x="course_count", y="skill", hue="skill", palette="mako", legend=False, ax=ax)
-    ax.set_title(
-        "Top 15 kỹ năng theo số khóa học\n"
-        f"Mỗi skill chỉ đếm một lần/khóa; coverage={covered:,}/{len(df):,} ({covered / len(df) * 100:.1f}%)",
-        fontweight="bold",
-    )
+    ax.set_title("Top 15 kỹ năng theo số khóa học", fontweight="bold")
     ax.set_xlabel("Số khóa học")
     ax.set_ylabel("")
     add_bar_labels(ax)
-    fig.tight_layout()
+    fig.tight_layout(rect=[0, 0.04, 1, 1])
+    note_text = f"* Ghi chú: Mỗi kỹ năng đếm 1 lần/khóa | Độ phủ (coverage): {covered:,}/{len(df):,} khóa học ({covered / len(df) * 100:.1f}%)"
+    fig.text(0.99, 0.01, note_text, ha="right", va="bottom", fontsize=10, style="italic", color="dimgray")
     fig.savefig(OUTPUT_DIR / "11_top_skills.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
 
-
+# Bối cảnh internet tại quốc gia trụ sở tổ chức
 def save_internet_context(df: pd.DataFrame) -> None:
+    # Tóm tắt dữ liệu theo trụ sở quốc gia
     summary = (
         df.dropna(subset=["organization_hq_country", "internet_usage_pct"])
         .groupby("organization_hq_country", as_index=False)
@@ -436,6 +459,7 @@ def save_internet_context(df: pd.DataFrame) -> None:
             internet_usage_year=("internet_usage_year", "first"),
         )
     )
+
     fig, ax = plt.subplots(figsize=(12, 7))
     sns.scatterplot(
         data=summary,
@@ -447,9 +471,9 @@ def save_internet_context(df: pd.DataFrame) -> None:
         ax=ax,
     )
     ax.set_yscale("log")
-    ax.set_title("Bối cảnh Internet tại quốc gia trụ sở\nMô tả, không phải bằng chứng về hành vi người học", fontweight="bold")
+    ax.set_title("Bối cảnh Internet tại quốc gia trụ sở", fontweight="bold")
     ax.set_xlabel("Tỷ lệ sử dụng Internet (%) – năm gần nhất trong nguồn cục bộ")
-    ax.set_ylabel("Số khóa học (log scale)")
+    ax.set_ylabel("Số khóa học")
     top_rows = summary.nlargest(5, "course_count")
     offsets = [(8, 10), (8, 8), (8, 8), (8, 12), (8, -14)]
     for row, offset in zip(top_rows.itertuples(index=False), offsets):
@@ -467,11 +491,13 @@ def save_internet_context(df: pd.DataFrame) -> None:
         legend.set_title("Số tổ chức")
         legend.set_bbox_to_anchor((1.01, 1))
         legend.set_loc("upper left")
-    fig.tight_layout()
+    fig.tight_layout(rect=[0, 0.05, 1, 1])
+    note_text = "* Ghi chú: Dữ liệu mang tính mô tả bối cảnh, không phải bằng chứng về hành vi người học."
+    fig.text(0.99, 0.01, note_text, ha="right", va="bottom", fontsize=10, style="italic", color="dimgray")
     fig.savefig(OUTPUT_DIR / "12_internet_hq_context.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
 
-
+# Tổng quan EDA
 def write_report(
     df: pd.DataFrame,
     subjects: pd.DataFrame,
