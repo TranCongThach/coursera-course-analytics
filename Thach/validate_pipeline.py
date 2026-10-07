@@ -40,7 +40,6 @@ EXPECTED_EDA_OUTPUTS = [
     "EDA_REPORT.md",
 ]
 
-
 def main() -> None:
     raw = pd.read_csv(RAW_DIR / "coursera_course_2024.csv", low_memory=False)
     fact = pd.read_csv(
@@ -53,7 +52,6 @@ def main() -> None:
     skills = pd.read_csv(PROCESSED_DIR / "bridge_course_skill.csv")
     quality = pd.read_csv(EDA_OUTPUT_DIR / "01_data_quality.csv")
     checks: list[dict[str, object]] = []
-
     def record(
         check: str,
         passed: bool,
@@ -92,6 +90,7 @@ def main() -> None:
         len(fact),
         "Confirms no source URL was lost or synthesized.",
     )
+    """Xử lí các URL bị thiếu hoặc dư thừa giữa dữ liệu thô và dữ liệu thực tế."""
     missing_urls = set(raw["URL"]).difference(fact["URL"])
     extra_urls = set(fact["URL"]).difference(raw["URL"])
     record(
@@ -112,6 +111,7 @@ def main() -> None:
         lambda value: "course_"
         + hashlib.sha256(str(value).encode("utf-8")).hexdigest()[:16]
     )
+    """xử lý các ID khóa chính của course dựa trên URL bằng cách băm SHA-256 và kiểm tra tính nhất quán."""
     record(
         "course_id_is_deterministic_url_hash",
         bool(expected_ids.equals(fact["course_id"])),

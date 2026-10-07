@@ -235,7 +235,7 @@ def add_subject_summary(fact: pd.DataFrame, bridge: pd.DataFrame) -> pd.DataFram
         lambda value: len(value) if isinstance(value, list) else 0
     )
     return result.drop(columns="_subjects")
-
+""""""
 def main() -> None:
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
     fact, same_name_audit = load_fact()
@@ -257,7 +257,6 @@ def main() -> None:
     merged = add_subject_summary(merged, subject_bridge)
     if len(merged) != initial_rows:
         raise AssertionError("Số dòng fact thay đổi sau khi join.")
-
     merged = merged.drop(columns=["_title_key", "_org_key"])
     same_name_audit = same_name_audit.drop(
         columns=["_title_key", "_org_key"], errors="ignore"

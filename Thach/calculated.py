@@ -16,6 +16,8 @@ MONTHS_PATTERN = re.compile(rf"{NUMBER}\s*months?", re.IGNORECASE)
 HOURS_PER_WEEK_PATTERN = re.compile(
     rf"at\s+{NUMBER}\s*hours?\s+a\s+week", re.IGNORECASE
 )
+OUTLIER_COLUMNS = ("enrolled_num", "num_reviews", "hours_to_complete")
+OUTLIER_IQR_MULTIPLIER = 1.5
 
 def match_number(pattern: re.Pattern[str], text: str) -> float:
     match = pattern.search(text)
@@ -135,6 +137,46 @@ def build_skill_bridge(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
         )
     summary = pd.DataFrame(summaries)
     return bridge, summary
+"""Phát hiện ngoại lệ và đánh dấu outlier bằng IQR trên thang log10(x+1)."""
+def add_outlier_flags(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
+    result = df.copy()
+    summary_rows: list[dict[str, object]] = []
+    flag_columns: list[str] = []
+    for column in OUTLIER_COLUMNS:
+        values = pd.to_numeric(result[column], errors="coerce")
+        valid = values.notna() & values.ge(0)
+        transformed = np.log10(values.loc[valid] + 1.0)
+        if transformed.empty:
+            raise ValueError(f"{column} khong co gia tri hop le de phat hien outlier.")
+        q1 = float(transformed.quantile(0.25))
+        q3 = float(transformed.quantile(0.75))
+        iqr = q3 - q1
+        lower_log = q1 - OUTLIER_IQR_MULTIPLIER * iqr
+        upper_log = q3 + OUTLIER_IQR_MULTIPLIER * iqr
+        lower_value = max(0.0, float(10**lower_log - 1.0))
+        upper_value = float(10**upper_log - 1.0)
+        flag_column = f"{column}_is_outlier"
+        flags = pd.Series(False, index=result.index, dtype=bool)
+        flags.loc[valid] = transformed.lt(lower_log) | transformed.gt(upper_log)
+        result[flag_column] = flags
+        flag_columns.append(flag_column)
+        outlier_count = int(flags.sum())
+        summary_rows.append(
+            {
+                "column": column,
+                "method": "IQR 1.5x on log10(x+1)",
+                "non_missing_count": int(valid.sum()),
+                "q1_log10p1": q1,
+                "q3_log10p1": q3,
+                "lower_bound_original_scale": lower_value,
+                "upper_bound_original_scale": upper_value,
+                "outlier_count": outlier_count,
+                "outlier_pct_of_valid": 100.0 * outlier_count / int(valid.sum()),
+            }
+        )
+
+    result["has_numeric_outlier"] = result[flag_columns].any(axis=1)
+    return result, pd.DataFrame(summary_rows)
 
 def validate_ranges(df: pd.DataFrame) -> None:
     checks = {
@@ -177,6 +219,7 @@ def main() -> None:
     df["hours_to_complete_is_estimated"] = df[
         "hours_to_complete_is_estimated"
     ].astype("boolean")
+    """các chỉ số mức học"""
     df["level_clean"] = (
         df["Level"]
         .astype("string")
@@ -208,22 +251,37 @@ def main() -> None:
         ["missing_both", "missing_rating", "missing_enrollment"],
         default="complete",
     )
+
+    """số khóa học theo tổ chức và quốc gia"""
     skill_bridge, skill_summary = build_skill_bridge(df)
     df = df.drop(columns=["skills_combined", "skill_count"], errors="ignore")
     df = df.merge(skill_summary, on="course_id", how="left", validate="one_to_one")
     df["courses_per_organization"] = df.groupby("Organization")["course_id"].transform(
         "count"
     )
+
     df["courses_per_hq_country"] = df.groupby("organization_hq_country")[
         "course_id"
     ].transform("count")
+    original_numeric = df[list(OUTLIER_COLUMNS)].copy(deep=True)
+    df, outlier_summary = add_outlier_flags(df)
+    pd.testing.assert_frame_equal(
+        df[list(OUTLIER_COLUMNS)], original_numeric, check_dtype=True
+    )
 
     if len(df) != row_count or df["course_id"].nunique() != row_count:
         raise AssertionError("Số dòng hoặc số course_id thay đổi khi tạo calculated fields.")
     validate_ranges(df)
     df.to_csv(PROCESSED_DIR / "fact_courses_final.csv", index=False)
     skill_bridge.to_csv(PROCESSED_DIR / "bridge_course_skill.csv", index=False)
+    outlier_summary.to_csv(PROCESSED_DIR / "outlier_summary.csv", index=False)
     print(f"Fact calculated: {len(df):,} rows, {len(df.columns):,} columns")
+    print("Outlier audit (original values retained):")
+    print(
+        outlier_summary[
+            ["column", "outlier_count", "outlier_pct_of_valid"]
+        ].to_string(index=False)
+    )
     print("Schedule parse status:")
     print(df["schedule_parse_status"].value_counts(dropna=False).to_string())
     print(
