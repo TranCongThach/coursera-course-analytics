@@ -441,7 +441,7 @@ def save_top_skills(df: pd.DataFrame, skills: pd.DataFrame) -> None:
     ax.set_ylabel("")
     add_bar_labels(ax)
     fig.tight_layout(rect=[0, 0.04, 1, 1])
-    note_text = f"* Ghi chú: Mỗi kỹ năng đếm 1 lần/khóa | Độ phủ (coverage): {covered:,}/{len(df):,} khóa học ({covered / len(df) * 100:.1f}%)"
+    note_text = f"* Ghi chú: Mỗi kỹ năng đếm 1 lần/khóa | Độ phủ: {covered:,}/{len(df):,} khóa học ({covered / len(df) * 100:.1f}%)"
     fig.text(0.99, 0.01, note_text, ha="right", va="bottom", fontsize=10, style="italic", color="dimgray")
     fig.savefig(OUTPUT_DIR / "11_top_skills.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
