@@ -1,4 +1,3 @@
-"""Bước 2: Dùng Plotly vẽ 1 biểu đồ duy nhất: thực tế vs dự báo + đường hồi quy."""
 import json
 from pathlib import Path
 
