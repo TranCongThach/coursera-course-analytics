@@ -27,10 +27,7 @@ LEVEL_COLORS = {
     "Not specified": "#94a3b8",
 }
 
-
-# --------------------------------------------------------------------------- #
 # 1. Nạp dữ liệu (dashboard nên bọc bằng st.cache_data)
-# --------------------------------------------------------------------------- #
 def load_fact(path: str | Path | None = None) -> pd.DataFrame:
     return pd.read_csv(path or FACT_PATH, usecols=FACT_COLUMNS)
 
@@ -42,10 +39,7 @@ def load_skill_bridge(path: str | Path | None = None) -> pd.DataFrame:
 def load_subject_bridge(path: str | Path | None = None) -> pd.DataFrame:
     return pd.read_csv(path or SUBJECT_BRIDGE_PATH, usecols=["course_id", "subject", "subject_normalized"])
 
-
-# --------------------------------------------------------------------------- #
 # 2. Bộ lọc
-# --------------------------------------------------------------------------- #
 def filter_options(df: pd.DataFrame) -> dict[str, list]:
     """Giá trị để đổ vào widget bộ lọc."""
     levels = [x for x in LEVEL_ORDER if x in set(df["level_clean"].dropna())]
@@ -69,10 +63,7 @@ def apply_filters(
         out = out[out["Organization"].fillna("").str.contains(organization_query, case=False, regex=False)]
     return out
 
-
-# --------------------------------------------------------------------------- #
 # 3. KPI và bảng thống kê
-# --------------------------------------------------------------------------- #
 def compute_kpis(df: pd.DataFrame) -> dict[str, float | int | None]:
     """KPI tổng quan. Median (không dùng mean) vì enrollment/review lệch phải mạnh."""
     n = len(df)
@@ -150,10 +141,7 @@ def coverage_of(df: pd.DataFrame, bridge: pd.DataFrame) -> tuple[int, int]:
     """(số khóa trong bộ lọc có ít nhất 1 skill/subject, tổng số khóa) — để in coverage."""
     return int(df["course_id"].isin(bridge["course_id"]).sum()), len(df)
 
-
-# ---------------------------------------------------------------------------
 # 4. Biểu đồ (Plotly)
-# ---------------------------------------------------------------------------
 def empty_figure(message: str = "Không có khóa học phù hợp với bộ lọc.") -> go.Figure:
     """Figure trống kèm thông báo, dùng khi bộ lọc không còn dữ liệu hoặc hồi quy lỗi."""
     fig = go.Figure()
@@ -220,10 +208,7 @@ def fig_rating_by_level(df: pd.DataFrame) -> go.Figure:
                       margin=dict(l=50, r=20, t=60, b=40))
     return fig
 
-
-# --------------------------------------------------------------------------- #
 # 5. Câu diễn giải tự sinh (luôn kèm coverage, không suy ra nhân quả)
-# --------------------------------------------------------------------------- #
 def generate_insights(df: pd.DataFrame, skill_bridge: pd.DataFrame | None = None) -> list[str]:
     """Danh sách câu insight mô tả cho bộ lọc hiện tại."""
     if df.empty:
