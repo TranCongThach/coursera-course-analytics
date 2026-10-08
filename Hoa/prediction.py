@@ -56,11 +56,6 @@ class LinearTrend:
         return self.intercept + self.slope * np.asarray(x, dtype=float)
 
     def interval(self, x, kind: str = "prediction") -> tuple[np.ndarray, np.ndarray]:
-        """Khoảng tin cậy quanh đường hồi quy.
-
-        kind="prediction": khoảng dự báo cho một quan sát mới (rộng hơn, dùng để dự báo).
-        kind="mean":       khoảng tin cậy cho giá trị trung bình của đường hồi quy.
-        """
         x = np.asarray(x, dtype=float)
         yhat = self.predict(x)
         lever = 1.0 / self.n + (x - self.x_mean) ** 2 / self.sxx
@@ -152,12 +147,6 @@ def _base_layout(fig: go.Figure, title: str, xtitle: str, ytitle: str) -> None:
 
 # 2. Chế độ 1: dự báo Internet Usage theo năm
 def load_internet_history(source=None) -> pd.DataFrame:
-    """Đọc internet_usage.csv (dạng rộng, cột 2000..2023) -> dạng dài.
-
-    source: đường dẫn hoặc file-like; None = Data/raw/internet_usage.csv.
-    Trả về cột: country, country_code, year (int), internet_usage_pct (float).
-    Nên gọi một lần rồi tái sử dụng kết quả trong callback của dashboard.
-    """
     if source is None:
         source = INTERNET_RAW_PATH
     if not hasattr(source, "read"):
@@ -184,10 +173,6 @@ def load_internet_history(source=None) -> pd.DataFrame:
 
 
 def list_hq_countries(min_courses: int = 1, fact: pd.DataFrame | None = None) -> pd.DataFrame:
-    """Các quốc gia trụ sở có trong fact (kèm số khóa) để đổ vào dropdown.
-
-    Cột ``wb_name`` là tên đã đổi sang chuẩn World Bank, dùng làm tham số ``country``.
-    """
     if fact is None:
         fact = pd.read_csv(FACT_PATH, usecols=["organization_hq_country"])
     counts = (
@@ -206,12 +191,6 @@ def build_internet_forecast(
     confidence: float = 0.95,
     title: str | None = None,
 ) -> TrendChart:
-    """Hồi quy tuyến tính Internet Usage ~ năm và dự báo ``horizon`` năm tiếp theo.
-
-    country     : tên theo World Bank (vd "Viet Nam", "United States", "Korea, Rep.").
-    history     : kết quả của load_internet_history(); None thì tự đọc file raw.
-    start_year  : chỉ khớp từ năm này trở đi (vd 2010 nếu muốn bỏ giai đoạn bùng nổ đầu).
-    """
     if history is None:
         history = load_internet_history()
     sub = history[history["country"] == country].sort_values("year")
@@ -293,10 +272,7 @@ def build_internet_forecast(
     )
     return TrendChart(fig, trend, table, summary, warnings)
 
-
-# --------------------------------------------------------------------------- #
 # 3. Chế độ 2: đường xu hướng giữa hai biến của khóa học
-# --------------------------------------------------------------------------- #
 COURSE_LABELS = {
     "hours_to_complete": "Giờ học",
     "duration_weeks": "Tuần học",
@@ -400,11 +376,6 @@ class EnrollmentModel:
 
 
 def build_enrollment_model(fact: pd.DataFrame, seed: int = 42) -> EnrollmentModel:
-    """Split 60/20/20 cố định theo course: train/calibration/test.
-
-    Calibration chọn độ rộng khoảng từ sai số ngoài train; test chỉ dùng một lần
-    để báo cáo chất lượng. Đây là đánh giá trên cùng phân phối snapshot.
-    """
     missing = set(ENROLLMENT_COLUMNS).difference(fact.columns)
     if missing:
         raise ValueError(f"Thiếu cột mô hình: {sorted(missing)}")
@@ -492,12 +463,6 @@ def build_course_trend(
     max_points: int = 4000,
     title: str | None = None,
 ) -> TrendChart:
-    """Đường hồi quy tuyến tính y ~ x trên dữ liệu khóa học (đã lọc theo bộ lọc dashboard).
-
-    log_x / log_y : khớp trên log10 (nên bật cho enrolled_num, num_reviews, hours vì lệch phải mạnh).
-    x_new         : các giá trị x (thang gốc) muốn dự đoán y, vd [10, 40, 100] giờ.
-    Lưu ý: đây là quan hệ cắt ngang, không phải dự báo theo thời gian, và không hàm ý nhân quả.
-    """
     for c in (x_col, y_col):
         if c not in df.columns:
             raise KeyError(f"Thiếu cột '{c}' trong DataFrame.")
@@ -580,10 +545,7 @@ def build_course_trend(
                f"R² = {trend.r2:.2f}: đường này giải thích được khoảng {trend.r2:.0%} chênh lệch của {yl} giữa {trend.n:,} khóa.")
     return TrendChart(fig, trend, table, summary, warnings)
 
-
-# --------------------------------------------------------------------------- #
 # 4. Chạy thử: python -m Hoa.prediction
-# --------------------------------------------------------------------------- #
 if __name__ == "__main__":
     model = build_enrollment_model(load_fact(ENROLLMENT_COLUMNS))
     print(f"Enrollment model: {model.eligible_rows:,}/{model.total_rows:,} course đủ dữ liệu")
