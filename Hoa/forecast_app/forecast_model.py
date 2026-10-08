@@ -1,14 +1,3 @@
-"""Bước 1: Huấn luyện mô hình dự báo enrollment và lưu kết quả ra CSV.
-
-Bài toán: hồi quy log10(enrolled_num) từ đặc trưng của khóa học.
-Dataset là snapshot (không có chuỗi thời gian) nên đây là dự báo hồi quy
-cắt ngang, không phải time-series forecasting.
-
-Loại bỏ các biến gây leakage theo README: enrolled_percentile,
-popularity_score, review_to_enrollment_ratio.
-
-Chạy:  python -m Hoa.forecast_app.forecast_model
-"""
 import json
 from pathlib import Path
 
