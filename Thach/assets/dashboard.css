@@ -589,6 +589,9 @@ input[type="radio"] {
   border-color: rgba(202, 221, 242, 0.8);
   box-shadow: 0 14px 34px rgba(34, 112, 190, 0.08);
 }
+.overview-kpis {
+  margin-bottom: 22px;
+}
 .filter-toolbar {
   display: flex;
   align-items: center;
