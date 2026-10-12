@@ -37,6 +37,7 @@ COUNTRY_ISO = dict(zip(
      "ITA", "NOR", "DEU", "IRL", "MAR", "CZE", "ARG", "COL", "SAU", "PER",
      "ARE", "SGP", "BRA", "CHL"], strict=True))
 
+# Đọc bảng fact và hai bảng bridge dùng cho Dashboard
 def load_data():
     directory = ROOT / "Data" / "processed"
     fact = pd.read_csv(directory / "fact_courses_eda_ready.csv")
@@ -50,10 +51,12 @@ def load_data():
         bridges[kind] = bridge.drop_duplicates(["course_id", f"{kind}_normalized"])
     return fact, bridges
 
+# Tạo danh sách lựa chọn cho bộ lọc chủ đề hoặc kỹ năng
 def bridge_options(bridge, kind):
     labels = bridge.groupby(f"{kind}_normalized")[kind].first().sort_values()
     return [{"label": label, "value": key} for key, label in labels.items()]
 
+# Lọc danh sách khóa học theo bộ lọc và lựa chọn trên biểu đồ
 def filter_courses(fact, filters, bridges, drill=None):
     out = fact
     for key, column in (("organizations", "Organization"), ("levels", "level_clean")):
@@ -87,6 +90,7 @@ def filter_courses(fact, filters, bridges, drill=None):
             out = out[out[key].eq(value)]
     return out.copy()
 
+# Tạo tiêu đề biểu đồ gồm nội dung chính và thông tin phạm vi dữ liệu
 def chart_title(title, subtitle):
     """Tiêu đề Plotly hai tầng: nội dung chính và phạm vi dữ liệu."""
     return (
@@ -94,7 +98,7 @@ def chart_title(title, subtitle):
         f"<span style='font-size:11px;color:#667085'>{subtitle}</span>"
     )
 
-
+# Áp dụng kiểu hiển thị thống nhất cho các biểu đồ Plotly
 def style_figure(fig):
     # Giữ khoảng trái/phải riêng của heatmap, map và treemap; chuẩn hóa
     # khoảng trên để tiêu đề hai tầng không chạm vùng vẽ.
@@ -120,6 +124,7 @@ def style_figure(fig):
     fig.update_yaxes(gridcolor="#f0f2f5", automargin=True)
     return fig
 
+# Tạo biểu đồ rỗng kèm thông báo khi không có dữ liệu phù hợp
 def empty_figure(message="Không có khóa học phù hợp với bộ lọc."):
     fig = go.Figure()
     fig.add_annotation(text=message, x=0.5, y=0.5, xref="paper", yref="paper", showarrow=False)
@@ -127,6 +132,7 @@ def empty_figure(message="Không có khóa học phù hợp với bộ lọc."):
     fig.update_yaxes(visible=False)
     return style_figure(fig)
 
+# Tính tương quan Spearman và cỡ mẫu cho từng cặp chỉ số
 def pairwise_spearman(df):
     rho = np.full((len(NUMERIC), len(NUMERIC)), np.nan)
     counts = np.zeros_like(rho, dtype=int)
@@ -139,6 +145,7 @@ def pairwise_spearman(df):
                 rho[i, j] = a.rank().corr(b.rank())
     return rho, counts
 
+# Tạo các biểu đồ Dashboard từ tập khóa học đã được lọc
 def build_figures(df, bridges, tree_kind="subject"):
     keys = ["level", "coverage", "histogram", "rating", "tree", "map", "scatter", "heatmap", "ecdf", "organizations"]
     if df.empty:
@@ -303,6 +310,7 @@ def build_figures(df, bridges, tree_kind="subject"):
     ))
     return {key: style_figure(fig) for key, fig in figures.items()}
 
+# Tạo các câu insight mô tả dựa trên dữ liệu đang hiển thị
 def insight_text(df, bridges):
     if df.empty:
         return ["Không có khóa phù hợp. Thử nới bộ lọc hoặc xóa lựa chọn."]
@@ -329,6 +337,7 @@ def insight_text(df, bridges):
 
 TABLE_COLUMNS = ["course_id", "title", "Organization", "level_clean", "rating_num", "enrolled_num", "num_reviews", "hours_to_complete"]
 
+# Chuyển dữ liệu khóa học thành bản ghi dùng cho bảng trên Dashboard
 def table_records(df):
     result = df[TABLE_COLUMNS].copy().round(2)
     result["id"] = result.course_id
