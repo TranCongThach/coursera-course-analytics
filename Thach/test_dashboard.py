@@ -9,6 +9,7 @@ if __package__ in (None, ""):
 from Thach import dashboard as app
 from Thach import dashboard_utils as du
 
+# Tìm một thành phần giao diện theo ID trong cây layout của Dashboard
 def find_component(component, component_id):
     """Return the first Dash component with the requested id."""
     if getattr(component, "id", None) == component_id:
@@ -24,6 +25,7 @@ def find_component(component, component_id):
             return found
     return None
 
+# Thu thập ID của tất cả thành phần con trong một thành phần giao diện
 def descendant_ids(component):
     ids = set()
     component_id = getattr(component, "id", None)
@@ -40,10 +42,12 @@ def descendant_ids(component):
 
 class DashboardTests(unittest.TestCase):
     @classmethod
+    # Chuẩn bị dữ liệu và ứng dụng dùng chung trước khi chạy các kiểm thử
     def setUpClass(cls):
         cls.fact, cls.bridges = app.FACT, app.BRIDGES
         cls.client = app.server.test_client()
 
+    # Kiểm tra biểu đồ hệ số sử dụng cột đứng và thể hiện đúng dấu của hệ số
     def test_coefficient_chart_uses_signed_vertical_bars(self):
         figure = app.coefficient_figure()
         traces = {trace.name: trace for trace in figure.data}
@@ -60,6 +64,7 @@ class DashboardTests(unittest.TestCase):
         prediction_panel = find_component(app.app.layout, "prediction-panel")
         self.assertNotIn("Cách đọc kết quả", str(prediction_panel))
 
+    # Gọi callback của Dashboard với dữ liệu đầu vào mô phỏng
     def callback(self, output_fragment, values, changed, state=None):
         key = next(key for key in app.app.callback_map if output_fragment in key)
         meta = app.app.callback_map[key]
@@ -71,13 +76,16 @@ class DashboardTests(unittest.TestCase):
         self.assertEqual(response.status_code, 200, response.data[:1000])
         return response.get_json()["response"]
 
+    # Kiểm tra thanh điều hướng và bộ lọc nằm đúng khu vực giao diện
     def test_navigation_and_filters_are_in_expected_regions(self):
         sidebar = find_component(app.app.layout, "app-sidebar")
         main = find_component(app.app.layout, "dashboard-main")
         filters = find_component(app.app.layout, "filter-panel")
+        overview_kpis = find_component(app.app.layout, "overview-kpis")
         self.assertIsNotNone(sidebar)
         self.assertIsNotNone(main)
         self.assertIsNotNone(filters)
+        self.assertIsNotNone(overview_kpis)
         self.assertIsNone(find_component(app.app.layout, "page-intro"))
         self.assertIsNone(find_component(app.app.layout, "page-title"))
         self.assertIsNone(find_component(app.app.layout, "page-subtitle"))
@@ -95,6 +103,9 @@ class DashboardTests(unittest.TestCase):
         self.assertNotIn("clear-drill", sidebar_ids)
         self.assertNotIn("page-intro", descendant_ids(main))
         self.assertIn("filter-panel", descendant_ids(main))
+        main_child_ids = [getattr(child, "id", None) for child in main.children]
+        self.assertLess(main_child_ids.index("overview-kpis"), main_child_ids.index("filter-panel"))
+        self.assertLess(main_child_ids.index("filter-panel"), main_child_ids.index("overview-panel"))
         self.assertTrue({
             "filter-organizations", "filter-levels", "filter-subjects",
             "filter-skills", "filter-rating", "filter-hours",
@@ -102,6 +113,33 @@ class DashboardTests(unittest.TestCase):
             "clear-drill", "reset-filters",
         }.issubset(filter_ids))
 
+    def test_related_charts_are_adjacent_and_ecdf_is_full_width(self):
+        overview_grid = find_component(app.app.layout, "overview-chart-grid")
+        insight_grid = find_component(app.app.layout, "insight-chart-grid")
+
+        overview_chart_ids = [
+            next(component_id for component_id in descendant_ids(card) if component_id.startswith("chart-"))
+            for card in overview_grid.children
+        ]
+        self.assertEqual(
+            overview_chart_ids,
+            [
+                "chart-level", "chart-rating",
+                "chart-histogram", "chart-coverage",
+                "chart-tree", "chart-map", "chart-organizations",
+            ],
+        )
+        self.assertIn("chart-card-wide", overview_grid.children[4].className)
+        self.assertEqual(
+            [
+                next(component_id for component_id in descendant_ids(card) if component_id.startswith("chart-"))
+                for card in insight_grid.children
+            ],
+            ["chart-scatter", "chart-heatmap", "chart-ecdf"],
+        )
+        self.assertIn("chart-card-wide", insight_grid.children[2].className)
+
+    # Kiểm tra trang dữ liệu có mục điều hướng riêng trên sidebar
     def test_data_explorer_has_its_own_sidebar_tab(self):
         sidebar = find_component(app.app.layout, "app-sidebar")
         tabs = find_component(sidebar, "page-tab")
@@ -131,10 +169,13 @@ class DashboardTests(unittest.TestCase):
                 {"display": "none"},
                 {"display": "block"},
                 {"display": "block"},
+                {"display": "none"},
             ),
         )
         self.assertEqual(app.switch_tab("prediction")[4], {"display": "none"})
+        self.assertEqual(app.switch_tab("overview")[5], {"display": "block"})
 
+    # Kiểm tra trạng thái mặc định giữ toàn bộ khóa học và dữ liệu thiếu
     def test_default_preserves_all_courses_and_missing(self):
         filters = app.store_filters([], [], [], [], [0, 5], [0, app.HOURS_MAX], [0, app.ENROLL_MAX], ["missing"])
         filtered = du.filter_courses(self.fact, filters, self.bridges)
@@ -144,6 +185,7 @@ class DashboardTests(unittest.TestCase):
         filtered = du.filter_courses(self.fact, filters, self.bridges)
         self.assertFalse(filtered[["enrolled_num", "rating_num", "hours_to_complete"]].isna().any().any())
 
+    # Kiểm tra bộ lọc qua bảng bridge không làm nhân bản khóa học
     def test_bridge_filters_do_not_multiply_courses(self):
         filters = {"subjects": ["business", "computer science"], "skills": ["data analysis"]}
         filtered = du.filter_courses(self.fact, filters, self.bridges)
@@ -153,12 +195,14 @@ class DashboardTests(unittest.TestCase):
         self.assertEqual(set(filtered.course_id), expected)
         self.assertEqual(len(filtered), len(expected))
 
+    # Kiểm tra tùy chọn giờ công bố và điều kiện lọc khoảng nghiêm ngặt
     def test_reported_hours_and_strict_ranges(self):
         filtered = du.filter_courses(self.fact, {"reported_only": True, "hours": [5, 20], "include_missing": False}, self.bridges)
         self.assertGreater(len(filtered), 0)
         self.assertTrue(filtered.hours_to_complete.between(5, 20).all())
         self.assertTrue(filtered.hours_to_complete_is_estimated.eq(False).all())
 
+    # Kiểm tra thứ hạng tương quan được tính lại sau khi loại giá trị thiếu
     def test_pairwise_ranks_are_recomputed_after_missing(self):
         data = pd.DataFrame({"enrolled_num": [1, 2, 3, 4, 5], "num_reviews": [3, np.nan, 1, 2, np.nan], "rating_num": [4, 4, 4, 4, 4], "hours_to_complete": [1, 2, 3, 4, 5], "skill_count": [1, 2, 3, 4, 5]})
         rho, counts = du.pairwise_spearman(data)
@@ -166,6 +210,7 @@ class DashboardTests(unittest.TestCase):
         self.assertAlmostEqual(rho[0, 1], -0.5)
         self.assertTrue(np.isnan(rho[0, 2]))
 
+    # Kiểm tra số lượng nhóm biểu đồ và cách tính đường phân phối tích lũy
     def test_nine_chart_families_counts_and_ecdf(self):
         figures = du.build_figures(self.fact, self.bridges)
         expected = dict(level="bar", coverage="pie", histogram="histogram", rating="box", tree="treemap", map="choropleth", scatter="scattergl", heatmap="heatmap", ecdf="scatter")
@@ -178,6 +223,7 @@ class DashboardTests(unittest.TestCase):
         self.assertEqual(figures["ecdf"].data[0].y[-1], 1)
         self.assertTrue(np.all(np.diff(figures["ecdf"].data[0].y) >= 0))
 
+    # Kiểm tra dữ liệu trên từng biểu đồ khớp với các dòng nguồn tương ứng
     def test_every_chart_matches_its_source_rows(self):
         """Khóa số liệu hiển thị với fact/bridge để tránh biểu đồ đúng hình nhưng sai số."""
         figures = du.build_figures(self.fact, self.bridges)
@@ -240,6 +286,7 @@ class DashboardTests(unittest.TestCase):
         self.assertEqual(list(org_trace.y), organizations.Organization.tolist())
         self.assertEqual(list(org_trace.x), organizations.n_courses.tolist())
 
+    # Kiểm tra các biểu đồ tuân theo quy tắc hiển thị thống nhất
     def test_chart_visual_contract_is_consistent(self):
         figures = du.build_figures(self.fact, self.bridges)
         self.assertEqual(app.GRAPH_CONFIG["topojsonURL"], "/assets/plotly-topojson/")
@@ -274,6 +321,7 @@ class DashboardTests(unittest.TestCase):
         for colorbar in colorbars:
             self.assertLessEqual(colorbar.thickness, 12)
 
+    # Kiểm tra biểu đồ hoạt động với dữ liệu rỗng hoặc chỉ có một dòng
     def test_empty_and_single_row_figures(self):
         for frame in (self.fact.iloc[:0], self.fact.iloc[:1]):
             figures = du.build_figures(frame, self.bridges, "skill")
@@ -281,6 +329,7 @@ class DashboardTests(unittest.TestCase):
             for figure in figures.values():
                 self.assertTrue(figure.to_json())
 
+    # Kiểm tra callback drill-down, lọc và đặt lại bằng dữ liệu thực tế
     def test_actual_callbacks_drill_filter_reset(self):
         values = {"chart-level.clickData": {"points": [{"x": "Beginner"}]}, "tree-kind.value": "subject"}
         response = self.callback("drill-state.data", values, "chart-level.clickData", {"drill-state.data": {}})
@@ -300,6 +349,7 @@ class DashboardTests(unittest.TestCase):
         response = self.callback("drill-state.data", {"reset-filters.n_clicks": 1}, "reset-filters.n_clicks", {"drill-state.data": drill})
         self.assertEqual(response["drill-state"]["data"], {})
 
+    # Kiểm tra phần chi tiết dùng ID ổn định và được xóa khi bộ lọc thay đổi
     def test_detail_uses_stable_row_id_and_clears_on_filter(self):
         row = self.fact.iloc[100]
         values = {"course-table.active_cell": {"row": 0, "column": 0, "row_id": row.course_id}, "filter-state.data": {}, "drill-state.data": {}}
@@ -308,6 +358,7 @@ class DashboardTests(unittest.TestCase):
         response = self.callback("course-detail.children", values, "filter-state.data")
         self.assertIsInstance(response["course-detail"]["children"], str)
 
+    # Kiểm tra callback với dữ liệu rỗng, chức năng dự đoán và các trang giao diện
     def test_empty_callback_prediction_and_routes(self):
         response = self.callback("chart-level.figure", {"filter-state.data": {"organizations": ["__empty__"]}, "drill-state.data": {}, "tree-kind.value": "subject"}, "filter-state.data")
         self.assertEqual(response["course-table"]["data"], [])
