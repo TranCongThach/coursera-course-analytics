@@ -33,9 +33,11 @@ TABLE_LABELS = ["Mã", "Tên khóa học", "Tổ chức", "Trình độ", "Đi�
 DRILL_LABELS = {"level_clean": "Trình độ", "subject": "Chủ đề", "skill": "Kỹ năng",
                 "organization_hq_country": "Trụ sở", "Organization": "Tổ chức"}
 
+# Tạo một trường nhập liệu có nhãn trong giao diện Dashboard
 def field(label, component):
     return html.Div([html.Label(label), component], className="field")
 
+# Tạo thẻ KPI hiển thị giá trị, nhãn, ghi chú và biểu tượng
 def kpi(value, label, note="", icon=None):
     icon_node = html.Span(
         html.Img(src=f"/assets/{icon}", alt="", className="kpi-icon-image") if icon else None,
@@ -44,6 +46,7 @@ def kpi(value, label, note="", icon=None):
     return html.Div([icon_node, html.Div(label, className="kpi-label"), html.Strong(value),
                      html.Small(note)], className="kpi")
 
+# Tạo thẻ chứa biểu đồ và phần chú thích tương ứng
 def card(key, note, extra=None, wide=False):
     return html.Section([
         *([extra] if extra is not None else []),
@@ -52,6 +55,7 @@ def card(key, note, extra=None, wide=False):
         html.P(note, className="chart-note"),
     ], className="chart-card chart-card-wide" if wide else "chart-card")
 
+# Tạo biểu đồ thể hiện chiều và độ lớn các hệ số của mô hình
 def coefficient_figure():
     labels = [
         "Lượt đánh giá<br>tăng 10 lần",
@@ -151,6 +155,13 @@ app.layout = html.Div([
         ]),
     ], id="app-sidebar", className="sidebar"),
     html.Main([
+        # KPI chỉ thuộc trang Tổng quan. Đặt ngoài panel để bộ lọc có thể nằm
+        # ngay bên dưới KPI nhưng vẫn dùng chung được cho Phân tích và Dữ liệu.
+        html.Div(
+            html.Div(id="kpi-row", className="kpi-grid"),
+            id="overview-kpis",
+            className="overview-kpis",
+        ),
         html.Section([
             html.Div([
                 html.Div([
@@ -206,24 +217,27 @@ app.layout = html.Div([
             ], open=False, className="filter-details"),
         ], id="filter-panel", className="panel filter-panel"),
         html.Div([
-            html.Div(id="kpi-row", className="kpi-grid"),
+            # 1) Trình độ đặt cạnh đánh giá theo trình độ để so sánh trực tiếp.
+            # 2) Quy mô người học đặt cạnh mức đầy đủ của lịch học.
+            # 3) Treemap dùng toàn hàng để các nhãn chủ đề/kỹ năng dễ đọc.
+            # 4) Bản đồ đặt cạnh xếp hạng tổ chức vì cùng mô tả nhà cung cấp.
             html.Div([
                 card("level", "Not specified là khóa chưa có thông tin trình độ. Bấm vào cột để lọc."),
-                card("coverage", "Mỗi phần cho biết thời lượng học được ghi theo cách nào hoặc còn thiếu."),
-                card("histogram", "Trục log10 giúp thu gọn khoảng cách: 3 tương ứng 1.000 người học."),
                 card("rating", "Đường giữa là trung vị; mỗi hộp chứa 50% số điểm ở giữa."),
+                card("histogram", "Trục log10 giúp thu gọn khoảng cách: 3 tương ứng 1.000 người học."),
+                card("coverage", "Mỗi phần cho biết thời lượng học được ghi theo cách nào hoặc còn thiếu."),
                 card("tree", "Một khóa có thể có nhiều chủ đề hoặc kỹ năng. Bấm vào ô để lọc.",
-                     dcc.RadioItems(id="tree-kind", options=[{"label": " Chủ đề", "value": "subject"}, {"label": " Kỹ năng", "value": "skill"}], value="subject", inline=True)),
+                     dcc.RadioItems(id="tree-kind", options=[{"label": " Chủ đề", "value": "subject"}, {"label": " Kỹ năng", "value": "skill"}], value="subject", inline=True), wide=True),
                 card("map", "Bản đồ ghi trụ sở của tổ chức, không phải nơi ở của người học."),
-                card("organizations", "Bấm vào một tổ chức để lọc các khóa do tổ chức đó cung cấp.", wide=True),
-            ], className="chart-grid section-gap"),
+                card("organizations", "Bấm vào một tổ chức để lọc các khóa do tổ chức đó cung cấp."),
+            ], id="overview-chart-grid", className="chart-grid section-gap"),
         ], id="overview-panel"),
         html.Div([
             html.Div([
                 card("scatter", "Hai chỉ số cùng tăng không có nghĩa cái này gây ra cái kia."),
                 card("heatmap", "Ô trống: chưa đủ khóa có cả hai chỉ số để tính. Spearman gần 1 là cùng tăng, gần -1 là ngược chiều."),
-                card("ecdf", "Tại mỗi mốc, đường biểu diễn tỷ lệ khóa có số người học thấp hơn hoặc bằng mốc đó."),
-            ], className="chart-grid section-gap"),
+                card("ecdf", "Tại mỗi mốc, đường biểu diễn tỷ lệ khóa có số người học thấp hơn hoặc bằng mốc đó.", wide=True),
+            ], id="insight-chart-grid", className="chart-grid section-gap"),
             html.Details([
                 html.Summary("Tự chọn hai chỉ số để so sánh"),
                 html.P("Chọn hai trục; log10 giúp thu gọn các giá trị chênh lệch lớn.", className="muted"),
@@ -298,13 +312,15 @@ app.layout = html.Div([
 
 @app.callback(Output("overview-panel", "style"), Output("insight-panel", "style"),
               Output("prediction-panel", "style"), Output("data-panel", "style"),
-              Output("filter-panel", "style"),
+              Output("filter-panel", "style"), Output("overview-kpis", "style"),
               Input("page-tab", "value"))
+# Chuyển đổi vùng nội dung hiển thị theo trang người dùng lựa chọn
 def switch_tab(tab):
     panels = ("overview", "insight", "prediction", "data")
     panel_styles = tuple({"display": "block" if tab == key else "none"} for key in panels)
     filter_style = {"display": "none"} if tab == "prediction" else {"display": "block"}
-    return (*panel_styles, filter_style)
+    kpi_style = {"display": "block"} if tab == "overview" else {"display": "none"}
+    return (*panel_styles, filter_style, kpi_style)
 
 # Khi mở tab, đọc chiều cao thật của wrapper rồi tính lại khung vẽ.
 app.clientside_callback(
@@ -334,18 +350,21 @@ app.clientside_callback(
 @app.callback(Output("filter-state", "data"),
     Input("filter-organizations", "value"), Input("filter-levels", "value"), Input("filter-subjects", "value"), Input("filter-skills", "value"),
     Input("filter-rating", "value"), Input("filter-hours", "value"), Input("filter-enrollment", "value"), Input("filter-options", "value"))
+# Lưu trạng thái của toàn bộ bộ lọc trên Dashboard
 def store_filters(organizations, levels, subjects, skills, rating, hours, enrollment, options):
     return dict(organizations=organizations, levels=levels, subjects=subjects, skills=skills,
                 rating=rating, hours=hours, enrollment=enrollment,
                 include_missing="missing" in (options or []), reported_only="reported" in (options or []))
 
 @app.callback(*[Output(f"filter-{key}", "value") for key in ("organizations", "levels", "subjects", "skills", "rating", "hours", "enrollment", "options")], Input("reset-filters", "n_clicks"), prevent_initial_call=True)
+# Đặt lại các bộ lọc về giá trị mặc định ban đầu
 def reset_filters(_):
     return [], [], [], [], [0, 5], [0, HOURS_MAX], [0, ENROLL_MAX], ["missing"]
 
 @app.callback(Output("drill-state", "data"),
     Input("chart-level", "clickData"), Input("chart-tree", "clickData"), Input("chart-map", "clickData"), Input("chart-organizations", "clickData"),
     Input("clear-drill", "n_clicks"), Input("reset-filters", "n_clicks"), Input("tree-kind", "value"), State("drill-state", "data"), prevent_initial_call=True)
+# Cập nhật trạng thái drill-down khi người dùng bấm vào biểu đồ
 def update_drill(level, tree, country, organization, clear, reset, kind, current):
     trigger = ctx.triggered_id
     if trigger in ("clear-drill", "reset-filters"):
@@ -381,6 +400,7 @@ def update_drill(level, tree, country, organization, clear, reset, kind, current
     Output("kpi-row", "children"), Output("course-table", "data"), Output("course-table", "page_current"),
     Output("breadcrumb", "children"), Output("table-caption", "children"),
     Input("filter-state", "data"), Input("drill-state", "data"), Input("tree-kind", "value"))
+# Cập nhật đồng bộ KPI, biểu đồ và bảng dữ liệu theo bộ lọc hiện tại
 def update_dashboard(filters, drill, kind):
     df = du.filter_courses(FACT, filters or {}, BRIDGES, drill)
     figs = du.build_figures(df, BRIDGES, kind)
@@ -394,11 +414,13 @@ def update_dashboard(filters, drill, kind):
     return (*[figs[key] for key in CHART_KEYS], kpis, du.table_records(df), 0, breadcrumb,
             f"{n:,} khóa phù hợp. Bấm vào một dòng để xem chi tiết.")
 
+# Tạo nội dung chi tiết của một khóa học được lựa chọn
 def render_detail(course_id, df):
     selected = df[df.course_id.eq(course_id)]
     if selected.empty:
         return "Khóa này không còn khớp với bộ lọc. Hãy chọn lại trong bảng."
     row = selected.iloc[0]
+    # Định dạng một giá trị để hiển thị trong phần chi tiết khóa học
     def display(column):
         value = row[column]
         return "Chưa có dữ liệu" if pd.isna(value) else f"{value:,.2f}" if isinstance(value, (float, int, np.number)) else str(value)
@@ -417,6 +439,7 @@ def render_detail(course_id, df):
             html.Div(facts, className="detail-grid"), html.P(hours_note, className="warning"), *items, link]
 
 @app.callback(Output("course-detail", "children"), Input("chart-scatter", "clickData"), Input("course-table", "active_cell"), Input("filter-state", "data"), Input("drill-state", "data"))
+# Cập nhật chi tiết khóa học từ điểm scatter hoặc dòng trong bảng
 def update_detail(scatter, cell, filters, drill):
     if ctx.triggered_id in ("filter-state", "drill-state", None):
         return "Bấm vào một dòng để xem thông tin khóa học."
@@ -429,6 +452,7 @@ def update_detail(scatter, cell, filters, drill):
 
 @app.callback(Output("fig-trend", "figure"), Output("trend-summary", "children"), Output("trend-warnings", "children"), Output("trend-table", "data"), Output("trend-table", "columns"),
     Input("x-var", "value"), Input("y-var", "value"), Input("log-opts", "value"), Input("x-new", "value"), Input("filter-state", "data"), Input("drill-state", "data"))
+# Cập nhật biểu đồ xu hướng khi người dùng chọn hai chỉ số so sánh
 def update_trend(x_var, y_var, log_opts, x_new, filters, drill):
     try:
         chart = pred.build_course_trend(du.filter_courses(FACT, filters or {}, BRIDGES, drill), x_col=x_var, y_col=y_var,
@@ -438,6 +462,7 @@ def update_trend(x_var, y_var, log_opts, x_new, filters, drill):
     return du.style_figure(chart.fig), chart.summary, html.Ul([html.Li(w) for w in chart.warnings], className="warning"), chart.table.round(2).to_dict("records"), [{"name": c, "id": c} for c in chart.table.columns]
 
 @app.callback(Output("model-estimate", "children"), Output("model-warning", "children"), Input("model-reviews", "value"), Input("model-rating", "value"), Input("model-hours", "value"), Input("model-skills", "value"), Input("model-level", "value"))
+# Tính và hiển thị ước lượng số người học từ các đầu vào của người dùng
 def update_model(reviews, rating, hours, skills, level):
     try:
         if any(value is None for value in (reviews, rating, hours, skills, level)):
