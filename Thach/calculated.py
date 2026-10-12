@@ -19,10 +19,12 @@ HOURS_PER_WEEK_PATTERN = re.compile(
 OUTLIER_COLUMNS = ("enrolled_num", "num_reviews", "hours_to_complete")
 OUTLIER_IQR_MULTIPLIER = 1.5
 
+# Tìm và lấy một giá trị số từ chuỗi bằng biểu thức chính quy
 def match_number(pattern: re.Pattern[str], text: str) -> float:
     match = pattern.search(text)
     return float(match.group(1)) if match else np.nan
 
+# Phân tích lịch học để lấy thời lượng, số giờ và trạng thái ước tính
 def parse_schedule(value: object) -> pd.Series:
     """Parse lịch học và phân biệt rõ số liệu báo cáo với số liệu ước lượng."""
     result = {
@@ -67,7 +69,8 @@ def parse_schedule(value: object) -> pd.Series:
     else:
         result["schedule_parse_status"] = "unparsed"
     return pd.Series(result)
-
+    
+# Chuyển dữ liệu kỹ năng dạng chuỗi thành danh sách kỹ năng
 def parse_skills(value: object) -> list[str]:
     if pd.isna(value):
         return []
@@ -84,6 +87,7 @@ def parse_skills(value: object) -> list[str]:
         return [str(item).strip() for item in parsed if str(item).strip()]
     return [item.strip() for item in text.split(",") if item.strip()]
 
+# Tạo bảng bridge khóa học - kỹ năng và bảng tổng hợp kỹ năng theo khóa học
 def build_skill_bridge(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     """Tạo bảng nhiều-nhiều course-skill và tóm tắt skill trong fact."""
     bridge_rows: list[dict[str, object]] = []
@@ -138,6 +142,7 @@ def build_skill_bridge(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     summary = pd.DataFrame(summaries)
     return bridge, summary
 """Phát hiện ngoại lệ và đánh dấu outlier bằng IQR trên thang log10(x+1)."""
+# Phát hiện và đánh dấu ngoại lệ bằng IQR trên thang log10(x+1)
 def add_outlier_flags(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     result = df.copy()
     summary_rows: list[dict[str, object]] = []
@@ -178,6 +183,7 @@ def add_outlier_flags(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     result["has_numeric_outlier"] = result[flag_columns].any(axis=1)
     return result, pd.DataFrame(summary_rows)
 
+# Kiểm tra các trường số có nằm trong miền giá trị hợp lệ hay không
 def validate_ranges(df: pd.DataFrame) -> None:
     checks = {
         "rating_num": (0, 5),
@@ -191,6 +197,7 @@ def validate_ranges(df: pd.DataFrame) -> None:
         if invalid.any():
             raise ValueError(f"{column} có {invalid.sum()} giá trị ngoài [{lower}, {upper}].")
 
+# Tạo các trường tính toán, bảng bridge kỹ năng và báo cáo ngoại lệ
 def main() -> None:
     input_path = PROCESSED_DIR / "fact_courses_with_country.csv"
     df = pd.read_csv(input_path)
